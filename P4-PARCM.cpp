@@ -1,9 +1,9 @@
 ﻿#include "P4-PARCM.h"
 #include <grpcpp//grpcpp.h>
-#include "proto/generated/hello.grpc.pb.h"
 
 using namespace grpc;
 
+/*
 class temp final : public HelloGRPC::Service {
 	public:
 		Status SayHello(ServerContext* context, const HelloRequest* request, HelloReply* response) {
@@ -27,9 +27,9 @@ void RunServer() {
 
 	server->Wait();
 }
-
+*/
 int main()
 {
-	RunServer();
+	//RunServer();
 	return 0;
 }

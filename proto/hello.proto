@@ -1,14 +1,39 @@
 syntax = "proto3";
 
-service HelloGRPC{
-	rpc SayHello(HelloRequest) returns (HelloReply){}
+
+message Vector3{
+	float x = 1;
+	float y = 2;
+	float z = 3;
 }
 
-message HelloRequest{
-	string name = 1;
+message Transform{
+	Vector3 position = 1;
+	Vector3 rotation = 2;
+	Vector3 scale = 3;
 }
 
-message HelloReply{
-	bool status = 1;
-	string msg = 2;
+message Mesh{
+	string model_name = 1;
+	bytes mesh_data = 2;
+}
+
+message GameObject{
+	string unique_id = 1;
+	string name = 2;
+	Transform t = 3;
+	string model_id = 4;
+}
+
+message WorldData{
+	repeated GameObject game_objects = 1;
+}
+
+message ModelRequest{
+	string model_id = 1;
+}
+
+service World{
+	rpc InitializeClient() returns World;
+	rpc DownloadMesh(ModelRequest) returns Mesh;
 }

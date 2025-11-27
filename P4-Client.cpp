@@ -1,7 +1,7 @@
 #include "P4-Client.h"
 #include <grpcpp/grpcpp.h>
-#include "proto/generated/hello.grpc.pb.h"
 
+/*
 class HelloClient {
 	private:
 		std::unique_ptr<HelloGRPC::Stub> stub;
@@ -27,8 +27,9 @@ class HelloClient {
 			}
 		}
 };
-
+*/
 int main() {
+	/*
 	auto channel = grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials());
 	HelloClient client(channel);
 
@@ -38,6 +39,6 @@ int main() {
 		std::cin >> msg;
 		client.SayHello(msg);
 	}
-
+	*/
 	return 0;
 }
