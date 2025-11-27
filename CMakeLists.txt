@@ -6,16 +6,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 project ("P4-PARCM")
 
-find_package(Protobuf CONFIG REQUIRED)
-find_package(gRPC CONFIG REQUIRED)
-
-#Library
-
-set(LIBRARY_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Library"
-	CACHE PATH "LIBRARY_PATH" FORCE)
 
 
 #Proto
+find_package(Protobuf CONFIG REQUIRED)
+find_package(gRPC CONFIG REQUIRED)
 
 set(PROTO_SRC_PATH "${CMAKE_CURRENT_SOURCE_DIR}/proto/generated"
 	CACHE PATH "PROTO_FILES" FORCE)
@@ -23,12 +18,20 @@ set(PROTO_SRC_PATH "${CMAKE_CURRENT_SOURCE_DIR}/proto/generated"
 file (GLOB_RECURSE PROTO_SRC "${PROTO_SRC_PATH}/*.cc")
 file (GLOB_RECURSE PROTO_HEADERS "${PROTO_SRC_PATH}/*.h")
 
+
+#Library
+
+set(LIBRARY_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Library"
+	CACHE PATH "LIBRARY_PATH" FORCE)
+
+file (GLOB_RECURSE LIBRARY_SRC CONFIGURE_DEPENDS "${LIBRARY_PATH}/*.[ch]pp")	
+
 #Server
 
 set (SERVER_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/SERVER/src
 	CACHE PATH "SERVER_SRC" FORCE)
 
-file (GLOB_RECURSE SERVER_SRC_PATH CONFIGURE_DEPENDS 
+file (GLOB_RECURSE SERVER_SRC CONFIGURE_DEPENDS 
 	"${SERVER_SRC_PATH}/*.[ch]pp")
 
 add_executable (P4_SERVER 
@@ -36,6 +39,7 @@ add_executable (P4_SERVER
 	${PROTO_SRC} 
 	${PROTO_HEADERS} 
 	${SERVER_SRC} 
+	${LIBRARY_SRC}
 )
 
 target_compile_definitions(P4_SERVER PUBLIC "PROTOBUF_USE_DLLS")
@@ -52,20 +56,29 @@ target_link_libraries (P4_SERVER PUBLIC
 set(CLIENT_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CLIENT/src
 	CACHE PATH "Project Client SRC" FORCE)
 
-file (GLOB_RECURSE CLIENT_SRC_PATH CONFIGURE_DEPENDS "${CLIENT_SRC_PATH}/*.[ch]pp")
+file (GLOB_RECURSE CLIENT_SRC CONFIGURE_DEPENDS "${CLIENT_SRC_PATH}/*.[ch]pp")
 
 add_executable (P4_CLIENT 
 	"CLIENT/Client-Main.cpp"  
 	${PROTO_SRC} 
 	${PROTO_HEADERS} 
 	${CLIENT_SRC}
+	${LIBRARY_SRC}
 )
 
 target_compile_definitions(P4_CLIENT PUBLIC "PROTOBUF_USE_DLLS")
 
-target_link_libraries (P4_CLIENT PUBLIC 
+target_link_libraries (P4_CLIENT
+	PUBLIC 
 	protobuf::libprotobuf
 	gRPC::grpc
 	gRPC::grpc++
 	gRPC::grpc++_reflection
+)
+
+target_link_libraries(P4_CLIENT
+	PRIVATE
+    d3d11
+    dxgi
+    d3dcompiler
 )
