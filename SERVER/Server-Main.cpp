@@ -1,5 +1,5 @@
 ﻿
-#include "P4/Workspace.h"
+#include "P4/GameObjectManager.h"
 
 int main()
 {

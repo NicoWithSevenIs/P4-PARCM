@@ -27,8 +27,8 @@ file (GLOB_RECURSE SERVER_SRC_PATH CONFIGURE_DEPENDS
 
 add_executable (GRPC_SERVER "SERVER/Server-Main.cpp" 
 	${PROTO_SRC} ${PROTO_HEADERS} ${SERVER_SRC} 
-		"SERVER/P4/Workspace.h" 
-		"SERVER/P4/Workspace.cpp"
+		"SERVER/P4/GameObjectManager.h" 
+		"SERVER/P4/GameObjectManager.cpp"
 )
 
 target_compile_definitions(GRPC_SERVER PUBLIC "PROTOBUF_USE_DLLS")
