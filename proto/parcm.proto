@@ -25,8 +25,12 @@ message WorldData{
 	repeated GameObject game_objects = 1;
 }
 
+message WorldRequest{
+	string msg = 1;
+}
+
 service World{
-	rpc InitializeClient() returns World
+	rpc InitializeClient(WorldRequest) returns (WorldData){}
 }
 
 //Meshes
@@ -40,5 +44,5 @@ message Mesh{
 }
 
 service MeshManager{
-	rpc DownloadMesh(MeshRequest) returns Mesh
+	rpc DownloadMesh(MeshRequest) returns (Mesh){}
 }
