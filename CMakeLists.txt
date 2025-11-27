@@ -9,31 +9,38 @@ project ("P4-PARCM")
 find_package(Protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
 
+#Library
+
+set(LIBRARY_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Library"
+	CACHE PATH "LIBRARY_PATH" FORCE)
+
+
 #Proto
 
 set(PROTO_SRC_PATH "${CMAKE_CURRENT_SOURCE_DIR}/proto/generated"
-	CACHE PATH "Proto Files" FORCE)
+	CACHE PATH "PROTO_FILES" FORCE)
 
 file (GLOB_RECURSE PROTO_SRC "${PROTO_SRC_PATH}/*.cc")
 file (GLOB_RECURSE PROTO_HEADERS "${PROTO_SRC_PATH}/*.h")
 
 #Server
 
-set (SERVER_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src_server
-	CACHE PATH "Project Server SRC" FORCE)
+set (SERVER_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/SERVER/src
+	CACHE PATH "SERVER_SRC" FORCE)
 
 file (GLOB_RECURSE SERVER_SRC_PATH CONFIGURE_DEPENDS 
 	"${SERVER_SRC_PATH}/*.[ch]pp")
 
-add_executable (GRPC_SERVER "SERVER/Server-Main.cpp" 
-	${PROTO_SRC} ${PROTO_HEADERS} ${SERVER_SRC} 
-		"SERVER/P4/GameObjectManager.h" 
-		"SERVER/P4/GameObjectManager.cpp"
+add_executable (P4_SERVER 
+	"SERVER/Server-Main.cpp" 
+	${PROTO_SRC} 
+	${PROTO_HEADERS} 
+	${SERVER_SRC} 
 )
 
-target_compile_definitions(GRPC_SERVER PUBLIC "PROTOBUF_USE_DLLS")
+target_compile_definitions(P4_SERVER PUBLIC "PROTOBUF_USE_DLLS")
 
-target_link_libraries (GRPC_SERVER PUBLIC 
+target_link_libraries (P4_SERVER PUBLIC 
 	protobuf::libprotobuf
 	gRPC::grpc
 	gRPC::grpc++
@@ -42,17 +49,21 @@ target_link_libraries (GRPC_SERVER PUBLIC
 
 #Client
 
-set(CLIENT_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src_client
+set(CLIENT_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CLIENT/src
 	CACHE PATH "Project Client SRC" FORCE)
 
-file (GLOB_RECURSE CLIENT_SRC CONFIGURE_DEPENDS "${CLIENT_SRC_PATH}/*.[ch]pp")
+file (GLOB_RECURSE CLIENT_SRC_PATH CONFIGURE_DEPENDS "${CLIENT_SRC_PATH}/*.[ch]pp")
 
-add_executable (GRPC_CLIENT "CLIENT/Client-Main.cpp"  
-	${PROTO_SRC} ${PROTO_HEADERS} ${CLIENT_SRC})
+add_executable (P4_CLIENT 
+	"CLIENT/Client-Main.cpp"  
+	${PROTO_SRC} 
+	${PROTO_HEADERS} 
+	${CLIENT_SRC}
+)
 
-target_compile_definitions(GRPC_CLIENT PUBLIC "PROTOBUF_USE_DLLS")
+target_compile_definitions(P4_CLIENT PUBLIC "PROTOBUF_USE_DLLS")
 
-target_link_libraries (GRPC_CLIENT PUBLIC 
+target_link_libraries (P4_CLIENT PUBLIC 
 	protobuf::libprotobuf
 	gRPC::grpc
 	gRPC::grpc++
