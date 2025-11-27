@@ -1,5 +1,5 @@
-set protobuf_cmd="%VCPKG_ROOOT%\packages\protobuf_x64-windows\tools\protobuf\protoc"
-set grpc_exe_dir="%VCPKG_ROOOT%\installed\x64-windows\tools\grpc\grpc_cpp_plugin.exe"
+set protobuf_cmd="C:\VCPKG\vcpkg\packages\protobuf_x64-windows\tools\protobuf\protoc"
+set grpc_exe_dir="C:\VCPKG\vcpkg\installed\x64-windows\tools\grpc\grpc_cpp_plugin.exe"
 set src="%cd%"
 set proto_file="%cd%\hello.proto"
 set dest="%cd%\generated"
