@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../../../Library/Singleton.h"
+#include "../../../SHARED/Singleton.h"
+#include "../../../SHARED/Time/Time.h"
+
 #include "Swap Chain/SwapChain.h"
 #include "Device Context/DeviceContext.h"
 
@@ -8,6 +10,7 @@
 
 #include <d3d11.h>
 #include <memory>
+#include <iostream>
 
 class GraphicsEngine final: public Singleton<GraphicsEngine> 
 {

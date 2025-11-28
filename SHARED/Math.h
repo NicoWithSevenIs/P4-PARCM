@@ -1,6 +1,7 @@
 #pragma once
 
 #include <array>
+#include <memory>
 
 namespace Math {
 	
@@ -54,6 +55,19 @@ namespace Math {
 			static Color YELLOW;
 			static Color MAGENTA;
 			static Color NICO_BLUE;
+	};
+
+	class Matrix{
+		public:
+			float matrix[4][4] = {};
+
+		public:
+			void Identity() {
+				::memset(matrix, 0, sizeof(float) * 16);
+				for (int i = 0; i < 4; i++)
+					matrix[i][i] = 1;
+			}
+
 	};
 
 	typedef Vector2<float> Vector2f;

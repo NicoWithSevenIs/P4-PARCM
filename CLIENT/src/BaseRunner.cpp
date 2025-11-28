@@ -12,6 +12,7 @@ void BaseRunner::OnCreate()
 void BaseRunner::OnUpdate()
 {
 	GraphicsEngine::Clear(Math::Color::NICO_BLUE);
+	std::cout << Time::deltaTime() << std::endl;
 	GraphicsEngine::Present(this);
 }
 

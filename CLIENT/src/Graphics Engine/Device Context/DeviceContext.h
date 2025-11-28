@@ -1,6 +1,6 @@
 #pragma once
 #include <d3d11.h>
-#include "../../../../Library/Math.h"
+#include "../../../../SHARED/Math.h"
 
 class DeviceContext {
 	private:

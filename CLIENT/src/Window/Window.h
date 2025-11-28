@@ -1,7 +1,7 @@
 #pragma once
 #include <Windows.h>
-#include "../../../Library/Time/Time.h"
-#include "../../../Library/Math.h"
+#include "../../../SHARED/Time/Time.h"
+#include "../../../SHARED/Math.h"
 #include <iostream>
 
 class Window {
