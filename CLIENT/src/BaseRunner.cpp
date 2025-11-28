@@ -11,6 +11,7 @@ void BaseRunner::OnCreate()
 
 void BaseRunner::OnUpdate()
 {
+	GraphicsEngine::Clear(Math::Color::NAVY_BLUE);
 	GraphicsEngine::Present(this);
 }
 

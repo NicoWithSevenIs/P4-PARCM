@@ -2,6 +2,7 @@
 
 #include "../../../Library/Singleton.h"
 #include "Swap Chain/SwapChain.h"
+#include "Device Context/DeviceContext.h"
 
 #include "../Window/Window.h"
 
@@ -21,8 +22,10 @@ class GraphicsEngine final: public Singleton<GraphicsEngine>
 
 	private:
 		SwapChain swap_chain;
+		DeviceContext device_context;
 
 	public:
 		static bool Initialize(Window* window);
 		static void Present(bool vsync);
+		static void Clear(Math::Color color = Math::Color::WHITE);
 };

@@ -2,8 +2,6 @@
 
 bool GraphicsEngine::Initialize(Window* window)
 {
-	
-	
 
 	D3D_DRIVER_TYPE driver_types[] = {
 	D3D_DRIVER_TYPE_HARDWARE,
@@ -35,7 +33,7 @@ bool GraphicsEngine::Initialize(Window* window)
 		return false;
 	}
 
-	//this->m_device_context = new DeviceContext(imm_context);
+	get().device_context.Initialize(imm_context);
 
 	get().d3d_device->QueryInterface(__uuidof(IDXGIDevice), (void**)&get().dxgi_device);
 	get().dxgi_device->GetParent(__uuidof(IDXGIAdapter), (void**)&get().dxgi_adapter);
@@ -50,4 +48,12 @@ bool GraphicsEngine::Initialize(Window* window)
 
 void GraphicsEngine::Present(bool vsync) {
 	get().swap_chain.Present(vsync);
+}
+
+void GraphicsEngine::Clear(Math::Color color) {
+	get().device_context.clearRenderTargetColor(
+		get().swap_chain.GetRenderTargetView(), 
+		get().swap_chain.GetDepthTargetView(),
+		color
+	);
 }

@@ -1,0 +1,14 @@
+#pragma once
+#include <d3d11.h>
+#include "../../../../Library/Math.h"
+
+class DeviceContext {
+	private:
+		ID3D11DeviceContext* device_context;
+		
+
+	public:
+		void Initialize(ID3D11DeviceContext* device_context);
+		void clearRenderTargetColor(ID3D11RenderTargetView** rtv, ID3D11DepthStencilView** dsv, Math::Color color);
+		void Release();
+};
