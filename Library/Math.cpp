@@ -21,5 +21,5 @@ Color Color::BLUE = Color(0, 0, 255);
 Color Color::CYAN = Color(0, 255, 255);
 Color Color::YELLOW = Color(255, 255, 0);
 Color Color::MAGENTA = Color(255, 0, 255);
-Color Color::NAVY_BLUE = Color(0, 0, 128);
+Color Color::NICO_BLUE = Color(0, 77, 102);
 

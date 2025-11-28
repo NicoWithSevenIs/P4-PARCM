@@ -53,7 +53,7 @@ namespace Math {
 			static Color CYAN;
 			static Color YELLOW;
 			static Color MAGENTA;
-			static Color NAVY_BLUE;
+			static Color NICO_BLUE;
 	};
 
 	typedef Vector2<float> Vector2f;
