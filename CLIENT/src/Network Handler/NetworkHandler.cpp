@@ -1,12 +1,20 @@
 #include "NetworkHandler.h"
 
-void NetworkHandler::Initialize(std::shared_ptr<Channel> channel)
-{
 
-	//get().stub;
+void NetworkHandler::Initialize()
+{
+	auto channel = CreateChannel("localhost:50051", InsecureChannelCredentials());
+	get().stub = World::NewStub(channel);
 }
+
 
 void NetworkHandler::MessageServer()
 {
-	std::cout << "Messagasdase" <<std::endl;
+	WorldRequest request;
+	request.set_msg("ASDADASDFASD");
+
+	WorldData response;
+	ClientContext context;
+
+	Status status = get().stub->InitializeClient(&context, request, &response);
 }

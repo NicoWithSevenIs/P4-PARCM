@@ -7,13 +7,13 @@ BaseRunner::BaseRunner(): Window()
 void BaseRunner::OnCreate()
 {
 	GraphicsEngine::Initialize(this);
-	//NetworkHandler::MessageServer();
+	NetworkHandler::Initialize();
+	NetworkHandler::MessageServer();
 }
 
 void BaseRunner::OnUpdate()
 {
 	GraphicsEngine::Clear(Math::Color::NICO_BLUE);
-	//std::cout << Time::deltaTime() << std::endl;
 	GraphicsEngine::Present(this);
 }
 

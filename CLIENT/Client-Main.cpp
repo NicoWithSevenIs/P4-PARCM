@@ -1,9 +1,5 @@
 
-#include <grpcpp/grpcpp.h>
-
 #include "src/BaseRunner.h"
-
-using namespace grpc;
 
 int main() 
 {

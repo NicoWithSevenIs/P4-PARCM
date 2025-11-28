@@ -1,5 +1,8 @@
 #pragma once
+
+#define NOMINMAX
 #include <Windows.h>
+
 #include "../../../SHARED/Time/Time.h"
 #include "../../../SHARED/Math.h"
 #include <iostream>

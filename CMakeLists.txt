@@ -66,7 +66,14 @@ add_executable (P4_CLIENT
 	${SHARED_SRC}
 )
 
-target_compile_definitions(P4_CLIENT PUBLIC "PROTOBUF_USE_DLLS")
+target_compile_definitions(P4_CLIENT PUBLIC 
+	"PROTOBUF_USE_DLLS"
+)
+
+target_compile_definitions(P4_CLIENT PRIVATE
+    "WIN32_LEAN_AND_MEAN"
+    "NOMINMAX"
+)
 
 target_link_libraries (P4_CLIENT
 	PUBLIC 
