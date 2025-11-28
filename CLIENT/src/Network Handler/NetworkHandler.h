@@ -9,9 +9,16 @@
 
 using namespace grpc;
 
-class NetworkHandler: public Singleton<NetworkHandler> {
+class NetworkHandler{
 	private:
 		std::unique_ptr<World::Stub> stub;
+	
 	public:
-		void MessageServer();
+		inline NetworkHandler(std::shared_ptr<grpc::Channel> channel) :
+			stub(World::NewStub(channel)) {
+			
+		}
+	public:
+		static void Initialize(std::shared_ptr<Channel> channel);
+		static void MessageServer();
 };

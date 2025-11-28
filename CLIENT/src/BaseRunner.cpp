@@ -7,7 +7,7 @@ BaseRunner::BaseRunner(): Window()
 void BaseRunner::OnCreate()
 {
 	GraphicsEngine::Initialize(this);
-	NetworkHandler::get().MessageServer();
+	//NetworkHandler::MessageServer();
 }
 
 void BaseRunner::OnUpdate()
