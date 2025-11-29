@@ -51,6 +51,12 @@ target_link_libraries (P4_SERVER PUBLIC
 	gRPC::grpc++_reflection
 )
 
+#IMGUI
+set (IMGUI_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/IMGUI
+	CACHE PATH "Project IMGUI SRC" FORCE)
+
+file (GLOB_RECURSE IMGUI_SRC CONFIGURE_DEPENDS "${IMGUI_SRC_PATH}/*.[ch]pp")
+
 #Client
 
 set(CLIENT_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CLIENT/src
@@ -64,6 +70,11 @@ add_executable (P4_CLIENT
 	${PROTO_HEADERS} 
 	${CLIENT_SRC}
 	${SHARED_SRC}
+	${IMGUI_SRC}
+)
+
+target_include_directories(P4_CLIENT PRIVATE 
+	${IMGUI_SRC_PATH}
 )
 
 target_compile_definitions(P4_CLIENT PUBLIC 
