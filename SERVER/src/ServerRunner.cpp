@@ -1,6 +1,7 @@
 #include "ServerRunner.h"
 #include "World Service/WorldService.h"
 
+
 void ServerRunner::Run() 
 {
 	std::string add("0.0.0.0:50051");
@@ -9,6 +10,10 @@ void ServerRunner::Run()
 
 	builder.AddListeningPort(add, grpc::InsecureServerCredentials());
 	builder.RegisterService(&world);
+
+	Engine::GameObject go = Engine::GameObject("some_id", "cube");
+	go.Print();
+	world.AddGameObject(go);
 
 	auto server(builder.BuildAndStart());
 	std::cout << "Server listening on " << add << std::endl;

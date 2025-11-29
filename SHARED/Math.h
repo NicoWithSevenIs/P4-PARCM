@@ -2,7 +2,7 @@
 
 #include <array>
 #include <memory>
-
+#include <iostream>
 namespace Math {
 	
 	//ensures type is always an integer type or a floating point type
@@ -28,6 +28,11 @@ namespace Math {
 		public:
 			Vector3() : x(0), y(0), z(0) {}
 			Vector3(N x, N y, N z) : x(x), y(y), z(z) {}
+		public:
+			inline friend std::ostream& operator << (std::ostream& os, const Vector3<N>& vec) {
+				os << "(" << vec.x << "," << vec.y << "," << vec.z << ")";
+				return os;
+			}
 	};
 
 	class Color {

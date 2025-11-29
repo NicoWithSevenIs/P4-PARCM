@@ -1,14 +1,23 @@
 #pragma once
 #include "Math.h"
 
-using namespace Math;
+namespace Engine {
+	using namespace Math;
 
-class Transform {
+	class Transform {
 	public:
-		Vector2f position;
-		Vector2f scale;
-		Vector2f rotation;
+		Vector3f position;
+		Vector3f scale;
+		Vector3f rotation;
 
 	public:
-		Transform(): position(Vector2f()), scale(Vector2f(1,1,1), rotation(Vector2f()){}
-};
+		Transform() :
+			position(Vector3f()),
+			scale(Vector3f(1.f, 1.f, 1.f)),
+			rotation(Vector3f())
+		{
+		}
+		Transform(Vector3f position, Vector3f scale, Vector3f rotation):
+			position(position), scale(scale), rotation(rotation){}
+	};
+}

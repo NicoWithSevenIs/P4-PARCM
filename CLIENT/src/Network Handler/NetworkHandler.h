@@ -2,10 +2,10 @@
 
 
 #include "../../../SHARED/Singleton.h"
+#include "../../../proto/generated/PARCM-P4.grpc.pb.h"
+#include "../../../SHARED/GameObject/GameObject.h"
 
 #include <grpcpp/grpcpp.h>
-#include "../../../proto/generated/PARCM-P4.grpc.pb.h"
-
 #include <iostream>
 
 
