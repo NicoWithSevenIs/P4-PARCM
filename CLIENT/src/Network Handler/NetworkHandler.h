@@ -3,7 +3,7 @@
 
 #include "../../../SHARED/Singleton.h"
 #include "../../../proto/generated/PARCM-P4.grpc.pb.h"
-#include "../../../SHARED/GameObject/GameObject.h"
+#include "../../../SHARED/GameObjectData/GameObjectData.h"
 
 #include <grpcpp/grpcpp.h>
 #include <iostream>

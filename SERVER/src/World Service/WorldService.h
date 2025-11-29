@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../../../proto/generated/PARCM-P4.grpc.pb.h"
-#include "../../../SHARED/GameObject/GameObject.h"
+#include "../../../SHARED/GameObjectData/GameObjectData.h"
 
 #include <vector>
 #include <iostream>
@@ -10,10 +10,10 @@ using namespace grpc;
 class WorldService final : public World::Service
 {
 	private:
-		std::vector<Engine::GameObject> gameobjects;
+		std::vector<Engine::GameObjectData> gameobjects;
 
 	private:
-		inline void ConfigureTransform(GameObject* proto_go, Engine::GameObject engine_go) {
+		inline void ConfigureTransform(GameObject* proto_go, Engine::GameObjectData engine_go) {
 			auto ConfigureVector = [&](Vector3* proto_vec, Math::Vector3f math_vec)
 			{
 				proto_vec->set_x(math_vec.x);
@@ -49,7 +49,7 @@ class WorldService final : public World::Service
 
 			return Status::OK;
 		}
-		inline void AddGameObject(Engine::GameObject obj) {
+		inline void AddGameObject(Engine::GameObjectData obj) {
 			gameobjects.push_back(obj);
 		}
 };

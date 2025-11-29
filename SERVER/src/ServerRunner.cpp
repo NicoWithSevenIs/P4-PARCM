@@ -11,7 +11,7 @@ void ServerRunner::Run()
 	builder.AddListeningPort(add, grpc::InsecureServerCredentials());
 	builder.RegisterService(&world);
 
-	Engine::GameObject go = Engine::GameObject("some_id", "cube");
+	Engine::GameObjectData go = Engine::GameObjectData("some_id", "cube");
 	go.Print();
 	world.AddGameObject(go);
 

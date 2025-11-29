@@ -5,7 +5,7 @@
 #include <iostream>
 
 namespace Engine {
-	class GameObject {
+	class GameObjectData {
 		protected:
 			std::string unique_id;
 			std::string name;
@@ -15,8 +15,8 @@ namespace Engine {
 			std::string mesh_id;
 
 		public:
-			inline GameObject(std::string unique_id, std::string name) : unique_id(unique_id), name(name), mesh_id("") {}
-			inline GameObject(std::string unique_id, std::string name, Transform t, std::string mesh_id) :
+			inline GameObjectData(std::string unique_id, std::string name) : unique_id(unique_id), name(name), mesh_id("") {}
+			inline GameObjectData(std::string unique_id, std::string name, Transform t, std::string mesh_id) :
 				unique_id(unique_id), name(name), transform(t), mesh_id(mesh_id) {}
 
 			inline void Print() {

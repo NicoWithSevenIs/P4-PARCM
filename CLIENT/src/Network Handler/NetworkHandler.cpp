@@ -33,7 +33,7 @@ void NetworkHandler::MessageServer()
 
 		Engine::Transform e_t(t_pos, t_scale, t_rot);
 
-		auto engine_go = Engine::GameObject(proto_go.unique_id(), proto_go.name(), e_t, proto_go.mesh_id());
+		auto engine_go = Engine::GameObjectData(proto_go.unique_id(), proto_go.name(), e_t, proto_go.mesh_id());
 		engine_go.Print();
 	}
 }

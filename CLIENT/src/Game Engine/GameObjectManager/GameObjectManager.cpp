@@ -1,24 +1,34 @@
 #include "GameObjectManager.h"
 
-/*
-void Engine::GameObjectManager::AddGameObject(GameObject* gameobject)
+using namespace Engine;
+
+
+void GameObjectManager::AddGameObject(GameObjectData gameobject)
 {
-	this->gameobjects.push_back(gameobject);
+	if (this->object_map.contains(gameobject.GetUID()))
+		return;
+
+	auto go = new GameObject(gameobject);
+	this->object_map[gameobject.GetUID()] = go;
 }
 
-void Engine::GameObjectManager::AddGameObjects(std::vector<GameObject*> gameobjects)
+void GameObjectManager::AddGameObjects(std::vector<GameObjectData> gameobjects)
 {
-	this->gameobjects.insert(this->gameobjects.end(), gameobjects.begin(), gameobjects.end());
-}
-
-void Engine::GameObjectManager::Update()
-{
-	for (auto& go : this->gameobjects) {
-		//go->Update();
+	for (auto& go : gameobjects) {
+		this->AddGameObject(go);
 	}
 }
 
-void Engine::GameObjectManager::Draw()
+void GameObjectManager::Update()
 {
-	
-}*/
+	for (auto& [uid, go_ptr] : this->object_map) {
+		go_ptr->Update();
+	}
+}
+
+void GameObjectManager::Draw()
+{
+	for (auto& [uid, go_ptr] : this->object_map) {
+		go_ptr->Draw();
+	}
+}
