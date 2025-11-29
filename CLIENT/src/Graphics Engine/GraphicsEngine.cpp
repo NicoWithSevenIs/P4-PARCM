@@ -57,3 +57,12 @@ void GraphicsEngine::Clear(Math::Color color) {
 		color
 	);
 }
+
+void GraphicsEngine::Release() {
+	get().swap_chain.Release();
+	get().device_context.Release();
+	get().dxgi_device->Release();
+	get().dxgi_adapter->Release();
+	get().dxgi_factory->Release();
+	get().d3d_device->Release();
+}

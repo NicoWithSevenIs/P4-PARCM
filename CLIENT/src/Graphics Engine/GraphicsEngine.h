@@ -31,4 +31,9 @@ class GraphicsEngine final: public Singleton<GraphicsEngine>
 		static bool Initialize(Window* window);
 		static void Present(bool vsync);
 		static void Clear(Math::Color color = Math::Color::WHITE);
+		static void Release();
+
+	public:
+		inline static ID3D11Device* GetD3DDevice() {return get().d3d_device; }
+		inline static ID3D11DeviceContext* GetDeviceContext() {return get().device_context.GetDeviceContext();}
 };

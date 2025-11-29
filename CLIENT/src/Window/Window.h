@@ -1,11 +1,14 @@
 #pragma once
 
-#include <Windows.h>
-
 #include "../../../SHARED/Time/Time.h"
 #include "../../../SHARED/Math.h"
+
 #include "imgui.h"
+#include "imgui_impl_win32.h"
+#include "imgui_impl_dx11.h"
+
 #include <iostream>
+#include <Windows.h>
 
 class Window {
 	protected:
