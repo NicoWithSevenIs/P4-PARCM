@@ -13,14 +13,16 @@ namespace Engine {
 		private: 
 			std::unordered_map<std::string, GameObject*> object_map;
 
-		
+		public:
+			GameObjectManager();
+
 		public:
 			void AddGameObject(GameObjectData gameobject);
 			void AddGameObjects(std::vector<GameObjectData> gameobjects);
 
 		public:
-			void Update();
-			void Draw();
-			void Release();
+			static void Update();
+			static void Draw();
+			static void Release();
 	};
 }

@@ -4,6 +4,7 @@
 #include "Graphics Engine/GraphicsEngine.h"
 #include "Network Handler/NetworkHandler.h"
 #include "Imgui Handler/ImguiHandler.h"
+#include "Game Engine/GameObjectManager/GameObjectManager.h"
 
 class BaseRunner final: public Window 
 {

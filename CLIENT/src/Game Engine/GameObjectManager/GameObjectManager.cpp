@@ -3,6 +3,10 @@
 using namespace Engine;
 
 
+GameObjectManager::GameObjectManager()
+{
+}
+
 void GameObjectManager::AddGameObject(GameObjectData gameobject)
 {
 	if (this->object_map.contains(gameobject.GetUID()))
@@ -21,14 +25,22 @@ void GameObjectManager::AddGameObjects(std::vector<GameObjectData> gameobjects)
 
 void GameObjectManager::Update()
 {
-	for (auto& [uid, go_ptr] : this->object_map) {
+	for (auto& [uid, go_ptr] : get().object_map) {
 		go_ptr->Update();
 	}
 }
 
 void GameObjectManager::Draw()
 {
-	for (auto& [uid, go_ptr] : this->object_map) {
+	for (auto& [uid, go_ptr] : get().object_map) {
 		go_ptr->Draw();
 	}
+}
+
+void GameObjectManager::Release() {
+	for (auto& [uid, go_ptr] : get().object_map) {
+		go_ptr->Release();
+		delete go_ptr;
+	}
+	get().object_map.clear();
 }

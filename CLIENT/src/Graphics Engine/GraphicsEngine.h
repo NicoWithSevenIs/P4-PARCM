@@ -5,12 +5,17 @@
 
 #include "Swap Chain/SwapChain.h"
 #include "Device Context/DeviceContext.h"
-
+#include "DrawArgs.h"
 #include "../Window/Window.h"
+#include "Shader.h"
 
 #include <d3d11.h>
 #include <memory>
 #include <iostream>
+
+#include "Buffers/Vertex Buffer/VertexBuffer.h"
+
+using namespace Engine;
 
 class GraphicsEngine final: public Singleton<GraphicsEngine> 
 {
@@ -32,8 +37,14 @@ class GraphicsEngine final: public Singleton<GraphicsEngine>
 		static void Present(bool vsync);
 		static void Clear(Math::Color color = Math::Color::WHITE);
 		static void Release();
+		static void Draw(DrawArgs draw_args);
 
 	public:
 		inline static ID3D11Device* GetD3DDevice() {return get().d3d_device; }
 		inline static ID3D11DeviceContext* GetDeviceContext() {return get().device_context.GetDeviceContext();}
+
+	public:
+		static Shader<ID3D11VertexShader>* CompileVertexShader(std::string filename);
+		static Shader<ID3D11PixelShader>* CompilePixelShader(std::string filename);
+		static VertexBuffer* CreateVertexBuffer();
 };

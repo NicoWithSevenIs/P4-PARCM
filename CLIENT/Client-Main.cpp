@@ -1,4 +1,4 @@
-
+#define TINYOBJLOADER_IMPLEMENTATION
 #include "src/BaseRunner.h"
 
 int main() 

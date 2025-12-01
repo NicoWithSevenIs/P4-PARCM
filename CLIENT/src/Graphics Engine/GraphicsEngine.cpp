@@ -66,3 +66,30 @@ void GraphicsEngine::Release() {
 	get().dxgi_factory->Release();
 	get().d3d_device->Release();
 }
+
+void GraphicsEngine::Draw(DrawArgs draw_args)
+{
+	
+}
+
+
+Shader<ID3D11VertexShader>* GraphicsEngine::CompileVertexShader(std::string filename) 
+{
+	auto shader = new Shader<ID3D11VertexShader>();
+	shader->Initialize(filename, get().d3d_device);
+	return shader;
+}
+
+Shader<ID3D11PixelShader>* GraphicsEngine::CompilePixelShader(std::string filename)
+{
+	auto shader = new Shader<ID3D11PixelShader>();
+	shader->Initialize(filename, get().d3d_device);
+	return shader;
+}
+
+VertexBuffer* GraphicsEngine::CreateVertexBuffer(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob)
+{
+	auto v_buffer = new VertexBuffer();
+	v_buffer->load(list_vertices, size_list, size_list, blob, get().d3d_device);
+	return v_buffer;
+}

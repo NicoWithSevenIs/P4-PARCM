@@ -16,13 +16,15 @@ void BaseRunner::OnUpdate()
 {
 	GraphicsEngine::Clear(Math::Color::NICO_BLUE);
 	ImguiHandler::Update();
-
+	Engine::GameObjectManager::Update();
+	Engine::GameObjectManager::Draw();
 	ImguiHandler::Render();
-	GraphicsEngine::Present(this);
+	GraphicsEngine::Present(true);
 }
 
 void BaseRunner::OnDestroy()
 {
+	Engine::GameObjectManager::Release();
 	ImguiHandler::Release();
 	GraphicsEngine::Release();
 }
