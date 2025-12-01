@@ -46,5 +46,5 @@ class GraphicsEngine final: public Singleton<GraphicsEngine>
 	public:
 		static Shader<ID3D11VertexShader>* CompileVertexShader(std::string filename);
 		static Shader<ID3D11PixelShader>* CompilePixelShader(std::string filename);
-		static VertexBuffer* CreateVertexBuffer();
+		static VertexBuffer* CreateVertexBuffer(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob);
 };
