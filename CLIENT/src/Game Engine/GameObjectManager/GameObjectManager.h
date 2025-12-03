@@ -8,6 +8,9 @@
 #include <vector>
 #include <unordered_map>
 
+#include "../Component/Mesh Renderer/MeshRenderer.h"
+#include "../Camera/Camera.h"
+
 namespace Engine {
 	class GameObjectManager: public Singleton<GameObjectManager> {
 		private: 
@@ -17,7 +20,8 @@ namespace Engine {
 			GameObjectManager();
 
 		public:
-			void AddGameObject(GameObjectData gameobject);
+			static GameObject* AddGameObject(GameObjectData gameobject);
+			static void AddGameObject(GameObject* gameobject);
 			void AddGameObjects(std::vector<GameObjectData> gameobjects);
 
 		public:

@@ -15,7 +15,7 @@ class ShaderBase {
 		ID3DBlob* blob = nullptr;
 
 	protected:
-		ID3DBlob* CompileShader(std::wstring filename, std::string entry_point_name, std::string target);
+		bool CompileShader(ID3DBlob** blob, std::wstring filename, std::string entry_point_name, std::string target);
 
 	public:
 		virtual void Initialize(std::string filename, ID3D11Device* d3d_device) = 0;
@@ -27,6 +27,7 @@ class ShaderBase {
 
 	public:
 		inline T* GetShader() const { return this->shader; }
+		inline ID3DBlob* GetBlob() const {return this->blob; }
 };
 
 template<ShaderType T>

@@ -24,12 +24,12 @@ class SwapChain {
 			return swap_chain;
 		}
 	public:
-		inline ID3D11RenderTargetView** GetRenderTargetView() 
+		inline ID3D11RenderTargetView* GetRenderTargetView() 
 		{
-			return &rtv;
+			return rtv;
 		}
-		inline ID3D11DepthStencilView** GetDepthTargetView() 
+		inline ID3D11DepthStencilView* GetDepthTargetView() 
 		{
-			return &dsv;
+			return dsv;
 		}
 };

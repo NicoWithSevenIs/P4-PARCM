@@ -100,3 +100,21 @@ target_link_libraries(P4_CLIENT
     dxgi
     d3dcompiler
 )
+
+#Copy Shaders and Models
+
+add_custom_command(TARGET P4_CLIENT POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory $<TARGET_FILE_DIR:P4_CLIENT>/SHADERS
+	COMMAND ${CMAKE_COMMAND} -E make_directory $<TARGET_FILE_DIR:P4_CLIENT>/MODELS
+)
+
+add_custom_target(COPY ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/SHADERS
+    $<TARGET_FILE_DIR:P4_CLIENT>/SHADERS
+
+	COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/MODELS
+    $<TARGET_FILE_DIR:P4_CLIENT>/MODELS
+)
+add_dependencies(P4_CLIENT COPY)

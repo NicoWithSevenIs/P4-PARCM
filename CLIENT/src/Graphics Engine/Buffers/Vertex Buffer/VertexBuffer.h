@@ -1,7 +1,20 @@
 #pragma once
 
 #include "../Buffer.h"
+#include "../../../../../SHARED/Math.h"
 #include <iostream>
+
+struct Vertex {
+	public:
+		Math::Vector3f vertex;
+		Math::Vector2f texture;
+		Math::Vector3f normals;
+
+	public:
+		inline Vertex(Math::Vector3f vertex, Math::Vector2f texture, Math::Vector3f normals):
+			vertex(vertex), texture(texture), normals(normals){}
+};
+
 
 class VertexBuffer : public Buffer {
 	private:
@@ -9,8 +22,13 @@ class VertexBuffer : public Buffer {
 		UINT size_vertex;
 		UINT size_list;
 	public:
-		void load(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob, ID3D11Device* d3d_device);
+		void Load(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob, ID3D11Device* d3d_device);
 	public:
-		inline UINT GetVertexSize(){return this->size_vertex;}
+		inline void Release() override {
+			Buffer::Release();
+			layout->Release();
+		}
+		inline ID3D11InputLayout* GetLayout() const { return this->layout; }
+		inline UINT GetVertexSize(){ return this->size_vertex; }
 		inline UINT GetListSize() { return this->size_list; }
 };

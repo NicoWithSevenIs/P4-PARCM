@@ -1,6 +1,6 @@
 #include "VertexBuffer.h"
 
-void VertexBuffer::load(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob, ID3D11Device* d3d_device) 
+void VertexBuffer::Load(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob, ID3D11Device* d3d_device) 
 {
 	if (buffer)
 		buffer->Release();
@@ -33,7 +33,6 @@ void VertexBuffer::load(void* list_vertices, UINT size_vertex, UINT size_list, I
 		{"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0},
 		{"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 },
 		{"NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 20, D3D11_INPUT_PER_VERTEX_DATA, 0 }
-
 	};
 
 	UINT size_layout = ARRAYSIZE(layout);
@@ -42,7 +41,6 @@ void VertexBuffer::load(void* list_vertices, UINT size_vertex, UINT size_list, I
 	if (FAILED(hr))
 	{
 		std::cout << "[ERROR] Failed to create Vertex Buffer Input Layout." << std::endl;
-		return;
 	}
 
 }

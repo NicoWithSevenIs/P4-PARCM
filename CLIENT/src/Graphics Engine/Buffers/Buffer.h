@@ -3,7 +3,8 @@
 
 class Buffer {
 	protected: 
-		ID3D11Buffer* buffer;
+		ID3D11Buffer* buffer = nullptr;
 	public:
 		inline virtual void Release(){buffer->Release(); }
+		inline ID3D11Buffer* GetBuffer() const{ return this->buffer;}
 };

@@ -67,8 +67,30 @@ void GraphicsEngine::Release() {
 	get().d3d_device->Release();
 }
 
-void GraphicsEngine::Draw(DrawArgs draw_args)
+void GraphicsEngine::Draw(DrawArgs args)
 {
+	UINT stride = args.vertex_buffer->GetVertexSize();
+	UINT offset = 0;
+	ID3D11DeviceContext* context = get().device_context.GetDeviceContext();
+
+	ID3D11Buffer* c_buff = args.constant_buffer->GetBuffer();
+	context->VSSetConstantBuffers(0, 1, &c_buff);
+	context->PSSetConstantBuffers(0, 1, &c_buff);
+
+	context->VSSetShader(args.vertex_shader->GetShader(), nullptr, 0);
+	context->PSSetShader(args.pixel_shader->GetShader(), nullptr, 0);
+
+	ID3D11Buffer* v_buff = args.vertex_buffer->GetBuffer();
+	context->IASetVertexBuffers(0, 1, &v_buff, &stride, &offset);
+	context->IASetInputLayout(args.vertex_buffer->GetLayout());
+
+	context->IASetIndexBuffer(args.index_buffer->GetBuffer(), DXGI_FORMAT_R32_UINT, 0);
+
+	
+	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
+	context->DrawIndexed(args.index_buffer->GetIndexListSize(), 0, 0);
+
 	
 }
 
@@ -90,6 +112,20 @@ Shader<ID3D11PixelShader>* GraphicsEngine::CompilePixelShader(std::string filena
 VertexBuffer* GraphicsEngine::CreateVertexBuffer(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob)
 {
 	auto v_buffer = new VertexBuffer();
-	v_buffer->load(list_vertices, size_list, size_list, blob, get().d3d_device);
+	v_buffer->Load(list_vertices, size_vertex, size_list, blob, get().d3d_device);
 	return v_buffer;
+}
+
+IndexBuffer* GraphicsEngine::CreateIndexBuffer(void* list_incides, UINT size_list)
+{
+	auto i_buffer = new IndexBuffer();
+	i_buffer->Load(list_incides, size_list, get().d3d_device);
+	return i_buffer;
+}
+
+ConstantBuffer* GraphicsEngine::CreateConstantBuffer(void* buffer, UINT size_buffer)
+{
+	auto c_buffer = new ConstantBuffer();
+	c_buffer->Load(buffer, size_buffer, get().d3d_device);
+	return c_buffer;
 }

@@ -3,17 +3,26 @@
 using namespace Engine;
 
 
+
 GameObjectManager::GameObjectManager()
 {
+
 }
 
-void GameObjectManager::AddGameObject(GameObjectData gameobject)
+GameObject* GameObjectManager::AddGameObject(GameObjectData gameobject)
 {
-	if (this->object_map.contains(gameobject.GetUID()))
-		return;
+	if (get().object_map.contains(gameobject.GetUID()))
+		return nullptr;
 
 	auto go = new GameObject(gameobject);
-	this->object_map[gameobject.GetUID()] = go;
+	get().object_map[gameobject.GetUID()] = go;
+	return go;
+}
+
+void GameObjectManager::AddGameObject(GameObject* gameobject)
+{
+	if (!get().object_map.contains(gameobject->data.GetUID()))
+		get().object_map[gameobject->data.GetUID()] = gameobject;
 }
 
 void GameObjectManager::AddGameObjects(std::vector<GameObjectData> gameobjects)

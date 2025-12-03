@@ -1,10 +1,16 @@
 #pragma once
 
 #include "../Component.h"
+
+
 #include "../../../tiny_obj_loader.h"
+
 #include "../../../Graphics Engine/DrawArgs.h"
 #include "../../../Graphics Engine/GraphicsEngine.h"
+#include "../../Camera/Camera.h"
+#include "../../../../../SHARED/Time/Time.h"
 
+#include "../Transform/TransformComponent.h"
 
 #include <string>
 
@@ -13,9 +19,12 @@ using namespace Engine;
 class MeshRenderer final: public Component {
 
 	private:
-		bool initialized;
-		Shader<ID3D11VertexShader> vertex_shader;
-		Shader<ID3D11PixelShader> pixel_shader;
+		DrawArgs draw_args;
+		Constant constant;
+
+	private:
+		std::vector<Vertex> list_vertices;
+		std::vector<unsigned int> list_indices;
 
 	public:
 		MeshRenderer();
