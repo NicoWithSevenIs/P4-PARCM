@@ -17,6 +17,8 @@
 #include "Buffers/Index Buffer/IndexBuffer.h"
 #include "Buffers/Constant Buffer/ConstantBuffer.h"
 
+#include "Texture/Texture.h"
+
 using namespace Engine;
 
 class GraphicsEngine final: public Singleton<GraphicsEngine> 
@@ -38,6 +40,9 @@ class GraphicsEngine final: public Singleton<GraphicsEngine>
 		DeviceContext device_context;
 
 	public:
+		Texture* texture;
+
+	public:
 		static bool Initialize(Window* window);
 		static void Present(bool vsync);
 		static void Clear(Math::Color color = Math::Color::WHITE);
@@ -54,7 +59,7 @@ class GraphicsEngine final: public Singleton<GraphicsEngine>
 		static VertexBuffer* CreateVertexBuffer(void* list_vertices, UINT size_vertex, UINT size_list, ID3DBlob* blob);
 		static IndexBuffer* CreateIndexBuffer(void* list_incides, UINT size_list);
 		static ConstantBuffer* CreateConstantBuffer(void* buffer, UINT size_buffer);
-
+		
 	public:
         static void DebugDrawTriangle();
         

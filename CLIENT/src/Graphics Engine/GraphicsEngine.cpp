@@ -43,6 +43,9 @@ bool GraphicsEngine::Initialize(Window* window)
 	get().window_size = window->GetWindowSize();
 	get().swap_chain.Initialize(get().d3d_device, get().dxgi_factory, window->GetHWND(), get().window_size.x, get().window_size.y);
 
+	get().texture = new Texture();
+	get().texture->load("IMAGES/dlsu logo.png", get().d3d_device, get().device_context.GetDeviceContext());
+
 	return true;
 }
 
