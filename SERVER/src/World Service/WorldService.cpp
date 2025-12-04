@@ -6,10 +6,11 @@ SceneData WorldService::GenerateScene(std::string client_id, std::string scene_i
 
 	std::random_device rd;
 	std::mt19937 gen(rd());
-	std::uniform_int_distribution<> dist(5, 10);
+	std::uniform_int_distribution<> dist(10, 25);
 
 	std::uniform_real_distribution<float> pos_dist(-5.0f, 5.0f);
-	std::uniform_real_distribution<float> scale_dist(0.3f, 1.1f);
+	std::uniform_real_distribution<float> scale_dist(0.3f, 0.8f);
+	std::uniform_real_distribution<float> rot_dist(-89.0f, 89.0f);
 
 	int count = dist(gen);
 
@@ -18,7 +19,7 @@ SceneData WorldService::GenerateScene(std::string client_id, std::string scene_i
 		std::string model = MeshDispatcher::DrawLots();
 		std::string unique_id = client_id + "_" + scene_id + "_" + std::to_string(i);
 
-		auto random_pos = Math::Vector3f(pos_dist(gen), 0, pos_dist(gen));
+		auto random_pos = Math::Vector3f(pos_dist(gen), pos_dist(gen)/2, pos_dist(gen));
 
 		float uniform_scale = scale_dist(gen);
 		auto random_scale = Math::Vector3f(uniform_scale, uniform_scale, uniform_scale);
@@ -31,7 +32,7 @@ SceneData WorldService::GenerateScene(std::string client_id, std::string scene_i
 				(
 					random_pos,
 					random_scale,
-					Math::Vector3f()
+					Math::Vector3f(0, rot_dist(gen), 0) * 3.141592653589793 / 180.f
 				),
 			model
 		);

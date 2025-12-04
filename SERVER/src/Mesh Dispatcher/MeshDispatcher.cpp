@@ -4,7 +4,10 @@ std::vector<std::string>
 MeshDispatcher::model_pool = {
 	//"lucy.obj",
 	"cow.obj",
-	"homer.obj"
+	"homer.obj",
+	"cheburashka.obj",
+	"teapot.obj",
+	"stanford-bunny.obj"
 };
 
 std::string MeshDispatcher::DrawLots()

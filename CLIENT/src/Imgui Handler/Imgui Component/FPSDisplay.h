@@ -13,12 +13,12 @@ class UI_FPSDisplay final : public ImguiComponent {
 	}
 
 	inline void Render() override {
-		ImGui::SetNextWindowPos(ImVec2(1080, 600));
-		ImGui::SetNextWindowSize(ImVec2(width, height));
+		//ImGui::SetNextWindowPos(ImVec2(1080, 600));
+		ImGui::SetNextWindowSize(ImVec2(width, height * 1.6));
 		ImGui::Begin("FPS");
 		ImGui::Text("FPS: %.2f", this->fDisplayVal);
 		if (ImGui::Button("View All")) {
-
+			
 		}
 		ImGui::End();
 	}
