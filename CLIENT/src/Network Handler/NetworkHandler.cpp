@@ -3,41 +3,55 @@
 
 void NetworkHandler::Initialize()
 {
-	/*
 	auto channel = CreateChannel("localhost:50051", InsecureChannelCredentials());
-	get().stub = World::NewStub(channel);
-	*/
+	get().stub = WORLD::NewStub(channel);
 }
 
 
-void NetworkHandler::MessageServer()
+void NetworkHandler::InformServer()
 {
-	/*
-	WorldRequest request;
-	request.set_msg("ASDADASDFASD");
+	CLIENT_JOIN_REQUEST request;
+	request.set_client_id("CLIENT_SAMPLE");
 
-	WorldData response;
+	GRPC_SCENES_BATCH response;
 	ClientContext context;
 
 	Status status = get().stub->InitializeClient(&context, request, &response);
+	int scenes_size = response.scenes_size();
+	
+	for (int i = 0; i < scenes_size; i++) 
+	{
+		GRPC_SCENE scene = response.scenes(i);
+		Scene* s = new Scene();
 
-	int go_size = response.game_objects_size();
-	for (int i = 0; i < go_size; i++) {
-		GameObject proto_go = response.game_objects(i);
-		Transform t = proto_go.t();
+		int game_object_count = scene.gameobjects_size();
+		for (int j = 0; j < game_object_count; j++) 
+		{
+			GRPC_GAMEOBJECT go = scene.gameobjects(i);
+			GRPC_TRANSFORM t = go.transform();
 
-		Vector3 position = t.position();
-		Vector3 scale = t.scale();
-		Vector3 rotation = t.rotation();
+			GRPC_VECTOR3 pos = t.position();
+			GRPC_VECTOR3 scale = t.scale();
+			GRPC_VECTOR3 rot = t.rotation();
 
-		Math::Vector3f t_pos(position.x(), position.y(), position.z());
-		Math::Vector3f t_scale(scale.x(), scale.y(), scale.z());
-		Math::Vector3f t_rot(rotation.x(), rotation.y(), rotation.z());
+			Engine::Transform t_data(
+				Math::Vector3f(pos.x(), pos.y(), pos.z()),
+				Math::Vector3f(scale.x(), scale.y(), scale.z()),
+				Math::Vector3f(rot.x(), rot.y(), rot.z())
+			);
 
-		Engine::Transform e_t(t_pos, t_scale, t_rot);
+			Engine::GameObjectData go_data(
+				go.unique_id(),
+				go.name(),
+				t_data,
+				go.mesh_id()
+			);
 
-		auto engine_go = Engine::GameObjectData(proto_go.unique_id(), proto_go.name(), e_t, proto_go.mesh_id());
-		engine_go.Print();
+			auto new_go = new Engine::GameObject(go_data);
+			auto mesh_renderer = new MeshRenderer();
+			new_go->AddComponent(mesh_renderer);
+			*s += new_go;
+		}
+		get().scene_cache.push_back(s);
 	}
-	*/
 }

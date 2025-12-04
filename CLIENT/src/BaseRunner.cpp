@@ -3,8 +3,7 @@
 BaseRunner::BaseRunner(): Window()
 {
 }
-Scene* scene1;
-Scene* scene2;
+
 
 void BaseRunner::OnCreate()
 {
@@ -19,7 +18,7 @@ void BaseRunner::OnCreate()
 	CameraManager::SetCurrentCamera(camera_object);
 	GameObjectManager::get().main += camera_object;
 
-	NetworkHandler::MessageServer();
+	NetworkHandler::InformServer();
 }
 
 
@@ -44,6 +43,7 @@ void BaseRunner::OnDestroy()
 	GraphicsEngine::Release();
 }
 
+int current_scene = 0;
 void BaseRunner::OnKeyboardInput(char key, bool up_or_down) 
 {
 	auto camera = (Camera*)GameObjectManager::get().main["0"];
@@ -55,6 +55,20 @@ void BaseRunner::OnKeyboardInput(char key, bool up_or_down)
 			case 'D': camera->right = 0.f;  break;
 			case 'Q':
 			case 'E': camera->up = 0.f;  break;
+
+			case 'O': 
+				if (NetworkHandler::get().scene_cache.size() > 0) {
+					GameObjectManager::get().LoadScene(NetworkHandler::get().scene_cache[current_scene]);
+					current_scene = std::clamp(current_scene - 1, 0, (int)NetworkHandler::get().scene_cache.size());
+				}
+			break;
+			case 'P':
+				if (NetworkHandler::get().scene_cache.size() > 0) {
+					GameObjectManager::get().LoadScene(NetworkHandler::get().scene_cache[current_scene]);
+					current_scene = std::clamp(current_scene + 1, 0, (int)NetworkHandler::get().scene_cache.size());
+				}
+			break;
+
 		}
 	}
 	else {

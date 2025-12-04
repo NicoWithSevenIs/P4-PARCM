@@ -34,9 +34,7 @@ add_executable (P4_SERVER
     ${PROTO_HEADERS} 
     ${SERVER_SRC} 
     ${SHARED_SRC}
-    "CLIENT/src/Imgui Handler/Imgui Component/SceneMiniWindow.h" 
-    "CLIENT/src/Graphics Engine/Texture/Texture.cpp" 
-    "CLIENT/src/Graphics Engine/Texture/Texture.h")
+)
 
 target_compile_definitions(P4_SERVER PUBLIC "PROTOBUF_USE_DLLS")
 
