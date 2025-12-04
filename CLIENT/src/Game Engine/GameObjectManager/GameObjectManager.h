@@ -11,6 +11,8 @@
 #include "../Component/Mesh Renderer/MeshRenderer.h"
 #include "../Camera/Camera.h"
 
+#include "Scene.h"
+
 namespace Engine {
 	class GameObjectManager: public Singleton<GameObjectManager> {
 		private: 

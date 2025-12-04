@@ -42,10 +42,8 @@ void MeshRenderer::Initialize(std::string obj_path, std::string vs_path, std::st
 	
 	Vector3f center = (min + max) / 2;
 	for (auto& v : list_vertices) {
-		v = v -  center;  // now pivot is at the model’s visual center
+		v = v -  center; 
 	}
-
-	std::cout << "Vertices: " << list_vertices.size() << std::endl;
 
 	draw_args.vertex_shader		= GraphicsEngine::CompileVertexShader("mesh_vertex.hlsl");
 	draw_args.pixel_shader		= GraphicsEngine::CompilePixelShader("mesh_pixel.hlsl");
@@ -59,6 +57,7 @@ void MeshRenderer::Initialize(std::string obj_path, std::string vs_path, std::st
 												&this->constant,
 												sizeof(Constant)
 											);
+
 	initialized = true;
 }
 
