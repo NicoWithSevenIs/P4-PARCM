@@ -4,17 +4,6 @@
 #include "../../../../../SHARED/Math.h"
 #include <iostream>
 
-struct Vertex {
-	public:
-		Math::Vector3f vertex;
-		Math::Vector2f texture;
-		Math::Vector3f normals;
-
-	public:
-		inline Vertex(Math::Vector3f vertex, Math::Vector2f texture, Math::Vector3f normals):
-			vertex(vertex), texture(texture), normals(normals){}
-};
-
 
 class VertexBuffer : public Buffer {
 	private:

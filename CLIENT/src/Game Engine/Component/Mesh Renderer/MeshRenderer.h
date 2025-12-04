@@ -23,8 +23,7 @@ class MeshRenderer final: public Component {
 		Constant constant;
 
 	private:
-		std::vector<Vertex> list_vertices;
-		std::vector<unsigned int> list_indices;
+		std::vector<Vector3f> list_vertices;
 
 	public:
 		MeshRenderer();

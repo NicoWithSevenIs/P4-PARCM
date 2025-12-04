@@ -21,6 +21,9 @@ using namespace Engine;
 
 class GraphicsEngine final: public Singleton<GraphicsEngine> 
 {
+	private:
+		Math::Vector2u window_size;
+
 	private:	
 		ID3D11Device* d3d_device;
 		D3D_FEATURE_LEVEL feature_level;
@@ -53,32 +56,6 @@ class GraphicsEngine final: public Singleton<GraphicsEngine>
 		static ConstantBuffer* CreateConstantBuffer(void* buffer, UINT size_buffer);
 
 	public:
-		inline static void DebugDrawTriangle() {
-			struct V { float x, y, z; float u, v; float nx, ny, nz; };
-			V tri[3] = {
-				{ -0.5f, -0.5f, 0.5f, 0,0, 0,0,1 },
-				{  0.0f,  0.5f, 0.5f, 0,0, 0,0,1 },
-				{  0.5f, -0.5f, 0.5f, 0,0, 0,0,1 },
-			};
-
-			// create and bind a dynamic vertex buffer, very small
-			D3D11_BUFFER_DESC bd{};
-			bd.Usage = D3D11_USAGE_DEFAULT;
-			bd.ByteWidth = sizeof(tri);
-			bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-			D3D11_SUBRESOURCE_DATA sd{ tri, 0, 0 };
-			ID3D11Buffer* vb = nullptr;
-			get().d3d_device->CreateBuffer(&bd, &sd, &vb);
-
-			UINT stride = sizeof(V), offset = 0;
-			get().device_context.GetDeviceContext()->IASetVertexBuffers(0, 1, &vb, &stride, &offset);
-			get().device_context.GetDeviceContext()->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-
-			// use the same input layout & shaders you use for mesh (or use test shaders)
-			get().device_context.GetDeviceContext()->Draw(3, 0);
-
-			if (vb) { vb->Release(); }
-
-			std::cout << "Draw" <<std::endl;
-		}
+        static void DebugDrawTriangle();
+        
 };

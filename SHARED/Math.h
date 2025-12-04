@@ -4,6 +4,7 @@
 #include <memory>
 #include <iostream>
 #include <cmath>
+#include <cassert>
 namespace Math {
 	
 	//ensures type is always an integer type or a floating point type
@@ -40,6 +41,24 @@ namespace Math {
 				os << "(" << vec.x << "," << vec.y << "," << vec.z << ")";
 				return os;
 			}
+
+			Vector3 operator+(const Vector3& rhs) {
+				return Vector3(x + rhs.x, y + rhs.y, z + rhs.z);
+			}
+
+			Vector3 operator-(const Vector3& rhs) {
+				return Vector3(x - rhs.x, y - rhs.y, z - rhs.z);
+			}
+
+			Vector3 operator*(const N& scalar) {
+				return Vector3(x * scalar, y * scalar, z*scalar);
+			}
+
+			Vector3 operator/(const N& scalar) {
+				assert(scalar != 0);
+				return (*this) * (1/scalar);
+			}
+
 	};
 
 

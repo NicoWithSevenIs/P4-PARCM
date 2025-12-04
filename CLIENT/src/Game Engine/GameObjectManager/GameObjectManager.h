@@ -22,7 +22,10 @@ namespace Engine {
 		public:
 			static GameObject* AddGameObject(GameObjectData gameobject);
 			static void AddGameObject(GameObject* gameobject);
+			inline static GameObject* GetGameObject(std::string uid){ return get().object_map[uid]; }
+
 			void AddGameObjects(std::vector<GameObjectData> gameobjects);
+
 
 		public:
 			static void Update();

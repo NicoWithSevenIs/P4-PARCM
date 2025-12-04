@@ -24,11 +24,7 @@ class Camera: public Engine::GameObject
 		Matrix GetProjectionMatrix();
 
 	public:
-		inline virtual void Update() override {
-			//std::cout << "Camera Updated" << std::endl;
-			auto t = (TransformComponent*)Get("TRANSFORM");
-			t->position.z += Time::deltaTime();
-		}
+		inline virtual void Update() override {}
 };
 
 class CameraManager : public Singleton<CameraManager>

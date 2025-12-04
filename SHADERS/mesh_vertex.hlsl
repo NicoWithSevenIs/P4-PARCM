@@ -1,15 +1,11 @@
 struct VS_INPUT
 {
-    float4 position : POSITION0;
-    float2 texcoord : TEXCOORD0;
-    float3 normal : NORMAL0;
+    float3 position : POSITION0;
 };
 
 struct VS_OUTPUT
 {
     float4 position : SV_POSITION;
-    float2 texcoord : TEXCOORD0;
-    float3 normal : TEXCOORD1;
 };
 
 cbuffer CONSTANT : register(b0)
@@ -23,13 +19,11 @@ cbuffer CONSTANT : register(b0)
 VS_OUTPUT vsmain(VS_INPUT input)
 {
     VS_OUTPUT output = (VS_OUTPUT) 0;
-    
-    output.position = mul(input.position, transform);
+    float4 vec = float4(input.position, 1.0);
+  
+    output.position = mul(vec, transform);
     output.position = mul(output.position, view);
     output.position = mul(output.position, projection);
-    
-    output.texcoord = input.texcoord;
-    output.normal = input.normal;
     
     return output;
 }

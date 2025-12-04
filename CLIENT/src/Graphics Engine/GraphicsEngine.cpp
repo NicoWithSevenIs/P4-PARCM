@@ -40,22 +40,32 @@ bool GraphicsEngine::Initialize(Window* window)
 	get().dxgi_adapter->GetParent(__uuidof(IDXGIFactory), (void**)&get().dxgi_factory);
 
 
-	Math::Vector2u dim = window->GetWindowSize();
-	get().swap_chain.Initialize(get().d3d_device, get().dxgi_factory, window->GetHWND(), dim.x, dim.y);
+	get().window_size = window->GetWindowSize();
+	get().swap_chain.Initialize(get().d3d_device, get().dxgi_factory, window->GetHWND(), get().window_size.x, get().window_size.y);
 
 	return true;
 }
 
-void GraphicsEngine::Present(bool vsync) {
+void GraphicsEngine::Present(bool vsync) 
+{
 	get().swap_chain.Present(vsync);
 }
 
-void GraphicsEngine::Clear(Math::Color color) {
+void GraphicsEngine::Clear(Math::Color color) 
+{
 	get().device_context.clearRenderTargetColor(
 		get().swap_chain.GetRenderTargetView(), 
 		get().swap_chain.GetDepthTargetView(),
 		color
 	);
+
+	D3D11_VIEWPORT vp = {};
+	vp.Width = get().window_size.x;
+	vp.Height = get().window_size.y;
+	vp.MinDepth = 0.0f;
+	vp.MaxDepth = 1.0f;
+
+	get().device_context.GetDeviceContext()->RSSetViewports(1, &vp);
 }
 
 void GraphicsEngine::Release() {
@@ -84,14 +94,9 @@ void GraphicsEngine::Draw(DrawArgs args)
 	context->IASetVertexBuffers(0, 1, &v_buff, &stride, &offset);
 	context->IASetInputLayout(args.vertex_buffer->GetLayout());
 
-	context->IASetIndexBuffer(args.index_buffer->GetBuffer(), DXGI_FORMAT_R32_UINT, 0);
-
-	
 	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	context->Draw(args.vertex_buffer->GetListSize(), 0);
 
-	context->DrawIndexed(args.index_buffer->GetIndexListSize(), 0, 0);
-
-	
 }
 
 
@@ -128,4 +133,57 @@ ConstantBuffer* GraphicsEngine::CreateConstantBuffer(void* buffer, UINT size_buf
 	auto c_buffer = new ConstantBuffer();
 	c_buffer->Load(buffer, size_buffer, get().d3d_device);
 	return c_buffer;
+}
+
+void GraphicsEngine::DebugDrawTriangle()
+{
+	
+	struct Vertex { float x, y, z; };
+	Vertex tri[3] = {
+		{-0.5f, -0.5f, 0.0f},
+		{ 0.0f,  0.5f, 0.0f},
+		{ 0.5f, -0.5f, 0.0f},
+	};
+
+	// --- Vertex Buffer ---
+	D3D11_BUFFER_DESC bd{};
+	bd.Usage = D3D11_USAGE_DEFAULT;
+	bd.ByteWidth = sizeof(tri);
+	bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+
+	D3D11_SUBRESOURCE_DATA sd{ tri, 0, 0 };
+	ID3D11Buffer* vb = nullptr;
+	get().d3d_device->CreateBuffer(&bd, &sd, &vb);
+
+	// --- Simple HLSL Shaders (compiled elsewhere or embedded) ---
+	Shader<ID3D11VertexShader>* v =	 CompileVertexShader("SAMPLE_VERTEX.hlsl");
+	Shader<ID3D11PixelShader>* p =	 CompilePixelShader("SAMPLE_PIXEL.hlsl");
+	ID3D11VertexShader* vs = v->GetShader();
+	ID3D11PixelShader* ps = p->GetShader();
+
+	// --- Input Layout ---
+	D3D11_INPUT_ELEMENT_DESC layout[] = {
+		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+	};
+	ID3D11InputLayout* inputLayout = nullptr;
+	get().d3d_device->CreateInputLayout(layout, 1, v->GetBlob()->GetBufferPointer(), v->GetBlob()->GetBufferSize(), &inputLayout);
+
+	// --- Bind pipeline ---
+	UINT stride = sizeof(Vertex), offset = 0;
+	auto ctx = get().device_context.GetDeviceContext();
+	ctx->IASetVertexBuffers(0, 1, &vb, &stride, &offset);
+	ctx->IASetInputLayout(inputLayout);
+	ctx->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	ctx->VSSetShader(vs, nullptr, 0);
+	ctx->PSSetShader(ps, nullptr, 0);
+
+	// --- Draw ---
+	ctx->Draw(3, 0);
+
+	// --- Cleanup ---
+	if (vb) vb->Release();
+	if (inputLayout) inputLayout->Release();
+	if (vs) vs->Release();
+	if (ps) ps->Release();
+	
 }
