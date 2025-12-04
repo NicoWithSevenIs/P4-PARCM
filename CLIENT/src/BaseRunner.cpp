@@ -7,7 +7,7 @@ BaseRunner::BaseRunner(): Window()
 void BaseRunner::OnCreate()
 {
 	GraphicsEngine::Initialize(this);
-	ImguiHandler::Initialize(hwnd,GraphicsEngine::GetD3DDevice(), GraphicsEngine::GetDeviceContext());
+	ImguiHandler::Initialize(hwnd,GraphicsEngine::GetD3DDevice(), GraphicsEngine::GetDeviceContext(), GraphicsEngine::get().texture->m_shader_res_view);
 	//NetworkHandler::Initialize();
 	//NetworkHandler::MessageServer();
 
@@ -30,6 +30,8 @@ void BaseRunner::OnCreate()
 	GameObjectManager::AddGameObject(c);
 	CameraManager::SetCurrentCamera(c);
 	*/
+
+
 }
 
 void BaseRunner::OnUpdate()

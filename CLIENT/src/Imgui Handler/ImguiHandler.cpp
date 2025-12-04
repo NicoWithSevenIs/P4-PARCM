@@ -3,7 +3,7 @@
 
 std::vector<ImguiComponent*> ImguiHandler::imgui_components;
 
-void ImguiHandler::Initialize(HWND hwnd, ID3D11Device* d3d_device, ID3D11DeviceContext* device_context)
+void ImguiHandler::Initialize(HWND hwnd, ID3D11Device* d3d_device, ID3D11DeviceContext* device_context, ID3D11ShaderResourceView* textureRef)
 {
 	// Setup Dear ImGui context
 	IMGUI_CHECKVERSION();
@@ -21,6 +21,17 @@ void ImguiHandler::Initialize(HWND hwnd, ID3D11Device* d3d_device, ID3D11DeviceC
 	fpsDisplay->width = 150.0f; 
 	fpsDisplay->height = 50.0f;
 	imgui_components.push_back(fpsDisplay);
+
+	for (int i = 0; i < 5; i++) {
+		SceneMiniWindow* sceneMiniWindow = new SceneMiniWindow();
+		sceneMiniWindow->name = "Scene " + std::to_string(i + 1);
+		sceneMiniWindow->thumbnailTexture = textureRef;
+		sceneMiniWindow->width = 150;
+		sceneMiniWindow->height = 150;
+		sceneMiniWindow->x = (i * 150);
+		sceneMiniWindow->y = 0;
+		imgui_components.push_back(sceneMiniWindow);
+	}
 }
 
 void ImguiHandler::Update()

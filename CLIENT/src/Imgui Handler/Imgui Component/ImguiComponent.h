@@ -7,6 +7,8 @@ class ImguiComponent {
 		float height = 0.0f;
 		float width = 0.0f;
 		float fDisplayVal = 0.0f;
+		float x = 0.0f;
+		float y = 0.0f;
 
 	public:
 		virtual void Initialize() = 0;
