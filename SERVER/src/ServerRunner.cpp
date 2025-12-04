@@ -4,6 +4,7 @@
 
 void ServerRunner::Run() 
 {
+	/*
 	std::string add("0.0.0.0:50051");
 	WorldService world;
 	grpc::ServerBuilder builder;
@@ -18,4 +19,5 @@ void ServerRunner::Run()
 	auto server(builder.BuildAndStart());
 	std::cout << "Server listening on " << add << std::endl;
 	server->Wait();
+	*/
 }

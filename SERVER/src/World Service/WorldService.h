@@ -10,6 +10,7 @@ using namespace grpc;
 
 typedef std::vector<Engine::GameObjectData> SceneData;
 
+/*
 class WorldService final : public World::Service
 {
 	private:
@@ -55,4 +56,4 @@ class WorldService final : public World::Service
 		inline void AddGameObject(Engine::GameObjectData obj) {
 			gameobjects.push_back(obj);
 		}
-};
+};*/

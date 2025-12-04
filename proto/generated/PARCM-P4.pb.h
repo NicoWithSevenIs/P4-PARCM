@@ -51,27 +51,30 @@ struct TableStruct_PARCM_2dP4_2eproto {
 };
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_PARCM_2dP4_2eproto;
-class GameObject;
-struct GameObjectDefaultTypeInternal;
-extern GameObjectDefaultTypeInternal _GameObject_default_instance_;
-class Mesh;
-struct MeshDefaultTypeInternal;
-extern MeshDefaultTypeInternal _Mesh_default_instance_;
-class MeshRequest;
-struct MeshRequestDefaultTypeInternal;
-extern MeshRequestDefaultTypeInternal _MeshRequest_default_instance_;
-class Transform;
-struct TransformDefaultTypeInternal;
-extern TransformDefaultTypeInternal _Transform_default_instance_;
-class Vector3;
-struct Vector3DefaultTypeInternal;
-extern Vector3DefaultTypeInternal _Vector3_default_instance_;
-class WorldData;
-struct WorldDataDefaultTypeInternal;
-extern WorldDataDefaultTypeInternal _WorldData_default_instance_;
-class WorldRequest;
-struct WorldRequestDefaultTypeInternal;
-extern WorldRequestDefaultTypeInternal _WorldRequest_default_instance_;
+class CLIENT_JOIN_REQUEST;
+struct CLIENT_JOIN_REQUESTDefaultTypeInternal;
+extern CLIENT_JOIN_REQUESTDefaultTypeInternal _CLIENT_JOIN_REQUEST_default_instance_;
+class GRPC_GAMEOBJECT;
+struct GRPC_GAMEOBJECTDefaultTypeInternal;
+extern GRPC_GAMEOBJECTDefaultTypeInternal _GRPC_GAMEOBJECT_default_instance_;
+class GRPC_SCENE;
+struct GRPC_SCENEDefaultTypeInternal;
+extern GRPC_SCENEDefaultTypeInternal _GRPC_SCENE_default_instance_;
+class GRPC_SCENES_BATCH;
+struct GRPC_SCENES_BATCHDefaultTypeInternal;
+extern GRPC_SCENES_BATCHDefaultTypeInternal _GRPC_SCENES_BATCH_default_instance_;
+class GRPC_TRANSFORM;
+struct GRPC_TRANSFORMDefaultTypeInternal;
+extern GRPC_TRANSFORMDefaultTypeInternal _GRPC_TRANSFORM_default_instance_;
+class GRPC_VECTOR3;
+struct GRPC_VECTOR3DefaultTypeInternal;
+extern GRPC_VECTOR3DefaultTypeInternal _GRPC_VECTOR3_default_instance_;
+class MESH;
+struct MESHDefaultTypeInternal;
+extern MESHDefaultTypeInternal _MESH_default_instance_;
+class MESH_REQUEST;
+struct MESH_REQUESTDefaultTypeInternal;
+extern MESH_REQUESTDefaultTypeInternal _MESH_REQUEST_default_instance_;
 namespace google {
 namespace protobuf {
 }  // namespace protobuf
@@ -83,31 +86,31 @@ namespace protobuf {
 
 // -------------------------------------------------------------------
 
-class WorldRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:WorldRequest) */ {
+class MESH_REQUEST final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:MESH_REQUEST) */ {
  public:
-  inline WorldRequest() : WorldRequest(nullptr) {}
-  ~WorldRequest() PROTOBUF_FINAL;
+  inline MESH_REQUEST() : MESH_REQUEST(nullptr) {}
+  ~MESH_REQUEST() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(WorldRequest* msg, std::destroying_delete_t) {
+  void operator delete(MESH_REQUEST* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(WorldRequest));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(MESH_REQUEST));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR WorldRequest(
+  explicit PROTOBUF_CONSTEXPR MESH_REQUEST(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline WorldRequest(const WorldRequest& from) : WorldRequest(nullptr, from) {}
-  inline WorldRequest(WorldRequest&& from) noexcept
-      : WorldRequest(nullptr, std::move(from)) {}
-  inline WorldRequest& operator=(const WorldRequest& from) {
+  inline MESH_REQUEST(const MESH_REQUEST& from) : MESH_REQUEST(nullptr, from) {}
+  inline MESH_REQUEST(MESH_REQUEST&& from) noexcept
+      : MESH_REQUEST(nullptr, std::move(from)) {}
+  inline MESH_REQUEST& operator=(const MESH_REQUEST& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WorldRequest& operator=(WorldRequest&& from) noexcept {
+  inline MESH_REQUEST& operator=(MESH_REQUEST&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -135,16 +138,16 @@ class WorldRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WorldRequest& default_instance() {
+  static const MESH_REQUEST& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WorldRequest* internal_default_instance() {
-    return reinterpret_cast<const WorldRequest*>(
-        &_WorldRequest_default_instance_);
+  static inline const MESH_REQUEST* internal_default_instance() {
+    return reinterpret_cast<const MESH_REQUEST*>(
+        &_MESH_REQUEST_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 4;
-  friend void swap(WorldRequest& a, WorldRequest& b) { a.Swap(&b); }
-  inline void Swap(WorldRequest* other) {
+  static constexpr int kIndexInFileMessages = 6;
+  friend void swap(MESH_REQUEST& a, MESH_REQUEST& b) { a.Swap(&b); }
+  inline void Swap(MESH_REQUEST* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -152,7 +155,7 @@ class WorldRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WorldRequest* other) {
+  void UnsafeArenaSwap(MESH_REQUEST* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -160,13 +163,13 @@ class WorldRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  WorldRequest* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<WorldRequest>(arena);
+  MESH_REQUEST* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<MESH_REQUEST>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const WorldRequest& from);
+  void CopyFrom(const MESH_REQUEST& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const WorldRequest& from) { WorldRequest::MergeImpl(*this, from); }
+  void MergeFrom(const MESH_REQUEST& from) { MESH_REQUEST::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -203,18 +206,18 @@ class WorldRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(WorldRequest* other);
+  void InternalSwap(MESH_REQUEST* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "WorldRequest"; }
+  static ::absl::string_view FullMessageName() { return "MESH_REQUEST"; }
 
  protected:
-  explicit WorldRequest(::google::protobuf::Arena* arena);
-  WorldRequest(::google::protobuf::Arena* arena, const WorldRequest& from);
-  WorldRequest(::google::protobuf::Arena* arena, WorldRequest&& from) noexcept
-      : WorldRequest(arena) {
+  explicit MESH_REQUEST(::google::protobuf::Arena* arena);
+  MESH_REQUEST(::google::protobuf::Arena* arena, const MESH_REQUEST& from);
+  MESH_REQUEST(::google::protobuf::Arena* arena, MESH_REQUEST&& from) noexcept
+      : MESH_REQUEST(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -229,31 +232,31 @@ class WorldRequest final : public ::google::protobuf::Message
 
   // accessors -------------------------------------------------------
   enum : int {
-    kMsgFieldNumber = 1,
+    kMeshIdFieldNumber = 1,
   };
-  // string msg = 1;
-  void clear_msg() ;
-  const std::string& msg() const;
+  // string mesh_id = 1;
+  void clear_mesh_id() ;
+  const std::string& mesh_id() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_msg(Arg_&& arg, Args_... args);
-  std::string* mutable_msg();
-  PROTOBUF_NODISCARD std::string* release_msg();
-  void set_allocated_msg(std::string* value);
+  void set_mesh_id(Arg_&& arg, Args_... args);
+  std::string* mutable_mesh_id();
+  PROTOBUF_NODISCARD std::string* release_mesh_id();
+  void set_allocated_mesh_id(std::string* value);
 
   private:
-  const std::string& _internal_msg() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_msg(
+  const std::string& _internal_mesh_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mesh_id(
       const std::string& value);
-  std::string* _internal_mutable_msg();
+  std::string* _internal_mutable_mesh_id();
 
   public:
-  // @@protoc_insertion_point(class_scope:WorldRequest)
+  // @@protoc_insertion_point(class_scope:MESH_REQUEST)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       0, 1, 0,
-      24, 2>
+      28, 2>
       _table_;
 
   friend class ::google::protobuf::MessageLite;
@@ -269,8 +272,8 @@ class WorldRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const WorldRequest& from_msg);
-    ::google::protobuf::internal::ArenaStringPtr msg_;
+                          const MESH_REQUEST& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr mesh_id_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -279,31 +282,31 @@ class WorldRequest final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class Vector3 final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:Vector3) */ {
+class MESH final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:MESH) */ {
  public:
-  inline Vector3() : Vector3(nullptr) {}
-  ~Vector3() PROTOBUF_FINAL;
+  inline MESH() : MESH(nullptr) {}
+  ~MESH() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Vector3* msg, std::destroying_delete_t) {
+  void operator delete(MESH* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Vector3));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(MESH));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Vector3(
+  explicit PROTOBUF_CONSTEXPR MESH(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline Vector3(const Vector3& from) : Vector3(nullptr, from) {}
-  inline Vector3(Vector3&& from) noexcept
-      : Vector3(nullptr, std::move(from)) {}
-  inline Vector3& operator=(const Vector3& from) {
+  inline MESH(const MESH& from) : MESH(nullptr, from) {}
+  inline MESH(MESH&& from) noexcept
+      : MESH(nullptr, std::move(from)) {}
+  inline MESH& operator=(const MESH& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Vector3& operator=(Vector3&& from) noexcept {
+  inline MESH& operator=(MESH&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -331,16 +334,16 @@ class Vector3 final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Vector3& default_instance() {
+  static const MESH& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Vector3* internal_default_instance() {
-    return reinterpret_cast<const Vector3*>(
-        &_Vector3_default_instance_);
+  static inline const MESH* internal_default_instance() {
+    return reinterpret_cast<const MESH*>(
+        &_MESH_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 0;
-  friend void swap(Vector3& a, Vector3& b) { a.Swap(&b); }
-  inline void Swap(Vector3* other) {
+  static constexpr int kIndexInFileMessages = 7;
+  friend void swap(MESH& a, MESH& b) { a.Swap(&b); }
+  inline void Swap(MESH* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -348,7 +351,7 @@ class Vector3 final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Vector3* other) {
+  void UnsafeArenaSwap(MESH* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -356,13 +359,13 @@ class Vector3 final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  Vector3* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Vector3>(arena);
+  MESH* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<MESH>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Vector3& from);
+  void CopyFrom(const MESH& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Vector3& from) { Vector3::MergeImpl(*this, from); }
+  void MergeFrom(const MESH& from) { MESH::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -399,18 +402,214 @@ class Vector3 final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(Vector3* other);
+  void InternalSwap(MESH* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "Vector3"; }
+  static ::absl::string_view FullMessageName() { return "MESH"; }
 
  protected:
-  explicit Vector3(::google::protobuf::Arena* arena);
-  Vector3(::google::protobuf::Arena* arena, const Vector3& from);
-  Vector3(::google::protobuf::Arena* arena, Vector3&& from) noexcept
-      : Vector3(arena) {
+  explicit MESH(::google::protobuf::Arena* arena);
+  MESH(::google::protobuf::Arena* arena, const MESH& from);
+  MESH(::google::protobuf::Arena* arena, MESH&& from) noexcept
+      : MESH(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kMeshDataFieldNumber = 1,
+  };
+  // string mesh_data = 1;
+  void clear_mesh_data() ;
+  const std::string& mesh_data() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_mesh_data(Arg_&& arg, Args_... args);
+  std::string* mutable_mesh_data();
+  PROTOBUF_NODISCARD std::string* release_mesh_data();
+  void set_allocated_mesh_data(std::string* value);
+
+  private:
+  const std::string& _internal_mesh_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mesh_data(
+      const std::string& value);
+  std::string* _internal_mutable_mesh_data();
+
+  public:
+  // @@protoc_insertion_point(class_scope:MESH)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      22, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const MESH& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr mesh_data_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_PARCM_2dP4_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GRPC_VECTOR3 final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:GRPC_VECTOR3) */ {
+ public:
+  inline GRPC_VECTOR3() : GRPC_VECTOR3(nullptr) {}
+  ~GRPC_VECTOR3() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GRPC_VECTOR3* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GRPC_VECTOR3));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GRPC_VECTOR3(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline GRPC_VECTOR3(const GRPC_VECTOR3& from) : GRPC_VECTOR3(nullptr, from) {}
+  inline GRPC_VECTOR3(GRPC_VECTOR3&& from) noexcept
+      : GRPC_VECTOR3(nullptr, std::move(from)) {}
+  inline GRPC_VECTOR3& operator=(const GRPC_VECTOR3& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GRPC_VECTOR3& operator=(GRPC_VECTOR3&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GRPC_VECTOR3& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GRPC_VECTOR3* internal_default_instance() {
+    return reinterpret_cast<const GRPC_VECTOR3*>(
+        &_GRPC_VECTOR3_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 0;
+  friend void swap(GRPC_VECTOR3& a, GRPC_VECTOR3& b) { a.Swap(&b); }
+  inline void Swap(GRPC_VECTOR3* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GRPC_VECTOR3* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GRPC_VECTOR3* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GRPC_VECTOR3>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GRPC_VECTOR3& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GRPC_VECTOR3& from) { GRPC_VECTOR3::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GRPC_VECTOR3* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "GRPC_VECTOR3"; }
+
+ protected:
+  explicit GRPC_VECTOR3(::google::protobuf::Arena* arena);
+  GRPC_VECTOR3(::google::protobuf::Arena* arena, const GRPC_VECTOR3& from);
+  GRPC_VECTOR3(::google::protobuf::Arena* arena, GRPC_VECTOR3&& from) noexcept
+      : GRPC_VECTOR3(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -459,7 +658,7 @@ class Vector3 final : public ::google::protobuf::Message
   void _internal_set_z(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:Vector3)
+  // @@protoc_insertion_point(class_scope:GRPC_VECTOR3)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -481,7 +680,7 @@ class Vector3 final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Vector3& from_msg);
+                          const GRPC_VECTOR3& from_msg);
     float x_;
     float y_;
     float z_;
@@ -493,31 +692,31 @@ class Vector3 final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class MeshRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:MeshRequest) */ {
+class CLIENT_JOIN_REQUEST final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:CLIENT_JOIN_REQUEST) */ {
  public:
-  inline MeshRequest() : MeshRequest(nullptr) {}
-  ~MeshRequest() PROTOBUF_FINAL;
+  inline CLIENT_JOIN_REQUEST() : CLIENT_JOIN_REQUEST(nullptr) {}
+  ~CLIENT_JOIN_REQUEST() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(MeshRequest* msg, std::destroying_delete_t) {
+  void operator delete(CLIENT_JOIN_REQUEST* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(MeshRequest));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CLIENT_JOIN_REQUEST));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR MeshRequest(
+  explicit PROTOBUF_CONSTEXPR CLIENT_JOIN_REQUEST(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline MeshRequest(const MeshRequest& from) : MeshRequest(nullptr, from) {}
-  inline MeshRequest(MeshRequest&& from) noexcept
-      : MeshRequest(nullptr, std::move(from)) {}
-  inline MeshRequest& operator=(const MeshRequest& from) {
+  inline CLIENT_JOIN_REQUEST(const CLIENT_JOIN_REQUEST& from) : CLIENT_JOIN_REQUEST(nullptr, from) {}
+  inline CLIENT_JOIN_REQUEST(CLIENT_JOIN_REQUEST&& from) noexcept
+      : CLIENT_JOIN_REQUEST(nullptr, std::move(from)) {}
+  inline CLIENT_JOIN_REQUEST& operator=(const CLIENT_JOIN_REQUEST& from) {
     CopyFrom(from);
     return *this;
   }
-  inline MeshRequest& operator=(MeshRequest&& from) noexcept {
+  inline CLIENT_JOIN_REQUEST& operator=(CLIENT_JOIN_REQUEST&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -545,16 +744,16 @@ class MeshRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const MeshRequest& default_instance() {
+  static const CLIENT_JOIN_REQUEST& default_instance() {
     return *internal_default_instance();
   }
-  static inline const MeshRequest* internal_default_instance() {
-    return reinterpret_cast<const MeshRequest*>(
-        &_MeshRequest_default_instance_);
+  static inline const CLIENT_JOIN_REQUEST* internal_default_instance() {
+    return reinterpret_cast<const CLIENT_JOIN_REQUEST*>(
+        &_CLIENT_JOIN_REQUEST_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 5;
-  friend void swap(MeshRequest& a, MeshRequest& b) { a.Swap(&b); }
-  inline void Swap(MeshRequest* other) {
+  friend void swap(CLIENT_JOIN_REQUEST& a, CLIENT_JOIN_REQUEST& b) { a.Swap(&b); }
+  inline void Swap(CLIENT_JOIN_REQUEST* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -562,7 +761,7 @@ class MeshRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(MeshRequest* other) {
+  void UnsafeArenaSwap(CLIENT_JOIN_REQUEST* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -570,13 +769,13 @@ class MeshRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  MeshRequest* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<MeshRequest>(arena);
+  CLIENT_JOIN_REQUEST* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CLIENT_JOIN_REQUEST>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const MeshRequest& from);
+  void CopyFrom(const CLIENT_JOIN_REQUEST& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const MeshRequest& from) { MeshRequest::MergeImpl(*this, from); }
+  void MergeFrom(const CLIENT_JOIN_REQUEST& from) { CLIENT_JOIN_REQUEST::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -613,18 +812,18 @@ class MeshRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(MeshRequest* other);
+  void InternalSwap(CLIENT_JOIN_REQUEST* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "MeshRequest"; }
+  static ::absl::string_view FullMessageName() { return "CLIENT_JOIN_REQUEST"; }
 
  protected:
-  explicit MeshRequest(::google::protobuf::Arena* arena);
-  MeshRequest(::google::protobuf::Arena* arena, const MeshRequest& from);
-  MeshRequest(::google::protobuf::Arena* arena, MeshRequest&& from) noexcept
-      : MeshRequest(arena) {
+  explicit CLIENT_JOIN_REQUEST(::google::protobuf::Arena* arena);
+  CLIENT_JOIN_REQUEST(::google::protobuf::Arena* arena, const CLIENT_JOIN_REQUEST& from);
+  CLIENT_JOIN_REQUEST(::google::protobuf::Arena* arena, CLIENT_JOIN_REQUEST&& from) noexcept
+      : CLIENT_JOIN_REQUEST(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -639,31 +838,31 @@ class MeshRequest final : public ::google::protobuf::Message
 
   // accessors -------------------------------------------------------
   enum : int {
-    kMeshIdFieldNumber = 1,
+    kCLIENTIDFieldNumber = 1,
   };
-  // string mesh_id = 1;
-  void clear_mesh_id() ;
-  const std::string& mesh_id() const;
+  // string CLIENT_ID = 1;
+  void clear_client_id() ;
+  const std::string& client_id() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_mesh_id(Arg_&& arg, Args_... args);
-  std::string* mutable_mesh_id();
-  PROTOBUF_NODISCARD std::string* release_mesh_id();
-  void set_allocated_mesh_id(std::string* value);
+  void set_client_id(Arg_&& arg, Args_... args);
+  std::string* mutable_client_id();
+  PROTOBUF_NODISCARD std::string* release_client_id();
+  void set_allocated_client_id(std::string* value);
 
   private:
-  const std::string& _internal_mesh_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mesh_id(
+  const std::string& _internal_client_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_client_id(
       const std::string& value);
-  std::string* _internal_mutable_mesh_id();
+  std::string* _internal_mutable_client_id();
 
   public:
-  // @@protoc_insertion_point(class_scope:MeshRequest)
+  // @@protoc_insertion_point(class_scope:CLIENT_JOIN_REQUEST)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       0, 1, 0,
-      27, 2>
+      37, 2>
       _table_;
 
   friend class ::google::protobuf::MessageLite;
@@ -679,8 +878,8 @@ class MeshRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const MeshRequest& from_msg);
-    ::google::protobuf::internal::ArenaStringPtr mesh_id_;
+                          const CLIENT_JOIN_REQUEST& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr client_id_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -689,31 +888,31 @@ class MeshRequest final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class Mesh final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:Mesh) */ {
+class GRPC_TRANSFORM final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:GRPC_TRANSFORM) */ {
  public:
-  inline Mesh() : Mesh(nullptr) {}
-  ~Mesh() PROTOBUF_FINAL;
+  inline GRPC_TRANSFORM() : GRPC_TRANSFORM(nullptr) {}
+  ~GRPC_TRANSFORM() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Mesh* msg, std::destroying_delete_t) {
+  void operator delete(GRPC_TRANSFORM* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Mesh));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GRPC_TRANSFORM));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Mesh(
+  explicit PROTOBUF_CONSTEXPR GRPC_TRANSFORM(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline Mesh(const Mesh& from) : Mesh(nullptr, from) {}
-  inline Mesh(Mesh&& from) noexcept
-      : Mesh(nullptr, std::move(from)) {}
-  inline Mesh& operator=(const Mesh& from) {
+  inline GRPC_TRANSFORM(const GRPC_TRANSFORM& from) : GRPC_TRANSFORM(nullptr, from) {}
+  inline GRPC_TRANSFORM(GRPC_TRANSFORM&& from) noexcept
+      : GRPC_TRANSFORM(nullptr, std::move(from)) {}
+  inline GRPC_TRANSFORM& operator=(const GRPC_TRANSFORM& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Mesh& operator=(Mesh&& from) noexcept {
+  inline GRPC_TRANSFORM& operator=(GRPC_TRANSFORM&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -741,212 +940,16 @@ class Mesh final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Mesh& default_instance() {
+  static const GRPC_TRANSFORM& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Mesh* internal_default_instance() {
-    return reinterpret_cast<const Mesh*>(
-        &_Mesh_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 6;
-  friend void swap(Mesh& a, Mesh& b) { a.Swap(&b); }
-  inline void Swap(Mesh* other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Mesh* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  Mesh* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Mesh>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Mesh& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Mesh& from) { Mesh::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(
-      ::google::protobuf::MessageLite& to_msg,
-      const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  static ::uint8_t* _InternalSerialize(
-      const MessageLite& msg, ::uint8_t* target,
-      ::google::protobuf::io::EpsCopyOutputStream* stream);
-
-  public:
-  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target,
-      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target,
-      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(Mesh* other);
- private:
-  template <typename T>
-  friend ::absl::string_view(
-      ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "Mesh"; }
-
- protected:
-  explicit Mesh(::google::protobuf::Arena* arena);
-  Mesh(::google::protobuf::Arena* arena, const Mesh& from);
-  Mesh(::google::protobuf::Arena* arena, Mesh&& from) noexcept
-      : Mesh(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
-  static void* PlacementNew_(const void*, void* mem,
-                             ::google::protobuf::Arena* arena);
-  static constexpr auto InternalNewImpl_();
-  static const ::google::protobuf::internal::ClassDataFull _class_data_;
-
- public:
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kMeshDataFieldNumber = 2,
-  };
-  // bytes mesh_data = 2;
-  void clear_mesh_data() ;
-  const std::string& mesh_data() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_mesh_data(Arg_&& arg, Args_... args);
-  std::string* mutable_mesh_data();
-  PROTOBUF_NODISCARD std::string* release_mesh_data();
-  void set_allocated_mesh_data(std::string* value);
-
-  private:
-  const std::string& _internal_mesh_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mesh_data(
-      const std::string& value);
-  std::string* _internal_mutable_mesh_data();
-
-  public:
-  // @@protoc_insertion_point(class_scope:Mesh)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
-      0, 2>
-      _table_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(
-        ::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena);
-    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                          ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Mesh& from_msg);
-    ::google::protobuf::internal::ArenaStringPtr mesh_data_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_PARCM_2dP4_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Transform final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:Transform) */ {
- public:
-  inline Transform() : Transform(nullptr) {}
-  ~Transform() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(Transform* msg, std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(Transform));
-  }
-#endif
-
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR Transform(
-      ::google::protobuf::internal::ConstantInitialized);
-
-  inline Transform(const Transform& from) : Transform(nullptr, from) {}
-  inline Transform(Transform&& from) noexcept
-      : Transform(nullptr, std::move(from)) {}
-  inline Transform& operator=(const Transform& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Transform& operator=(Transform&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const Transform& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Transform* internal_default_instance() {
-    return reinterpret_cast<const Transform*>(
-        &_Transform_default_instance_);
+  static inline const GRPC_TRANSFORM* internal_default_instance() {
+    return reinterpret_cast<const GRPC_TRANSFORM*>(
+        &_GRPC_TRANSFORM_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 1;
-  friend void swap(Transform& a, Transform& b) { a.Swap(&b); }
-  inline void Swap(Transform* other) {
+  friend void swap(GRPC_TRANSFORM& a, GRPC_TRANSFORM& b) { a.Swap(&b); }
+  inline void Swap(GRPC_TRANSFORM* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -954,7 +957,7 @@ class Transform final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Transform* other) {
+  void UnsafeArenaSwap(GRPC_TRANSFORM* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -962,13 +965,13 @@ class Transform final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  Transform* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<Transform>(arena);
+  GRPC_TRANSFORM* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GRPC_TRANSFORM>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const Transform& from);
+  void CopyFrom(const GRPC_TRANSFORM& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const Transform& from) { Transform::MergeImpl(*this, from); }
+  void MergeFrom(const GRPC_TRANSFORM& from) { GRPC_TRANSFORM::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -1005,18 +1008,18 @@ class Transform final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(Transform* other);
+  void InternalSwap(GRPC_TRANSFORM* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "Transform"; }
+  static ::absl::string_view FullMessageName() { return "GRPC_TRANSFORM"; }
 
  protected:
-  explicit Transform(::google::protobuf::Arena* arena);
-  Transform(::google::protobuf::Arena* arena, const Transform& from);
-  Transform(::google::protobuf::Arena* arena, Transform&& from) noexcept
-      : Transform(arena) {
+  explicit GRPC_TRANSFORM(::google::protobuf::Arena* arena);
+  GRPC_TRANSFORM(::google::protobuf::Arena* arena, const GRPC_TRANSFORM& from);
+  GRPC_TRANSFORM(::google::protobuf::Arena* arena, GRPC_TRANSFORM&& from) noexcept
+      : GRPC_TRANSFORM(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -1035,52 +1038,52 @@ class Transform final : public ::google::protobuf::Message
     kRotationFieldNumber = 2,
     kScaleFieldNumber = 3,
   };
-  // .Vector3 position = 1;
+  // .GRPC_VECTOR3 position = 1;
   bool has_position() const;
   void clear_position() ;
-  const ::Vector3& position() const;
-  PROTOBUF_NODISCARD ::Vector3* release_position();
-  ::Vector3* mutable_position();
-  void set_allocated_position(::Vector3* value);
-  void unsafe_arena_set_allocated_position(::Vector3* value);
-  ::Vector3* unsafe_arena_release_position();
+  const ::GRPC_VECTOR3& position() const;
+  PROTOBUF_NODISCARD ::GRPC_VECTOR3* release_position();
+  ::GRPC_VECTOR3* mutable_position();
+  void set_allocated_position(::GRPC_VECTOR3* value);
+  void unsafe_arena_set_allocated_position(::GRPC_VECTOR3* value);
+  ::GRPC_VECTOR3* unsafe_arena_release_position();
 
   private:
-  const ::Vector3& _internal_position() const;
-  ::Vector3* _internal_mutable_position();
+  const ::GRPC_VECTOR3& _internal_position() const;
+  ::GRPC_VECTOR3* _internal_mutable_position();
 
   public:
-  // .Vector3 rotation = 2;
+  // .GRPC_VECTOR3 rotation = 2;
   bool has_rotation() const;
   void clear_rotation() ;
-  const ::Vector3& rotation() const;
-  PROTOBUF_NODISCARD ::Vector3* release_rotation();
-  ::Vector3* mutable_rotation();
-  void set_allocated_rotation(::Vector3* value);
-  void unsafe_arena_set_allocated_rotation(::Vector3* value);
-  ::Vector3* unsafe_arena_release_rotation();
+  const ::GRPC_VECTOR3& rotation() const;
+  PROTOBUF_NODISCARD ::GRPC_VECTOR3* release_rotation();
+  ::GRPC_VECTOR3* mutable_rotation();
+  void set_allocated_rotation(::GRPC_VECTOR3* value);
+  void unsafe_arena_set_allocated_rotation(::GRPC_VECTOR3* value);
+  ::GRPC_VECTOR3* unsafe_arena_release_rotation();
 
   private:
-  const ::Vector3& _internal_rotation() const;
-  ::Vector3* _internal_mutable_rotation();
+  const ::GRPC_VECTOR3& _internal_rotation() const;
+  ::GRPC_VECTOR3* _internal_mutable_rotation();
 
   public:
-  // .Vector3 scale = 3;
+  // .GRPC_VECTOR3 scale = 3;
   bool has_scale() const;
   void clear_scale() ;
-  const ::Vector3& scale() const;
-  PROTOBUF_NODISCARD ::Vector3* release_scale();
-  ::Vector3* mutable_scale();
-  void set_allocated_scale(::Vector3* value);
-  void unsafe_arena_set_allocated_scale(::Vector3* value);
-  ::Vector3* unsafe_arena_release_scale();
+  const ::GRPC_VECTOR3& scale() const;
+  PROTOBUF_NODISCARD ::GRPC_VECTOR3* release_scale();
+  ::GRPC_VECTOR3* mutable_scale();
+  void set_allocated_scale(::GRPC_VECTOR3* value);
+  void unsafe_arena_set_allocated_scale(::GRPC_VECTOR3* value);
+  ::GRPC_VECTOR3* unsafe_arena_release_scale();
 
   private:
-  const ::Vector3& _internal_scale() const;
-  ::Vector3* _internal_mutable_scale();
+  const ::GRPC_VECTOR3& _internal_scale() const;
+  ::GRPC_VECTOR3* _internal_mutable_scale();
 
   public:
-  // @@protoc_insertion_point(class_scope:Transform)
+  // @@protoc_insertion_point(class_scope:GRPC_TRANSFORM)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1102,12 +1105,12 @@ class Transform final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const Transform& from_msg);
+                          const GRPC_TRANSFORM& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
-    ::Vector3* position_;
-    ::Vector3* rotation_;
-    ::Vector3* scale_;
+    ::GRPC_VECTOR3* position_;
+    ::GRPC_VECTOR3* rotation_;
+    ::GRPC_VECTOR3* scale_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -1115,31 +1118,31 @@ class Transform final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class GameObject final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:GameObject) */ {
+class GRPC_GAMEOBJECT final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:GRPC_GAMEOBJECT) */ {
  public:
-  inline GameObject() : GameObject(nullptr) {}
-  ~GameObject() PROTOBUF_FINAL;
+  inline GRPC_GAMEOBJECT() : GRPC_GAMEOBJECT(nullptr) {}
+  ~GRPC_GAMEOBJECT() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(GameObject* msg, std::destroying_delete_t) {
+  void operator delete(GRPC_GAMEOBJECT* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(GameObject));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GRPC_GAMEOBJECT));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR GameObject(
+  explicit PROTOBUF_CONSTEXPR GRPC_GAMEOBJECT(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline GameObject(const GameObject& from) : GameObject(nullptr, from) {}
-  inline GameObject(GameObject&& from) noexcept
-      : GameObject(nullptr, std::move(from)) {}
-  inline GameObject& operator=(const GameObject& from) {
+  inline GRPC_GAMEOBJECT(const GRPC_GAMEOBJECT& from) : GRPC_GAMEOBJECT(nullptr, from) {}
+  inline GRPC_GAMEOBJECT(GRPC_GAMEOBJECT&& from) noexcept
+      : GRPC_GAMEOBJECT(nullptr, std::move(from)) {}
+  inline GRPC_GAMEOBJECT& operator=(const GRPC_GAMEOBJECT& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GameObject& operator=(GameObject&& from) noexcept {
+  inline GRPC_GAMEOBJECT& operator=(GRPC_GAMEOBJECT&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1167,16 +1170,16 @@ class GameObject final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GameObject& default_instance() {
+  static const GRPC_GAMEOBJECT& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GameObject* internal_default_instance() {
-    return reinterpret_cast<const GameObject*>(
-        &_GameObject_default_instance_);
+  static inline const GRPC_GAMEOBJECT* internal_default_instance() {
+    return reinterpret_cast<const GRPC_GAMEOBJECT*>(
+        &_GRPC_GAMEOBJECT_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 2;
-  friend void swap(GameObject& a, GameObject& b) { a.Swap(&b); }
-  inline void Swap(GameObject* other) {
+  friend void swap(GRPC_GAMEOBJECT& a, GRPC_GAMEOBJECT& b) { a.Swap(&b); }
+  inline void Swap(GRPC_GAMEOBJECT* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1184,7 +1187,7 @@ class GameObject final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GameObject* other) {
+  void UnsafeArenaSwap(GRPC_GAMEOBJECT* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1192,13 +1195,13 @@ class GameObject final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  GameObject* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<GameObject>(arena);
+  GRPC_GAMEOBJECT* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GRPC_GAMEOBJECT>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const GameObject& from);
+  void CopyFrom(const GRPC_GAMEOBJECT& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const GameObject& from) { GameObject::MergeImpl(*this, from); }
+  void MergeFrom(const GRPC_GAMEOBJECT& from) { GRPC_GAMEOBJECT::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -1235,18 +1238,18 @@ class GameObject final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(GameObject* other);
+  void InternalSwap(GRPC_GAMEOBJECT* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "GameObject"; }
+  static ::absl::string_view FullMessageName() { return "GRPC_GAMEOBJECT"; }
 
  protected:
-  explicit GameObject(::google::protobuf::Arena* arena);
-  GameObject(::google::protobuf::Arena* arena, const GameObject& from);
-  GameObject(::google::protobuf::Arena* arena, GameObject&& from) noexcept
-      : GameObject(arena) {
+  explicit GRPC_GAMEOBJECT(::google::protobuf::Arena* arena);
+  GRPC_GAMEOBJECT(::google::protobuf::Arena* arena, const GRPC_GAMEOBJECT& from);
+  GRPC_GAMEOBJECT(::google::protobuf::Arena* arena, GRPC_GAMEOBJECT&& from) noexcept
+      : GRPC_GAMEOBJECT(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -1264,7 +1267,7 @@ class GameObject final : public ::google::protobuf::Message
     kUniqueIdFieldNumber = 1,
     kNameFieldNumber = 2,
     kMeshIdFieldNumber = 4,
-    kTFieldNumber = 3,
+    kTransformFieldNumber = 3,
   };
   // string unique_id = 1;
   void clear_unique_id() ;
@@ -1314,28 +1317,28 @@ class GameObject final : public ::google::protobuf::Message
   std::string* _internal_mutable_mesh_id();
 
   public:
-  // .Transform t = 3;
-  bool has_t() const;
-  void clear_t() ;
-  const ::Transform& t() const;
-  PROTOBUF_NODISCARD ::Transform* release_t();
-  ::Transform* mutable_t();
-  void set_allocated_t(::Transform* value);
-  void unsafe_arena_set_allocated_t(::Transform* value);
-  ::Transform* unsafe_arena_release_t();
+  // .GRPC_TRANSFORM transform = 3;
+  bool has_transform() const;
+  void clear_transform() ;
+  const ::GRPC_TRANSFORM& transform() const;
+  PROTOBUF_NODISCARD ::GRPC_TRANSFORM* release_transform();
+  ::GRPC_TRANSFORM* mutable_transform();
+  void set_allocated_transform(::GRPC_TRANSFORM* value);
+  void unsafe_arena_set_allocated_transform(::GRPC_TRANSFORM* value);
+  ::GRPC_TRANSFORM* unsafe_arena_release_transform();
 
   private:
-  const ::Transform& _internal_t() const;
-  ::Transform* _internal_mutable_t();
+  const ::GRPC_TRANSFORM& _internal_transform() const;
+  ::GRPC_TRANSFORM* _internal_mutable_transform();
 
   public:
-  // @@protoc_insertion_point(class_scope:GameObject)
+  // @@protoc_insertion_point(class_scope:GRPC_GAMEOBJECT)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       2, 4, 1,
-      39, 2>
+      44, 2>
       _table_;
 
   friend class ::google::protobuf::MessageLite;
@@ -1351,13 +1354,13 @@ class GameObject final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const GameObject& from_msg);
+                          const GRPC_GAMEOBJECT& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr unique_id_;
     ::google::protobuf::internal::ArenaStringPtr name_;
     ::google::protobuf::internal::ArenaStringPtr mesh_id_;
-    ::Transform* t_;
+    ::GRPC_TRANSFORM* transform_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -1365,31 +1368,31 @@ class GameObject final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class WorldData final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:WorldData) */ {
+class GRPC_SCENE final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:GRPC_SCENE) */ {
  public:
-  inline WorldData() : WorldData(nullptr) {}
-  ~WorldData() PROTOBUF_FINAL;
+  inline GRPC_SCENE() : GRPC_SCENE(nullptr) {}
+  ~GRPC_SCENE() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(WorldData* msg, std::destroying_delete_t) {
+  void operator delete(GRPC_SCENE* msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(WorldData));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GRPC_SCENE));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR WorldData(
+  explicit PROTOBUF_CONSTEXPR GRPC_SCENE(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline WorldData(const WorldData& from) : WorldData(nullptr, from) {}
-  inline WorldData(WorldData&& from) noexcept
-      : WorldData(nullptr, std::move(from)) {}
-  inline WorldData& operator=(const WorldData& from) {
+  inline GRPC_SCENE(const GRPC_SCENE& from) : GRPC_SCENE(nullptr, from) {}
+  inline GRPC_SCENE(GRPC_SCENE&& from) noexcept
+      : GRPC_SCENE(nullptr, std::move(from)) {}
+  inline GRPC_SCENE& operator=(const GRPC_SCENE& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WorldData& operator=(WorldData&& from) noexcept {
+  inline GRPC_SCENE& operator=(GRPC_SCENE&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1417,16 +1420,16 @@ class WorldData final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WorldData& default_instance() {
+  static const GRPC_SCENE& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WorldData* internal_default_instance() {
-    return reinterpret_cast<const WorldData*>(
-        &_WorldData_default_instance_);
+  static inline const GRPC_SCENE* internal_default_instance() {
+    return reinterpret_cast<const GRPC_SCENE*>(
+        &_GRPC_SCENE_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 3;
-  friend void swap(WorldData& a, WorldData& b) { a.Swap(&b); }
-  inline void Swap(WorldData* other) {
+  friend void swap(GRPC_SCENE& a, GRPC_SCENE& b) { a.Swap(&b); }
+  inline void Swap(GRPC_SCENE* other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1434,7 +1437,7 @@ class WorldData final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WorldData* other) {
+  void UnsafeArenaSwap(GRPC_SCENE* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1442,13 +1445,13 @@ class WorldData final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  WorldData* New(::google::protobuf::Arena* arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<WorldData>(arena);
+  GRPC_SCENE* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GRPC_SCENE>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const WorldData& from);
+  void CopyFrom(const GRPC_SCENE& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const WorldData& from) { WorldData::MergeImpl(*this, from); }
+  void MergeFrom(const GRPC_SCENE& from) { GRPC_SCENE::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -1485,18 +1488,18 @@ class WorldData final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(WorldData* other);
+  void InternalSwap(GRPC_SCENE* other);
  private:
   template <typename T>
   friend ::absl::string_view(
       ::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "WorldData"; }
+  static ::absl::string_view FullMessageName() { return "GRPC_SCENE"; }
 
  protected:
-  explicit WorldData(::google::protobuf::Arena* arena);
-  WorldData(::google::protobuf::Arena* arena, const WorldData& from);
-  WorldData(::google::protobuf::Arena* arena, WorldData&& from) noexcept
-      : WorldData(arena) {
+  explicit GRPC_SCENE(::google::protobuf::Arena* arena);
+  GRPC_SCENE(::google::protobuf::Arena* arena, const GRPC_SCENE& from);
+  GRPC_SCENE(::google::protobuf::Arena* arena, GRPC_SCENE&& from) noexcept
+      : GRPC_SCENE(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -1511,26 +1514,26 @@ class WorldData final : public ::google::protobuf::Message
 
   // accessors -------------------------------------------------------
   enum : int {
-    kGameObjectsFieldNumber = 1,
+    kGameobjectsFieldNumber = 1,
   };
-  // repeated .GameObject game_objects = 1;
-  int game_objects_size() const;
+  // repeated .GRPC_GAMEOBJECT gameobjects = 1;
+  int gameobjects_size() const;
   private:
-  int _internal_game_objects_size() const;
+  int _internal_gameobjects_size() const;
 
   public:
-  void clear_game_objects() ;
-  ::GameObject* mutable_game_objects(int index);
-  ::google::protobuf::RepeatedPtrField<::GameObject>* mutable_game_objects();
+  void clear_gameobjects() ;
+  ::GRPC_GAMEOBJECT* mutable_gameobjects(int index);
+  ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>* mutable_gameobjects();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::GameObject>& _internal_game_objects() const;
-  ::google::protobuf::RepeatedPtrField<::GameObject>* _internal_mutable_game_objects();
+  const ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>& _internal_gameobjects() const;
+  ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>* _internal_mutable_gameobjects();
   public:
-  const ::GameObject& game_objects(int index) const;
-  ::GameObject* add_game_objects();
-  const ::google::protobuf::RepeatedPtrField<::GameObject>& game_objects() const;
-  // @@protoc_insertion_point(class_scope:WorldData)
+  const ::GRPC_GAMEOBJECT& gameobjects(int index) const;
+  ::GRPC_GAMEOBJECT* add_gameobjects();
+  const ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>& gameobjects() const;
+  // @@protoc_insertion_point(class_scope:GRPC_SCENE)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1552,8 +1555,205 @@ class WorldData final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const WorldData& from_msg);
-    ::google::protobuf::RepeatedPtrField< ::GameObject > game_objects_;
+                          const GRPC_SCENE& from_msg);
+    ::google::protobuf::RepeatedPtrField< ::GRPC_GAMEOBJECT > gameobjects_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_PARCM_2dP4_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GRPC_SCENES_BATCH final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:GRPC_SCENES_BATCH) */ {
+ public:
+  inline GRPC_SCENES_BATCH() : GRPC_SCENES_BATCH(nullptr) {}
+  ~GRPC_SCENES_BATCH() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GRPC_SCENES_BATCH* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GRPC_SCENES_BATCH));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GRPC_SCENES_BATCH(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline GRPC_SCENES_BATCH(const GRPC_SCENES_BATCH& from) : GRPC_SCENES_BATCH(nullptr, from) {}
+  inline GRPC_SCENES_BATCH(GRPC_SCENES_BATCH&& from) noexcept
+      : GRPC_SCENES_BATCH(nullptr, std::move(from)) {}
+  inline GRPC_SCENES_BATCH& operator=(const GRPC_SCENES_BATCH& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GRPC_SCENES_BATCH& operator=(GRPC_SCENES_BATCH&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GRPC_SCENES_BATCH& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GRPC_SCENES_BATCH* internal_default_instance() {
+    return reinterpret_cast<const GRPC_SCENES_BATCH*>(
+        &_GRPC_SCENES_BATCH_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(GRPC_SCENES_BATCH& a, GRPC_SCENES_BATCH& b) { a.Swap(&b); }
+  inline void Swap(GRPC_SCENES_BATCH* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GRPC_SCENES_BATCH* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GRPC_SCENES_BATCH* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GRPC_SCENES_BATCH>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GRPC_SCENES_BATCH& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GRPC_SCENES_BATCH& from) { GRPC_SCENES_BATCH::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GRPC_SCENES_BATCH* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "GRPC_SCENES_BATCH"; }
+
+ protected:
+  explicit GRPC_SCENES_BATCH(::google::protobuf::Arena* arena);
+  GRPC_SCENES_BATCH(::google::protobuf::Arena* arena, const GRPC_SCENES_BATCH& from);
+  GRPC_SCENES_BATCH(::google::protobuf::Arena* arena, GRPC_SCENES_BATCH&& from) noexcept
+      : GRPC_SCENES_BATCH(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kScenesFieldNumber = 1,
+  };
+  // repeated .GRPC_SCENE scenes = 1;
+  int scenes_size() const;
+  private:
+  int _internal_scenes_size() const;
+
+  public:
+  void clear_scenes() ;
+  ::GRPC_SCENE* mutable_scenes(int index);
+  ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>* mutable_scenes();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>& _internal_scenes() const;
+  ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>* _internal_mutable_scenes();
+  public:
+  const ::GRPC_SCENE& scenes(int index) const;
+  ::GRPC_SCENE* add_scenes();
+  const ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>& scenes() const;
+  // @@protoc_insertion_point(class_scope:GRPC_SCENES_BATCH)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 1,
+      0, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const GRPC_SCENES_BATCH& from_msg);
+    ::google::protobuf::RepeatedPtrField< ::GRPC_SCENE > scenes_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1575,116 +1775,116 @@ class WorldData final : public ::google::protobuf::Message
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// Vector3
+// GRPC_VECTOR3
 
 // float x = 1;
-inline void Vector3::clear_x() {
+inline void GRPC_VECTOR3::clear_x() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = 0;
 }
-inline float Vector3::x() const {
-  // @@protoc_insertion_point(field_get:Vector3.x)
+inline float GRPC_VECTOR3::x() const {
+  // @@protoc_insertion_point(field_get:GRPC_VECTOR3.x)
   return _internal_x();
 }
-inline void Vector3::set_x(float value) {
+inline void GRPC_VECTOR3::set_x(float value) {
   _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:Vector3.x)
+  // @@protoc_insertion_point(field_set:GRPC_VECTOR3.x)
 }
-inline float Vector3::_internal_x() const {
+inline float GRPC_VECTOR3::_internal_x() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.x_;
 }
-inline void Vector3::_internal_set_x(float value) {
+inline void GRPC_VECTOR3::_internal_set_x(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.x_ = value;
 }
 
 // float y = 2;
-inline void Vector3::clear_y() {
+inline void GRPC_VECTOR3::clear_y() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = 0;
 }
-inline float Vector3::y() const {
-  // @@protoc_insertion_point(field_get:Vector3.y)
+inline float GRPC_VECTOR3::y() const {
+  // @@protoc_insertion_point(field_get:GRPC_VECTOR3.y)
   return _internal_y();
 }
-inline void Vector3::set_y(float value) {
+inline void GRPC_VECTOR3::set_y(float value) {
   _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:Vector3.y)
+  // @@protoc_insertion_point(field_set:GRPC_VECTOR3.y)
 }
-inline float Vector3::_internal_y() const {
+inline float GRPC_VECTOR3::_internal_y() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.y_;
 }
-inline void Vector3::_internal_set_y(float value) {
+inline void GRPC_VECTOR3::_internal_set_y(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.y_ = value;
 }
 
 // float z = 3;
-inline void Vector3::clear_z() {
+inline void GRPC_VECTOR3::clear_z() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.z_ = 0;
 }
-inline float Vector3::z() const {
-  // @@protoc_insertion_point(field_get:Vector3.z)
+inline float GRPC_VECTOR3::z() const {
+  // @@protoc_insertion_point(field_get:GRPC_VECTOR3.z)
   return _internal_z();
 }
-inline void Vector3::set_z(float value) {
+inline void GRPC_VECTOR3::set_z(float value) {
   _internal_set_z(value);
-  // @@protoc_insertion_point(field_set:Vector3.z)
+  // @@protoc_insertion_point(field_set:GRPC_VECTOR3.z)
 }
-inline float Vector3::_internal_z() const {
+inline float GRPC_VECTOR3::_internal_z() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.z_;
 }
-inline void Vector3::_internal_set_z(float value) {
+inline void GRPC_VECTOR3::_internal_set_z(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.z_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// Transform
+// GRPC_TRANSFORM
 
-// .Vector3 position = 1;
-inline bool Transform::has_position() const {
+// .GRPC_VECTOR3 position = 1;
+inline bool GRPC_TRANSFORM::has_position() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.position_ != nullptr);
   return value;
 }
-inline void Transform::clear_position() {
+inline void GRPC_TRANSFORM::clear_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.position_ != nullptr) _impl_.position_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::Vector3& Transform::_internal_position() const {
+inline const ::GRPC_VECTOR3& GRPC_TRANSFORM::_internal_position() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vector3* p = _impl_.position_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vector3&>(::_Vector3_default_instance_);
+  const ::GRPC_VECTOR3* p = _impl_.position_;
+  return p != nullptr ? *p : reinterpret_cast<const ::GRPC_VECTOR3&>(::_GRPC_VECTOR3_default_instance_);
 }
-inline const ::Vector3& Transform::position() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:Transform.position)
+inline const ::GRPC_VECTOR3& GRPC_TRANSFORM::position() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:GRPC_TRANSFORM.position)
   return _internal_position();
 }
-inline void Transform::unsafe_arena_set_allocated_position(::Vector3* value) {
+inline void GRPC_TRANSFORM::unsafe_arena_set_allocated_position(::GRPC_VECTOR3* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.position_);
   }
-  _impl_.position_ = reinterpret_cast<::Vector3*>(value);
+  _impl_.position_ = reinterpret_cast<::GRPC_VECTOR3*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Transform.position)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:GRPC_TRANSFORM.position)
 }
-inline ::Vector3* Transform::release_position() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::release_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Vector3* released = _impl_.position_;
+  ::GRPC_VECTOR3* released = _impl_.position_;
   _impl_.position_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -1699,30 +1899,30 @@ inline ::Vector3* Transform::release_position() {
   }
   return released;
 }
-inline ::Vector3* Transform::unsafe_arena_release_position() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::unsafe_arena_release_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:Transform.position)
+  // @@protoc_insertion_point(field_release:GRPC_TRANSFORM.position)
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Vector3* temp = _impl_.position_;
+  ::GRPC_VECTOR3* temp = _impl_.position_;
   _impl_.position_ = nullptr;
   return temp;
 }
-inline ::Vector3* Transform::_internal_mutable_position() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::_internal_mutable_position() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.position_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vector3>(GetArena());
-    _impl_.position_ = reinterpret_cast<::Vector3*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::GRPC_VECTOR3>(GetArena());
+    _impl_.position_ = reinterpret_cast<::GRPC_VECTOR3*>(p);
   }
   return _impl_.position_;
 }
-inline ::Vector3* Transform::mutable_position() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::mutable_position() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000001u;
-  ::Vector3* _msg = _internal_mutable_position();
-  // @@protoc_insertion_point(field_mutable:Transform.position)
+  ::GRPC_VECTOR3* _msg = _internal_mutable_position();
+  // @@protoc_insertion_point(field_mutable:GRPC_TRANSFORM.position)
   return _msg;
 }
-inline void Transform::set_allocated_position(::Vector3* value) {
+inline void GRPC_TRANSFORM::set_allocated_position(::GRPC_VECTOR3* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -1739,48 +1939,48 @@ inline void Transform::set_allocated_position(::Vector3* value) {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
 
-  _impl_.position_ = reinterpret_cast<::Vector3*>(value);
-  // @@protoc_insertion_point(field_set_allocated:Transform.position)
+  _impl_.position_ = reinterpret_cast<::GRPC_VECTOR3*>(value);
+  // @@protoc_insertion_point(field_set_allocated:GRPC_TRANSFORM.position)
 }
 
-// .Vector3 rotation = 2;
-inline bool Transform::has_rotation() const {
+// .GRPC_VECTOR3 rotation = 2;
+inline bool GRPC_TRANSFORM::has_rotation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.rotation_ != nullptr);
   return value;
 }
-inline void Transform::clear_rotation() {
+inline void GRPC_TRANSFORM::clear_rotation() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.rotation_ != nullptr) _impl_.rotation_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::Vector3& Transform::_internal_rotation() const {
+inline const ::GRPC_VECTOR3& GRPC_TRANSFORM::_internal_rotation() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vector3* p = _impl_.rotation_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vector3&>(::_Vector3_default_instance_);
+  const ::GRPC_VECTOR3* p = _impl_.rotation_;
+  return p != nullptr ? *p : reinterpret_cast<const ::GRPC_VECTOR3&>(::_GRPC_VECTOR3_default_instance_);
 }
-inline const ::Vector3& Transform::rotation() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:Transform.rotation)
+inline const ::GRPC_VECTOR3& GRPC_TRANSFORM::rotation() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:GRPC_TRANSFORM.rotation)
   return _internal_rotation();
 }
-inline void Transform::unsafe_arena_set_allocated_rotation(::Vector3* value) {
+inline void GRPC_TRANSFORM::unsafe_arena_set_allocated_rotation(::GRPC_VECTOR3* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.rotation_);
   }
-  _impl_.rotation_ = reinterpret_cast<::Vector3*>(value);
+  _impl_.rotation_ = reinterpret_cast<::GRPC_VECTOR3*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Transform.rotation)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:GRPC_TRANSFORM.rotation)
 }
-inline ::Vector3* Transform::release_rotation() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::release_rotation() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Vector3* released = _impl_.rotation_;
+  ::GRPC_VECTOR3* released = _impl_.rotation_;
   _impl_.rotation_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -1795,30 +1995,30 @@ inline ::Vector3* Transform::release_rotation() {
   }
   return released;
 }
-inline ::Vector3* Transform::unsafe_arena_release_rotation() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::unsafe_arena_release_rotation() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:Transform.rotation)
+  // @@protoc_insertion_point(field_release:GRPC_TRANSFORM.rotation)
 
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Vector3* temp = _impl_.rotation_;
+  ::GRPC_VECTOR3* temp = _impl_.rotation_;
   _impl_.rotation_ = nullptr;
   return temp;
 }
-inline ::Vector3* Transform::_internal_mutable_rotation() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::_internal_mutable_rotation() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.rotation_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vector3>(GetArena());
-    _impl_.rotation_ = reinterpret_cast<::Vector3*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::GRPC_VECTOR3>(GetArena());
+    _impl_.rotation_ = reinterpret_cast<::GRPC_VECTOR3*>(p);
   }
   return _impl_.rotation_;
 }
-inline ::Vector3* Transform::mutable_rotation() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::mutable_rotation() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000002u;
-  ::Vector3* _msg = _internal_mutable_rotation();
-  // @@protoc_insertion_point(field_mutable:Transform.rotation)
+  ::GRPC_VECTOR3* _msg = _internal_mutable_rotation();
+  // @@protoc_insertion_point(field_mutable:GRPC_TRANSFORM.rotation)
   return _msg;
 }
-inline void Transform::set_allocated_rotation(::Vector3* value) {
+inline void GRPC_TRANSFORM::set_allocated_rotation(::GRPC_VECTOR3* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -1835,48 +2035,48 @@ inline void Transform::set_allocated_rotation(::Vector3* value) {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
 
-  _impl_.rotation_ = reinterpret_cast<::Vector3*>(value);
-  // @@protoc_insertion_point(field_set_allocated:Transform.rotation)
+  _impl_.rotation_ = reinterpret_cast<::GRPC_VECTOR3*>(value);
+  // @@protoc_insertion_point(field_set_allocated:GRPC_TRANSFORM.rotation)
 }
 
-// .Vector3 scale = 3;
-inline bool Transform::has_scale() const {
+// .GRPC_VECTOR3 scale = 3;
+inline bool GRPC_TRANSFORM::has_scale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.scale_ != nullptr);
   return value;
 }
-inline void Transform::clear_scale() {
+inline void GRPC_TRANSFORM::clear_scale() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.scale_ != nullptr) _impl_.scale_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::Vector3& Transform::_internal_scale() const {
+inline const ::GRPC_VECTOR3& GRPC_TRANSFORM::_internal_scale() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Vector3* p = _impl_.scale_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Vector3&>(::_Vector3_default_instance_);
+  const ::GRPC_VECTOR3* p = _impl_.scale_;
+  return p != nullptr ? *p : reinterpret_cast<const ::GRPC_VECTOR3&>(::_GRPC_VECTOR3_default_instance_);
 }
-inline const ::Vector3& Transform::scale() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:Transform.scale)
+inline const ::GRPC_VECTOR3& GRPC_TRANSFORM::scale() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:GRPC_TRANSFORM.scale)
   return _internal_scale();
 }
-inline void Transform::unsafe_arena_set_allocated_scale(::Vector3* value) {
+inline void GRPC_TRANSFORM::unsafe_arena_set_allocated_scale(::GRPC_VECTOR3* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.scale_);
   }
-  _impl_.scale_ = reinterpret_cast<::Vector3*>(value);
+  _impl_.scale_ = reinterpret_cast<::GRPC_VECTOR3*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Transform.scale)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:GRPC_TRANSFORM.scale)
 }
-inline ::Vector3* Transform::release_scale() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::release_scale() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Vector3* released = _impl_.scale_;
+  ::GRPC_VECTOR3* released = _impl_.scale_;
   _impl_.scale_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
@@ -1891,30 +2091,30 @@ inline ::Vector3* Transform::release_scale() {
   }
   return released;
 }
-inline ::Vector3* Transform::unsafe_arena_release_scale() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::unsafe_arena_release_scale() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:Transform.scale)
+  // @@protoc_insertion_point(field_release:GRPC_TRANSFORM.scale)
 
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Vector3* temp = _impl_.scale_;
+  ::GRPC_VECTOR3* temp = _impl_.scale_;
   _impl_.scale_ = nullptr;
   return temp;
 }
-inline ::Vector3* Transform::_internal_mutable_scale() {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::_internal_mutable_scale() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (_impl_.scale_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Vector3>(GetArena());
-    _impl_.scale_ = reinterpret_cast<::Vector3*>(p);
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::GRPC_VECTOR3>(GetArena());
+    _impl_.scale_ = reinterpret_cast<::GRPC_VECTOR3*>(p);
   }
   return _impl_.scale_;
 }
-inline ::Vector3* Transform::mutable_scale() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::GRPC_VECTOR3* GRPC_TRANSFORM::mutable_scale() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000004u;
-  ::Vector3* _msg = _internal_mutable_scale();
-  // @@protoc_insertion_point(field_mutable:Transform.scale)
+  ::GRPC_VECTOR3* _msg = _internal_mutable_scale();
+  // @@protoc_insertion_point(field_mutable:GRPC_TRANSFORM.scale)
   return _msg;
 }
-inline void Transform::set_allocated_scale(::Vector3* value) {
+inline void GRPC_TRANSFORM::set_allocated_scale(::GRPC_VECTOR3* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
@@ -1931,149 +2131,149 @@ inline void Transform::set_allocated_scale(::Vector3* value) {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
 
-  _impl_.scale_ = reinterpret_cast<::Vector3*>(value);
-  // @@protoc_insertion_point(field_set_allocated:Transform.scale)
+  _impl_.scale_ = reinterpret_cast<::GRPC_VECTOR3*>(value);
+  // @@protoc_insertion_point(field_set_allocated:GRPC_TRANSFORM.scale)
 }
 
 // -------------------------------------------------------------------
 
-// GameObject
+// GRPC_GAMEOBJECT
 
 // string unique_id = 1;
-inline void GameObject::clear_unique_id() {
+inline void GRPC_GAMEOBJECT::clear_unique_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unique_id_.ClearToEmpty();
 }
-inline const std::string& GameObject::unique_id() const
+inline const std::string& GRPC_GAMEOBJECT::unique_id() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GameObject.unique_id)
+  // @@protoc_insertion_point(field_get:GRPC_GAMEOBJECT.unique_id)
   return _internal_unique_id();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GameObject::set_unique_id(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void GRPC_GAMEOBJECT::set_unique_id(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unique_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GameObject.unique_id)
+  // @@protoc_insertion_point(field_set:GRPC_GAMEOBJECT.unique_id)
 }
-inline std::string* GameObject::mutable_unique_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* GRPC_GAMEOBJECT::mutable_unique_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_unique_id();
-  // @@protoc_insertion_point(field_mutable:GameObject.unique_id)
+  // @@protoc_insertion_point(field_mutable:GRPC_GAMEOBJECT.unique_id)
   return _s;
 }
-inline const std::string& GameObject::_internal_unique_id() const {
+inline const std::string& GRPC_GAMEOBJECT::_internal_unique_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.unique_id_.Get();
 }
-inline void GameObject::_internal_set_unique_id(const std::string& value) {
+inline void GRPC_GAMEOBJECT::_internal_set_unique_id(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unique_id_.Set(value, GetArena());
 }
-inline std::string* GameObject::_internal_mutable_unique_id() {
+inline std::string* GRPC_GAMEOBJECT::_internal_mutable_unique_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.unique_id_.Mutable( GetArena());
 }
-inline std::string* GameObject::release_unique_id() {
+inline std::string* GRPC_GAMEOBJECT::release_unique_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GameObject.unique_id)
+  // @@protoc_insertion_point(field_release:GRPC_GAMEOBJECT.unique_id)
   return _impl_.unique_id_.Release();
 }
-inline void GameObject::set_allocated_unique_id(std::string* value) {
+inline void GRPC_GAMEOBJECT::set_allocated_unique_id(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.unique_id_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.unique_id_.IsDefault()) {
     _impl_.unique_id_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:GameObject.unique_id)
+  // @@protoc_insertion_point(field_set_allocated:GRPC_GAMEOBJECT.unique_id)
 }
 
 // string name = 2;
-inline void GameObject::clear_name() {
+inline void GRPC_GAMEOBJECT::clear_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.ClearToEmpty();
 }
-inline const std::string& GameObject::name() const
+inline const std::string& GRPC_GAMEOBJECT::name() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GameObject.name)
+  // @@protoc_insertion_point(field_get:GRPC_GAMEOBJECT.name)
   return _internal_name();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GameObject::set_name(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void GRPC_GAMEOBJECT::set_name(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GameObject.name)
+  // @@protoc_insertion_point(field_set:GRPC_GAMEOBJECT.name)
 }
-inline std::string* GameObject::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* GRPC_GAMEOBJECT::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:GameObject.name)
+  // @@protoc_insertion_point(field_mutable:GRPC_GAMEOBJECT.name)
   return _s;
 }
-inline const std::string& GameObject::_internal_name() const {
+inline const std::string& GRPC_GAMEOBJECT::_internal_name() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.name_.Get();
 }
-inline void GameObject::_internal_set_name(const std::string& value) {
+inline void GRPC_GAMEOBJECT::_internal_set_name(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.Set(value, GetArena());
 }
-inline std::string* GameObject::_internal_mutable_name() {
+inline std::string* GRPC_GAMEOBJECT::_internal_mutable_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.name_.Mutable( GetArena());
 }
-inline std::string* GameObject::release_name() {
+inline std::string* GRPC_GAMEOBJECT::release_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GameObject.name)
+  // @@protoc_insertion_point(field_release:GRPC_GAMEOBJECT.name)
   return _impl_.name_.Release();
 }
-inline void GameObject::set_allocated_name(std::string* value) {
+inline void GRPC_GAMEOBJECT::set_allocated_name(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
     _impl_.name_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:GameObject.name)
+  // @@protoc_insertion_point(field_set_allocated:GRPC_GAMEOBJECT.name)
 }
 
-// .Transform t = 3;
-inline bool GameObject::has_t() const {
+// .GRPC_TRANSFORM transform = 3;
+inline bool GRPC_GAMEOBJECT::has_transform() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.t_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.transform_ != nullptr);
   return value;
 }
-inline void GameObject::clear_t() {
+inline void GRPC_GAMEOBJECT::clear_transform() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (_impl_.t_ != nullptr) _impl_.t_->Clear();
+  if (_impl_.transform_ != nullptr) _impl_.transform_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::Transform& GameObject::_internal_t() const {
+inline const ::GRPC_TRANSFORM& GRPC_GAMEOBJECT::_internal_transform() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  const ::Transform* p = _impl_.t_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Transform&>(::_Transform_default_instance_);
+  const ::GRPC_TRANSFORM* p = _impl_.transform_;
+  return p != nullptr ? *p : reinterpret_cast<const ::GRPC_TRANSFORM&>(::_GRPC_TRANSFORM_default_instance_);
 }
-inline const ::Transform& GameObject::t() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GameObject.t)
-  return _internal_t();
+inline const ::GRPC_TRANSFORM& GRPC_GAMEOBJECT::transform() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:GRPC_GAMEOBJECT.transform)
+  return _internal_transform();
 }
-inline void GameObject::unsafe_arena_set_allocated_t(::Transform* value) {
+inline void GRPC_GAMEOBJECT::unsafe_arena_set_allocated_transform(::GRPC_TRANSFORM* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (GetArena() == nullptr) {
-    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.t_);
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.transform_);
   }
-  _impl_.t_ = reinterpret_cast<::Transform*>(value);
+  _impl_.transform_ = reinterpret_cast<::GRPC_TRANSFORM*>(value);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:GameObject.t)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:GRPC_GAMEOBJECT.transform)
 }
-inline ::Transform* GameObject::release_t() {
+inline ::GRPC_TRANSFORM* GRPC_GAMEOBJECT::release_transform() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Transform* released = _impl_.t_;
-  _impl_.t_ = nullptr;
+  ::GRPC_TRANSFORM* released = _impl_.transform_;
+  _impl_.transform_ = nullptr;
   if (::google::protobuf::internal::DebugHardenForceCopyInRelease()) {
     auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
     released = ::google::protobuf::internal::DuplicateIfNonNull(released);
@@ -2087,34 +2287,34 @@ inline ::Transform* GameObject::release_t() {
   }
   return released;
 }
-inline ::Transform* GameObject::unsafe_arena_release_t() {
+inline ::GRPC_TRANSFORM* GRPC_GAMEOBJECT::unsafe_arena_release_transform() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GameObject.t)
+  // @@protoc_insertion_point(field_release:GRPC_GAMEOBJECT.transform)
 
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Transform* temp = _impl_.t_;
-  _impl_.t_ = nullptr;
+  ::GRPC_TRANSFORM* temp = _impl_.transform_;
+  _impl_.transform_ = nullptr;
   return temp;
 }
-inline ::Transform* GameObject::_internal_mutable_t() {
+inline ::GRPC_TRANSFORM* GRPC_GAMEOBJECT::_internal_mutable_transform() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (_impl_.t_ == nullptr) {
-    auto* p = ::google::protobuf::Message::DefaultConstruct<::Transform>(GetArena());
-    _impl_.t_ = reinterpret_cast<::Transform*>(p);
+  if (_impl_.transform_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::GRPC_TRANSFORM>(GetArena());
+    _impl_.transform_ = reinterpret_cast<::GRPC_TRANSFORM*>(p);
   }
-  return _impl_.t_;
+  return _impl_.transform_;
 }
-inline ::Transform* GameObject::mutable_t() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::GRPC_TRANSFORM* GRPC_GAMEOBJECT::mutable_transform() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   _impl_._has_bits_[0] |= 0x00000001u;
-  ::Transform* _msg = _internal_mutable_t();
-  // @@protoc_insertion_point(field_mutable:GameObject.t)
+  ::GRPC_TRANSFORM* _msg = _internal_mutable_transform();
+  // @@protoc_insertion_point(field_mutable:GRPC_GAMEOBJECT.transform)
   return _msg;
 }
-inline void GameObject::set_allocated_t(::Transform* value) {
+inline void GRPC_GAMEOBJECT::set_allocated_transform(::GRPC_TRANSFORM* value) {
   ::google::protobuf::Arena* message_arena = GetArena();
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (message_arena == nullptr) {
-    delete (_impl_.t_);
+    delete (_impl_.transform_);
   }
 
   if (value != nullptr) {
@@ -2127,265 +2327,318 @@ inline void GameObject::set_allocated_t(::Transform* value) {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
 
-  _impl_.t_ = reinterpret_cast<::Transform*>(value);
-  // @@protoc_insertion_point(field_set_allocated:GameObject.t)
+  _impl_.transform_ = reinterpret_cast<::GRPC_TRANSFORM*>(value);
+  // @@protoc_insertion_point(field_set_allocated:GRPC_GAMEOBJECT.transform)
 }
 
 // string mesh_id = 4;
-inline void GameObject::clear_mesh_id() {
+inline void GRPC_GAMEOBJECT::clear_mesh_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.ClearToEmpty();
 }
-inline const std::string& GameObject::mesh_id() const
+inline const std::string& GRPC_GAMEOBJECT::mesh_id() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GameObject.mesh_id)
+  // @@protoc_insertion_point(field_get:GRPC_GAMEOBJECT.mesh_id)
   return _internal_mesh_id();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GameObject::set_mesh_id(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void GRPC_GAMEOBJECT::set_mesh_id(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GameObject.mesh_id)
+  // @@protoc_insertion_point(field_set:GRPC_GAMEOBJECT.mesh_id)
 }
-inline std::string* GameObject::mutable_mesh_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* GRPC_GAMEOBJECT::mutable_mesh_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_mesh_id();
-  // @@protoc_insertion_point(field_mutable:GameObject.mesh_id)
+  // @@protoc_insertion_point(field_mutable:GRPC_GAMEOBJECT.mesh_id)
   return _s;
 }
-inline const std::string& GameObject::_internal_mesh_id() const {
+inline const std::string& GRPC_GAMEOBJECT::_internal_mesh_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.mesh_id_.Get();
 }
-inline void GameObject::_internal_set_mesh_id(const std::string& value) {
+inline void GRPC_GAMEOBJECT::_internal_set_mesh_id(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.Set(value, GetArena());
 }
-inline std::string* GameObject::_internal_mutable_mesh_id() {
+inline std::string* GRPC_GAMEOBJECT::_internal_mutable_mesh_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.mesh_id_.Mutable( GetArena());
 }
-inline std::string* GameObject::release_mesh_id() {
+inline std::string* GRPC_GAMEOBJECT::release_mesh_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GameObject.mesh_id)
+  // @@protoc_insertion_point(field_release:GRPC_GAMEOBJECT.mesh_id)
   return _impl_.mesh_id_.Release();
 }
-inline void GameObject::set_allocated_mesh_id(std::string* value) {
+inline void GRPC_GAMEOBJECT::set_allocated_mesh_id(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.mesh_id_.IsDefault()) {
     _impl_.mesh_id_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:GameObject.mesh_id)
+  // @@protoc_insertion_point(field_set_allocated:GRPC_GAMEOBJECT.mesh_id)
 }
 
 // -------------------------------------------------------------------
 
-// WorldData
+// GRPC_SCENE
 
-// repeated .GameObject game_objects = 1;
-inline int WorldData::_internal_game_objects_size() const {
-  return _internal_game_objects().size();
+// repeated .GRPC_GAMEOBJECT gameobjects = 1;
+inline int GRPC_SCENE::_internal_gameobjects_size() const {
+  return _internal_gameobjects().size();
 }
-inline int WorldData::game_objects_size() const {
-  return _internal_game_objects_size();
+inline int GRPC_SCENE::gameobjects_size() const {
+  return _internal_gameobjects_size();
 }
-inline void WorldData::clear_game_objects() {
+inline void GRPC_SCENE::clear_gameobjects() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.game_objects_.Clear();
+  _impl_.gameobjects_.Clear();
 }
-inline ::GameObject* WorldData::mutable_game_objects(int index)
+inline ::GRPC_GAMEOBJECT* GRPC_SCENE::mutable_gameobjects(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:WorldData.game_objects)
-  return _internal_mutable_game_objects()->Mutable(index);
+  // @@protoc_insertion_point(field_mutable:GRPC_SCENE.gameobjects)
+  return _internal_mutable_gameobjects()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::GameObject>* WorldData::mutable_game_objects()
+inline ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>* GRPC_SCENE::mutable_gameobjects()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:WorldData.game_objects)
+  // @@protoc_insertion_point(field_mutable_list:GRPC_SCENE.gameobjects)
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _internal_mutable_game_objects();
+  return _internal_mutable_gameobjects();
 }
-inline const ::GameObject& WorldData::game_objects(int index) const
+inline const ::GRPC_GAMEOBJECT& GRPC_SCENE::gameobjects(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:WorldData.game_objects)
-  return _internal_game_objects().Get(index);
+  // @@protoc_insertion_point(field_get:GRPC_SCENE.gameobjects)
+  return _internal_gameobjects().Get(index);
 }
-inline ::GameObject* WorldData::add_game_objects() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::GRPC_GAMEOBJECT* GRPC_SCENE::add_gameobjects() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::GameObject* _add = _internal_mutable_game_objects()->Add();
-  // @@protoc_insertion_point(field_add:WorldData.game_objects)
+  ::GRPC_GAMEOBJECT* _add = _internal_mutable_gameobjects()->Add();
+  // @@protoc_insertion_point(field_add:GRPC_SCENE.gameobjects)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::GameObject>& WorldData::game_objects() const
+inline const ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>& GRPC_SCENE::gameobjects() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:WorldData.game_objects)
-  return _internal_game_objects();
+  // @@protoc_insertion_point(field_list:GRPC_SCENE.gameobjects)
+  return _internal_gameobjects();
 }
-inline const ::google::protobuf::RepeatedPtrField<::GameObject>&
-WorldData::_internal_game_objects() const {
+inline const ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>&
+GRPC_SCENE::_internal_gameobjects() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.game_objects_;
+  return _impl_.gameobjects_;
 }
-inline ::google::protobuf::RepeatedPtrField<::GameObject>*
-WorldData::_internal_mutable_game_objects() {
+inline ::google::protobuf::RepeatedPtrField<::GRPC_GAMEOBJECT>*
+GRPC_SCENE::_internal_mutable_gameobjects() {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return &_impl_.game_objects_;
+  return &_impl_.gameobjects_;
 }
 
 // -------------------------------------------------------------------
 
-// WorldRequest
+// GRPC_SCENES_BATCH
 
-// string msg = 1;
-inline void WorldRequest::clear_msg() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.msg_.ClearToEmpty();
+// repeated .GRPC_SCENE scenes = 1;
+inline int GRPC_SCENES_BATCH::_internal_scenes_size() const {
+  return _internal_scenes().size();
 }
-inline const std::string& WorldRequest::msg() const
+inline int GRPC_SCENES_BATCH::scenes_size() const {
+  return _internal_scenes_size();
+}
+inline void GRPC_SCENES_BATCH::clear_scenes() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.scenes_.Clear();
+}
+inline ::GRPC_SCENE* GRPC_SCENES_BATCH::mutable_scenes(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:WorldRequest.msg)
-  return _internal_msg();
+  // @@protoc_insertion_point(field_mutable:GRPC_SCENES_BATCH.scenes)
+  return _internal_mutable_scenes()->Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>* GRPC_SCENES_BATCH::mutable_scenes()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:GRPC_SCENES_BATCH.scenes)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_scenes();
+}
+inline const ::GRPC_SCENE& GRPC_SCENES_BATCH::scenes(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:GRPC_SCENES_BATCH.scenes)
+  return _internal_scenes().Get(index);
+}
+inline ::GRPC_SCENE* GRPC_SCENES_BATCH::add_scenes() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::GRPC_SCENE* _add = _internal_mutable_scenes()->Add();
+  // @@protoc_insertion_point(field_add:GRPC_SCENES_BATCH.scenes)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>& GRPC_SCENES_BATCH::scenes() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:GRPC_SCENES_BATCH.scenes)
+  return _internal_scenes();
+}
+inline const ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>&
+GRPC_SCENES_BATCH::_internal_scenes() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.scenes_;
+}
+inline ::google::protobuf::RepeatedPtrField<::GRPC_SCENE>*
+GRPC_SCENES_BATCH::_internal_mutable_scenes() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.scenes_;
+}
+
+// -------------------------------------------------------------------
+
+// CLIENT_JOIN_REQUEST
+
+// string CLIENT_ID = 1;
+inline void CLIENT_JOIN_REQUEST::clear_client_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.client_id_.ClearToEmpty();
+}
+inline const std::string& CLIENT_JOIN_REQUEST::client_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:CLIENT_JOIN_REQUEST.CLIENT_ID)
+  return _internal_client_id();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void WorldRequest::set_msg(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void CLIENT_JOIN_REQUEST::set_client_id(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.msg_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:WorldRequest.msg)
+  _impl_.client_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:CLIENT_JOIN_REQUEST.CLIENT_ID)
 }
-inline std::string* WorldRequest::mutable_msg() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_msg();
-  // @@protoc_insertion_point(field_mutable:WorldRequest.msg)
+inline std::string* CLIENT_JOIN_REQUEST::mutable_client_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_client_id();
+  // @@protoc_insertion_point(field_mutable:CLIENT_JOIN_REQUEST.CLIENT_ID)
   return _s;
 }
-inline const std::string& WorldRequest::_internal_msg() const {
+inline const std::string& CLIENT_JOIN_REQUEST::_internal_client_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.msg_.Get();
+  return _impl_.client_id_.Get();
 }
-inline void WorldRequest::_internal_set_msg(const std::string& value) {
+inline void CLIENT_JOIN_REQUEST::_internal_set_client_id(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.msg_.Set(value, GetArena());
+  _impl_.client_id_.Set(value, GetArena());
 }
-inline std::string* WorldRequest::_internal_mutable_msg() {
+inline std::string* CLIENT_JOIN_REQUEST::_internal_mutable_client_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.msg_.Mutable( GetArena());
+  return _impl_.client_id_.Mutable( GetArena());
 }
-inline std::string* WorldRequest::release_msg() {
+inline std::string* CLIENT_JOIN_REQUEST::release_client_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:WorldRequest.msg)
-  return _impl_.msg_.Release();
+  // @@protoc_insertion_point(field_release:CLIENT_JOIN_REQUEST.CLIENT_ID)
+  return _impl_.client_id_.Release();
 }
-inline void WorldRequest::set_allocated_msg(std::string* value) {
+inline void CLIENT_JOIN_REQUEST::set_allocated_client_id(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.msg_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.msg_.IsDefault()) {
-    _impl_.msg_.Set("", GetArena());
+  _impl_.client_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.client_id_.IsDefault()) {
+    _impl_.client_id_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:WorldRequest.msg)
+  // @@protoc_insertion_point(field_set_allocated:CLIENT_JOIN_REQUEST.CLIENT_ID)
 }
 
 // -------------------------------------------------------------------
 
-// MeshRequest
+// MESH_REQUEST
 
 // string mesh_id = 1;
-inline void MeshRequest::clear_mesh_id() {
+inline void MESH_REQUEST::clear_mesh_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.ClearToEmpty();
 }
-inline const std::string& MeshRequest::mesh_id() const
+inline const std::string& MESH_REQUEST::mesh_id() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:MeshRequest.mesh_id)
+  // @@protoc_insertion_point(field_get:MESH_REQUEST.mesh_id)
   return _internal_mesh_id();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void MeshRequest::set_mesh_id(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void MESH_REQUEST::set_mesh_id(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:MeshRequest.mesh_id)
+  // @@protoc_insertion_point(field_set:MESH_REQUEST.mesh_id)
 }
-inline std::string* MeshRequest::mutable_mesh_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* MESH_REQUEST::mutable_mesh_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_mesh_id();
-  // @@protoc_insertion_point(field_mutable:MeshRequest.mesh_id)
+  // @@protoc_insertion_point(field_mutable:MESH_REQUEST.mesh_id)
   return _s;
 }
-inline const std::string& MeshRequest::_internal_mesh_id() const {
+inline const std::string& MESH_REQUEST::_internal_mesh_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.mesh_id_.Get();
 }
-inline void MeshRequest::_internal_set_mesh_id(const std::string& value) {
+inline void MESH_REQUEST::_internal_set_mesh_id(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.Set(value, GetArena());
 }
-inline std::string* MeshRequest::_internal_mutable_mesh_id() {
+inline std::string* MESH_REQUEST::_internal_mutable_mesh_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.mesh_id_.Mutable( GetArena());
 }
-inline std::string* MeshRequest::release_mesh_id() {
+inline std::string* MESH_REQUEST::release_mesh_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:MeshRequest.mesh_id)
+  // @@protoc_insertion_point(field_release:MESH_REQUEST.mesh_id)
   return _impl_.mesh_id_.Release();
 }
-inline void MeshRequest::set_allocated_mesh_id(std::string* value) {
+inline void MESH_REQUEST::set_allocated_mesh_id(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_id_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.mesh_id_.IsDefault()) {
     _impl_.mesh_id_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:MeshRequest.mesh_id)
+  // @@protoc_insertion_point(field_set_allocated:MESH_REQUEST.mesh_id)
 }
 
 // -------------------------------------------------------------------
 
-// Mesh
+// MESH
 
-// bytes mesh_data = 2;
-inline void Mesh::clear_mesh_data() {
+// string mesh_data = 1;
+inline void MESH::clear_mesh_data() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_data_.ClearToEmpty();
 }
-inline const std::string& Mesh::mesh_data() const
+inline const std::string& MESH::mesh_data() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:Mesh.mesh_data)
+  // @@protoc_insertion_point(field_get:MESH.mesh_data)
   return _internal_mesh_data();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void Mesh::set_mesh_data(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void MESH::set_mesh_data(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.mesh_data_.SetBytes(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:Mesh.mesh_data)
+  _impl_.mesh_data_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:MESH.mesh_data)
 }
-inline std::string* Mesh::mutable_mesh_data() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* MESH::mutable_mesh_data() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_mesh_data();
-  // @@protoc_insertion_point(field_mutable:Mesh.mesh_data)
+  // @@protoc_insertion_point(field_mutable:MESH.mesh_data)
   return _s;
 }
-inline const std::string& Mesh::_internal_mesh_data() const {
+inline const std::string& MESH::_internal_mesh_data() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.mesh_data_.Get();
 }
-inline void Mesh::_internal_set_mesh_data(const std::string& value) {
+inline void MESH::_internal_set_mesh_data(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_data_.Set(value, GetArena());
 }
-inline std::string* Mesh::_internal_mutable_mesh_data() {
+inline std::string* MESH::_internal_mutable_mesh_data() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.mesh_data_.Mutable( GetArena());
 }
-inline std::string* Mesh::release_mesh_data() {
+inline std::string* MESH::release_mesh_data() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:Mesh.mesh_data)
+  // @@protoc_insertion_point(field_release:MESH.mesh_data)
   return _impl_.mesh_data_.Release();
 }
-inline void Mesh::set_allocated_mesh_data(std::string* value) {
+inline void MESH::set_allocated_mesh_data(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mesh_data_.SetAllocated(value, GetArena());
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.mesh_data_.IsDefault()) {
     _impl_.mesh_data_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:Mesh.mesh_data)
+  // @@protoc_insertion_point(field_set_allocated:MESH.mesh_data)
 }
 
 #ifdef __GNUC__

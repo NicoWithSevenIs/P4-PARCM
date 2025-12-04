@@ -26,49 +26,49 @@
 #include <grpcpp/support/sync_stream.h>
 #include <grpcpp/ports_def.inc>
 
-class World final {
+class WORLD final {
  public:
   static constexpr char const* service_full_name() {
-    return "World";
+    return "WORLD";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status InitializeClient(::grpc::ClientContext* context, const ::WorldRequest& request, ::WorldData* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::WorldData>> AsyncInitializeClient(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::WorldData>>(AsyncInitializeClientRaw(context, request, cq));
+    virtual ::grpc::Status InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::GRPC_SCENES_BATCH* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::GRPC_SCENES_BATCH>> AsyncInitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::GRPC_SCENES_BATCH>>(AsyncInitializeClientRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::WorldData>> PrepareAsyncInitializeClient(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::WorldData>>(PrepareAsyncInitializeClientRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::GRPC_SCENES_BATCH>> PrepareAsyncInitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::GRPC_SCENES_BATCH>>(PrepareAsyncInitializeClientRaw(context, request, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void InitializeClient(::grpc::ClientContext* context, const ::WorldRequest* request, ::WorldData* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void InitializeClient(::grpc::ClientContext* context, const ::WorldRequest* request, ::WorldData* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::WorldData>* AsyncInitializeClientRaw(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::WorldData>* PrepareAsyncInitializeClientRaw(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::GRPC_SCENES_BATCH>* AsyncInitializeClientRaw(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::GRPC_SCENES_BATCH>* PrepareAsyncInitializeClientRaw(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status InitializeClient(::grpc::ClientContext* context, const ::WorldRequest& request, ::WorldData* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::WorldData>> AsyncInitializeClient(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::WorldData>>(AsyncInitializeClientRaw(context, request, cq));
+    ::grpc::Status InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::GRPC_SCENES_BATCH* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>> AsyncInitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>>(AsyncInitializeClientRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::WorldData>> PrepareAsyncInitializeClient(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::WorldData>>(PrepareAsyncInitializeClientRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>> PrepareAsyncInitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>>(PrepareAsyncInitializeClientRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void InitializeClient(::grpc::ClientContext* context, const ::WorldRequest* request, ::WorldData* response, std::function<void(::grpc::Status)>) override;
-      void InitializeClient(::grpc::ClientContext* context, const ::WorldRequest* request, ::WorldData* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response, std::function<void(::grpc::Status)>) override;
+      void InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -80,8 +80,8 @@ class World final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::WorldData>* AsyncInitializeClientRaw(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::WorldData>* PrepareAsyncInitializeClientRaw(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>* AsyncInitializeClientRaw(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>* PrepareAsyncInitializeClientRaw(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_InitializeClient_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -90,7 +90,7 @@ class World final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status InitializeClient(::grpc::ServerContext* context, const ::WorldRequest* request, ::WorldData* response);
+    virtual ::grpc::Status InitializeClient(::grpc::ServerContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_InitializeClient : public BaseClass {
@@ -104,11 +104,11 @@ class World final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::WorldRequest* /*request*/, ::WorldData* /*response*/) override {
+    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::CLIENT_JOIN_REQUEST* /*request*/, ::GRPC_SCENES_BATCH* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestInitializeClient(::grpc::ServerContext* context, ::WorldRequest* request, ::grpc::ServerAsyncResponseWriter< ::WorldData>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestInitializeClient(::grpc::ServerContext* context, ::CLIENT_JOIN_REQUEST* request, ::grpc::ServerAsyncResponseWriter< ::GRPC_SCENES_BATCH>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -120,25 +120,25 @@ class World final {
    public:
     WithCallbackMethod_InitializeClient() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::WorldRequest, ::WorldData>(
+          new ::grpc::internal::CallbackUnaryHandler< ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::WorldRequest* request, ::WorldData* response) { return this->InitializeClient(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response) { return this->InitializeClient(context, request, response); }));}
     void SetMessageAllocatorFor_InitializeClient(
-        ::grpc::MessageAllocator< ::WorldRequest, ::WorldData>* allocator) {
+        ::grpc::MessageAllocator< ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::WorldRequest, ::WorldData>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_InitializeClient() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::WorldRequest* /*request*/, ::WorldData* /*response*/) override {
+    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::CLIENT_JOIN_REQUEST* /*request*/, ::GRPC_SCENES_BATCH* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* InitializeClient(
-      ::grpc::CallbackServerContext* /*context*/, const ::WorldRequest* /*request*/, ::WorldData* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::CLIENT_JOIN_REQUEST* /*request*/, ::GRPC_SCENES_BATCH* /*response*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_InitializeClient<Service > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
@@ -154,7 +154,7 @@ class World final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::WorldRequest* /*request*/, ::WorldData* /*response*/) override {
+    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::CLIENT_JOIN_REQUEST* /*request*/, ::GRPC_SCENES_BATCH* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -171,7 +171,7 @@ class World final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::WorldRequest* /*request*/, ::WorldData* /*response*/) override {
+    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::CLIENT_JOIN_REQUEST* /*request*/, ::GRPC_SCENES_BATCH* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -194,7 +194,7 @@ class World final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::WorldRequest* /*request*/, ::WorldData* /*response*/) override {
+    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::CLIENT_JOIN_REQUEST* /*request*/, ::GRPC_SCENES_BATCH* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -209,10 +209,10 @@ class World final {
     WithStreamedUnaryMethod_InitializeClient() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::WorldRequest, ::WorldData>(
+          ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::WorldRequest, ::WorldData>* streamer) {
+                     ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH>* streamer) {
                        return this->StreamedInitializeClient(context,
                          streamer);
                   }));
@@ -221,61 +221,64 @@ class World final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::WorldRequest* /*request*/, ::WorldData* /*response*/) override {
+    ::grpc::Status InitializeClient(::grpc::ServerContext* /*context*/, const ::CLIENT_JOIN_REQUEST* /*request*/, ::GRPC_SCENES_BATCH* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedInitializeClient(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::WorldRequest,::WorldData>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedInitializeClient(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CLIENT_JOIN_REQUEST,::GRPC_SCENES_BATCH>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_InitializeClient<Service > StreamedUnaryService;
   typedef Service SplitStreamedService;
   typedef WithStreamedUnaryMethod_InitializeClient<Service > StreamedService;
 };
 
-class MeshManager final {
+class MESH_DISPATCHER final {
  public:
   static constexpr char const* service_full_name() {
-    return "MeshManager";
+    return "MESH_DISPATCHER";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest& request, ::Mesh* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Mesh>> AsyncDownloadMesh(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Mesh>>(AsyncDownloadMeshRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::MESH>> DownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::MESH>>(DownloadMeshRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Mesh>> PrepareAsyncDownloadMesh(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Mesh>>(PrepareAsyncDownloadMeshRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::MESH>> AsyncDownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::MESH>>(AsyncDownloadMeshRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::MESH>> PrepareAsyncDownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::MESH>>(PrepareAsyncDownloadMeshRaw(context, request, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest* request, ::Mesh* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest* request, ::Mesh* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void DownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST* request, ::grpc::ClientReadReactor< ::MESH>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::Mesh>* AsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::Mesh>* PrepareAsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::MESH>* DownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::MESH>* AsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::MESH>* PrepareAsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest& request, ::Mesh* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Mesh>> AsyncDownloadMesh(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Mesh>>(AsyncDownloadMeshRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReader< ::MESH>> DownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::MESH>>(DownloadMeshRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Mesh>> PrepareAsyncDownloadMesh(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Mesh>>(PrepareAsyncDownloadMeshRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::MESH>> AsyncDownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::MESH>>(AsyncDownloadMeshRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::MESH>> PrepareAsyncDownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::MESH>>(PrepareAsyncDownloadMeshRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest* request, ::Mesh* response, std::function<void(::grpc::Status)>) override;
-      void DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest* request, ::Mesh* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void DownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST* request, ::grpc::ClientReadReactor< ::MESH>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -287,8 +290,9 @@ class MeshManager final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::Mesh>* AsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::Mesh>* PrepareAsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::MESH>* DownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request) override;
+    ::grpc::ClientAsyncReader< ::MESH>* AsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::MESH>* PrepareAsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_DownloadMesh_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -297,7 +301,7 @@ class MeshManager final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status DownloadMesh(::grpc::ServerContext* context, const ::MeshRequest* request, ::Mesh* response);
+    virtual ::grpc::Status DownloadMesh(::grpc::ServerContext* context, const ::MESH_REQUEST* request, ::grpc::ServerWriter< ::MESH>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_DownloadMesh : public BaseClass {
@@ -311,12 +315,12 @@ class MeshManager final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MeshRequest* /*request*/, ::Mesh* /*response*/) override {
+    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MESH_REQUEST* /*request*/, ::grpc::ServerWriter< ::MESH>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDownloadMesh(::grpc::ServerContext* context, ::MeshRequest* request, ::grpc::ServerAsyncResponseWriter< ::Mesh>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestDownloadMesh(::grpc::ServerContext* context, ::MESH_REQUEST* request, ::grpc::ServerAsyncWriter< ::MESH>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   typedef WithAsyncMethod_DownloadMesh<Service > AsyncService;
@@ -327,25 +331,20 @@ class MeshManager final {
    public:
     WithCallbackMethod_DownloadMesh() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::MeshRequest, ::Mesh>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::MESH_REQUEST, ::MESH>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::MeshRequest* request, ::Mesh* response) { return this->DownloadMesh(context, request, response); }));}
-    void SetMessageAllocatorFor_DownloadMesh(
-        ::grpc::MessageAllocator< ::MeshRequest, ::Mesh>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::MeshRequest, ::Mesh>*>(handler)
-              ->SetMessageAllocator(allocator);
+                   ::grpc::CallbackServerContext* context, const ::MESH_REQUEST* request) { return this->DownloadMesh(context, request); }));
     }
     ~WithCallbackMethod_DownloadMesh() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MeshRequest* /*request*/, ::Mesh* /*response*/) override {
+    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MESH_REQUEST* /*request*/, ::grpc::ServerWriter< ::MESH>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* DownloadMesh(
-      ::grpc::CallbackServerContext* /*context*/, const ::MeshRequest* /*request*/, ::Mesh* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::MESH>* DownloadMesh(
+      ::grpc::CallbackServerContext* /*context*/, const ::MESH_REQUEST* /*request*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_DownloadMesh<Service > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
@@ -361,7 +360,7 @@ class MeshManager final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MeshRequest* /*request*/, ::Mesh* /*response*/) override {
+    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MESH_REQUEST* /*request*/, ::grpc::ServerWriter< ::MESH>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -378,12 +377,12 @@ class MeshManager final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MeshRequest* /*request*/, ::Mesh* /*response*/) override {
+    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MESH_REQUEST* /*request*/, ::grpc::ServerWriter< ::MESH>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDownloadMesh(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestDownloadMesh(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -393,51 +392,51 @@ class MeshManager final {
    public:
     WithRawCallbackMethod_DownloadMesh() {
       ::grpc::Service::MarkMethodRawCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DownloadMesh(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->DownloadMesh(context, request); }));
     }
     ~WithRawCallbackMethod_DownloadMesh() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MeshRequest* /*request*/, ::Mesh* /*response*/) override {
+    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MESH_REQUEST* /*request*/, ::grpc::ServerWriter< ::MESH>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* DownloadMesh(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* DownloadMesh(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
   };
+  typedef Service StreamedUnaryService;
   template <class BaseClass>
-  class WithStreamedUnaryMethod_DownloadMesh : public BaseClass {
+  class WithSplitStreamingMethod_DownloadMesh : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_DownloadMesh() {
+    WithSplitStreamingMethod_DownloadMesh() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::MeshRequest, ::Mesh>(
+        new ::grpc::internal::SplitServerStreamingHandler<
+          ::MESH_REQUEST, ::MESH>(
             [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::MeshRequest, ::Mesh>* streamer) {
+                   ::grpc::ServerSplitStreamer<
+                     ::MESH_REQUEST, ::MESH>* streamer) {
                        return this->StreamedDownloadMesh(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_DownloadMesh() override {
+    ~WithSplitStreamingMethod_DownloadMesh() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MeshRequest* /*request*/, ::Mesh* /*response*/) override {
+    ::grpc::Status DownloadMesh(::grpc::ServerContext* /*context*/, const ::MESH_REQUEST* /*request*/, ::grpc::ServerWriter< ::MESH>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDownloadMesh(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::MeshRequest,::Mesh>* server_unary_streamer) = 0;
+    // replace default version of method with split streamed
+    virtual ::grpc::Status StreamedDownloadMesh(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::MESH_REQUEST,::MESH>* server_split_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_DownloadMesh<Service > StreamedUnaryService;
-  typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_DownloadMesh<Service > StreamedService;
+  typedef WithSplitStreamingMethod_DownloadMesh<Service > SplitStreamedService;
+  typedef WithSplitStreamingMethod_DownloadMesh<Service > StreamedService;
 };
 
 

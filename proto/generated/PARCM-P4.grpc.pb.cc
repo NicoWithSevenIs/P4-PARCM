@@ -20,60 +20,60 @@
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/support/sync_stream.h>
 
-static const char* World_method_names[] = {
-  "/World/InitializeClient",
+static const char* WORLD_method_names[] = {
+  "/WORLD/InitializeClient",
 };
 
-std::unique_ptr< World::Stub> World::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+std::unique_ptr< WORLD::Stub> WORLD::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   (void)options;
-  std::unique_ptr< World::Stub> stub(new World::Stub(channel, options));
+  std::unique_ptr< WORLD::Stub> stub(new WORLD::Stub(channel, options));
   return stub;
 }
 
-World::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_InitializeClient_(World_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+WORLD::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_InitializeClient_(WORLD_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status World::Stub::InitializeClient(::grpc::ClientContext* context, const ::WorldRequest& request, ::WorldData* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::WorldRequest, ::WorldData, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_InitializeClient_, context, request, response);
+::grpc::Status WORLD::Stub::InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::GRPC_SCENES_BATCH* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_InitializeClient_, context, request, response);
 }
 
-void World::Stub::async::InitializeClient(::grpc::ClientContext* context, const ::WorldRequest* request, ::WorldData* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::WorldRequest, ::WorldData, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_InitializeClient_, context, request, response, std::move(f));
+void WORLD::Stub::async::InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_InitializeClient_, context, request, response, std::move(f));
 }
 
-void World::Stub::async::InitializeClient(::grpc::ClientContext* context, const ::WorldRequest* request, ::WorldData* response, ::grpc::ClientUnaryReactor* reactor) {
+void WORLD::Stub::async::InitializeClient(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_InitializeClient_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::WorldData>* World::Stub::PrepareAsyncInitializeClientRaw(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::WorldData, ::WorldRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_InitializeClient_, context, request);
+::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>* WORLD::Stub::PrepareAsyncInitializeClientRaw(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::GRPC_SCENES_BATCH, ::CLIENT_JOIN_REQUEST, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_InitializeClient_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::WorldData>* World::Stub::AsyncInitializeClientRaw(::grpc::ClientContext* context, const ::WorldRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::GRPC_SCENES_BATCH>* WORLD::Stub::AsyncInitializeClientRaw(::grpc::ClientContext* context, const ::CLIENT_JOIN_REQUEST& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncInitializeClientRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-World::Service::Service() {
+WORLD::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      World_method_names[0],
+      WORLD_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< World::Service, ::WorldRequest, ::WorldData, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](World::Service* service,
+      new ::grpc::internal::RpcMethodHandler< WORLD::Service, ::CLIENT_JOIN_REQUEST, ::GRPC_SCENES_BATCH, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](WORLD::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::WorldRequest* req,
-             ::WorldData* resp) {
+             const ::CLIENT_JOIN_REQUEST* req,
+             ::GRPC_SCENES_BATCH* resp) {
                return service->InitializeClient(ctx, req, resp);
              }, this)));
 }
 
-World::Service::~Service() {
+WORLD::Service::~Service() {
 }
 
-::grpc::Status World::Service::InitializeClient(::grpc::ServerContext* context, const ::WorldRequest* request, ::WorldData* response) {
+::grpc::Status WORLD::Service::InitializeClient(::grpc::ServerContext* context, const ::CLIENT_JOIN_REQUEST* request, ::GRPC_SCENES_BATCH* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -81,63 +81,56 @@ World::Service::~Service() {
 }
 
 
-static const char* MeshManager_method_names[] = {
-  "/MeshManager/DownloadMesh",
+static const char* MESH_DISPATCHER_method_names[] = {
+  "/MESH_DISPATCHER/DownloadMesh",
 };
 
-std::unique_ptr< MeshManager::Stub> MeshManager::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+std::unique_ptr< MESH_DISPATCHER::Stub> MESH_DISPATCHER::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   (void)options;
-  std::unique_ptr< MeshManager::Stub> stub(new MeshManager::Stub(channel, options));
+  std::unique_ptr< MESH_DISPATCHER::Stub> stub(new MESH_DISPATCHER::Stub(channel, options));
   return stub;
 }
 
-MeshManager::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_DownloadMesh_(MeshManager_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+MESH_DISPATCHER::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_DownloadMesh_(MESH_DISPATCHER_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   {}
 
-::grpc::Status MeshManager::Stub::DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest& request, ::Mesh* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::MeshRequest, ::Mesh, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DownloadMesh_, context, request, response);
+::grpc::ClientReader< ::MESH>* MESH_DISPATCHER::Stub::DownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request) {
+  return ::grpc::internal::ClientReaderFactory< ::MESH>::Create(channel_.get(), rpcmethod_DownloadMesh_, context, request);
 }
 
-void MeshManager::Stub::async::DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest* request, ::Mesh* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::MeshRequest, ::Mesh, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DownloadMesh_, context, request, response, std::move(f));
+void MESH_DISPATCHER::Stub::async::DownloadMesh(::grpc::ClientContext* context, const ::MESH_REQUEST* request, ::grpc::ClientReadReactor< ::MESH>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::MESH>::Create(stub_->channel_.get(), stub_->rpcmethod_DownloadMesh_, context, request, reactor);
 }
 
-void MeshManager::Stub::async::DownloadMesh(::grpc::ClientContext* context, const ::MeshRequest* request, ::Mesh* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DownloadMesh_, context, request, response, reactor);
+::grpc::ClientAsyncReader< ::MESH>* MESH_DISPATCHER::Stub::AsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::MESH>::Create(channel_.get(), cq, rpcmethod_DownloadMesh_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncResponseReader< ::Mesh>* MeshManager::Stub::PrepareAsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::Mesh, ::MeshRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DownloadMesh_, context, request);
+::grpc::ClientAsyncReader< ::MESH>* MESH_DISPATCHER::Stub::PrepareAsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MESH_REQUEST& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::MESH>::Create(channel_.get(), cq, rpcmethod_DownloadMesh_, context, request, false, nullptr);
 }
 
-::grpc::ClientAsyncResponseReader< ::Mesh>* MeshManager::Stub::AsyncDownloadMeshRaw(::grpc::ClientContext* context, const ::MeshRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncDownloadMeshRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-MeshManager::Service::Service() {
+MESH_DISPATCHER::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MeshManager_method_names[0],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MeshManager::Service, ::MeshRequest, ::Mesh, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](MeshManager::Service* service,
+      MESH_DISPATCHER_method_names[0],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< MESH_DISPATCHER::Service, ::MESH_REQUEST, ::MESH>(
+          [](MESH_DISPATCHER::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::MeshRequest* req,
-             ::Mesh* resp) {
-               return service->DownloadMesh(ctx, req, resp);
+             const ::MESH_REQUEST* req,
+             ::grpc::ServerWriter<::MESH>* writer) {
+               return service->DownloadMesh(ctx, req, writer);
              }, this)));
 }
 
-MeshManager::Service::~Service() {
+MESH_DISPATCHER::Service::~Service() {
 }
 
-::grpc::Status MeshManager::Service::DownloadMesh(::grpc::ServerContext* context, const ::MeshRequest* request, ::Mesh* response) {
+::grpc::Status MESH_DISPATCHER::Service::DownloadMesh(::grpc::ServerContext* context, const ::MESH_REQUEST* request, ::grpc::ServerWriter< ::MESH>* writer) {
   (void) context;
   (void) request;
-  (void) response;
+  (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 

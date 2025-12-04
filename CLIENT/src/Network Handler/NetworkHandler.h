@@ -12,9 +12,10 @@
 using namespace grpc;
 
 class NetworkHandler: public Singleton<NetworkHandler>{
-
+	
+	
 	private:
-		std::unique_ptr<World::Stub> stub;
+		//std::unique_ptr<World::Stub> stub;
 	
 	public:
 		static void Initialize();

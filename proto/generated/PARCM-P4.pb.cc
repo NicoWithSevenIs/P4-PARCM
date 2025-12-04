@@ -25,61 +25,7 @@ namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 
-inline constexpr WorldRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : msg_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR WorldRequest::WorldRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct WorldRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WorldRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WorldRequestDefaultTypeInternal() {}
-  union {
-    WorldRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WorldRequestDefaultTypeInternal _WorldRequest_default_instance_;
-
-inline constexpr Vector3::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : x_{0},
-        y_{0},
-        z_{0},
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR Vector3::Vector3(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct Vector3DefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Vector3DefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Vector3DefaultTypeInternal() {}
-  union {
-    Vector3 _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Vector3DefaultTypeInternal _Vector3_default_instance_;
-
-inline constexpr MeshRequest::Impl_::Impl_(
+inline constexpr MESH_REQUEST::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : mesh_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
@@ -87,7 +33,7 @@ inline constexpr MeshRequest::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR MeshRequest::MeshRequest(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR MESH_REQUEST::MESH_REQUEST(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -95,18 +41,18 @@ PROTOBUF_CONSTEXPR MeshRequest::MeshRequest(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct MeshRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR MeshRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~MeshRequestDefaultTypeInternal() {}
+struct MESH_REQUESTDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MESH_REQUESTDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MESH_REQUESTDefaultTypeInternal() {}
   union {
-    MeshRequest _instance;
+    MESH_REQUEST _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MeshRequestDefaultTypeInternal _MeshRequest_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MESH_REQUESTDefaultTypeInternal _MESH_REQUEST_default_instance_;
 
-inline constexpr Mesh::Impl_::Impl_(
+inline constexpr MESH::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : mesh_data_(
             &::google::protobuf::internal::fixed_address_empty_string,
@@ -114,7 +60,7 @@ inline constexpr Mesh::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Mesh::Mesh(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR MESH::MESH(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -122,18 +68,72 @@ PROTOBUF_CONSTEXPR Mesh::Mesh(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct MeshDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR MeshDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~MeshDefaultTypeInternal() {}
+struct MESHDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MESHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MESHDefaultTypeInternal() {}
   union {
-    Mesh _instance;
+    MESH _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MeshDefaultTypeInternal _Mesh_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MESHDefaultTypeInternal _MESH_default_instance_;
 
-inline constexpr Transform::Impl_::Impl_(
+inline constexpr GRPC_VECTOR3::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : x_{0},
+        y_{0},
+        z_{0},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GRPC_VECTOR3::GRPC_VECTOR3(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct GRPC_VECTOR3DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GRPC_VECTOR3DefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GRPC_VECTOR3DefaultTypeInternal() {}
+  union {
+    GRPC_VECTOR3 _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GRPC_VECTOR3DefaultTypeInternal _GRPC_VECTOR3_default_instance_;
+
+inline constexpr CLIENT_JOIN_REQUEST::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : client_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR CLIENT_JOIN_REQUEST::CLIENT_JOIN_REQUEST(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct CLIENT_JOIN_REQUESTDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CLIENT_JOIN_REQUESTDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CLIENT_JOIN_REQUESTDefaultTypeInternal() {}
+  union {
+    CLIENT_JOIN_REQUEST _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CLIENT_JOIN_REQUESTDefaultTypeInternal _CLIENT_JOIN_REQUEST_default_instance_;
+
+inline constexpr GRPC_TRANSFORM::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         position_{nullptr},
@@ -141,7 +141,7 @@ inline constexpr Transform::Impl_::Impl_(
         scale_{nullptr} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Transform::Transform(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR GRPC_TRANSFORM::GRPC_TRANSFORM(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -149,18 +149,18 @@ PROTOBUF_CONSTEXPR Transform::Transform(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct TransformDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR TransformDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~TransformDefaultTypeInternal() {}
+struct GRPC_TRANSFORMDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GRPC_TRANSFORMDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GRPC_TRANSFORMDefaultTypeInternal() {}
   union {
-    Transform _instance;
+    GRPC_TRANSFORM _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TransformDefaultTypeInternal _Transform_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GRPC_TRANSFORMDefaultTypeInternal _GRPC_TRANSFORM_default_instance_;
 
-inline constexpr GameObject::Impl_::Impl_(
+inline constexpr GRPC_GAMEOBJECT::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         unique_id_(
@@ -172,10 +172,10 @@ inline constexpr GameObject::Impl_::Impl_(
         mesh_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        t_{nullptr} {}
+        transform_{nullptr} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR GameObject::GameObject(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR GRPC_GAMEOBJECT::GRPC_GAMEOBJECT(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -183,24 +183,24 @@ PROTOBUF_CONSTEXPR GameObject::GameObject(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct GameObjectDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GameObjectDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GameObjectDefaultTypeInternal() {}
+struct GRPC_GAMEOBJECTDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GRPC_GAMEOBJECTDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GRPC_GAMEOBJECTDefaultTypeInternal() {}
   union {
-    GameObject _instance;
+    GRPC_GAMEOBJECT _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GameObjectDefaultTypeInternal _GameObject_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GRPC_GAMEOBJECTDefaultTypeInternal _GRPC_GAMEOBJECT_default_instance_;
 
-inline constexpr WorldData::Impl_::Impl_(
+inline constexpr GRPC_SCENE::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : game_objects_{},
+      : gameobjects_{},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR WorldData::WorldData(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR GRPC_SCENE::GRPC_SCENE(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -208,16 +208,41 @@ PROTOBUF_CONSTEXPR WorldData::WorldData(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct WorldDataDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WorldDataDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WorldDataDefaultTypeInternal() {}
+struct GRPC_SCENEDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GRPC_SCENEDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GRPC_SCENEDefaultTypeInternal() {}
   union {
-    WorldData _instance;
+    GRPC_SCENE _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WorldDataDefaultTypeInternal _WorldData_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GRPC_SCENEDefaultTypeInternal _GRPC_SCENE_default_instance_;
+
+inline constexpr GRPC_SCENES_BATCH::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : scenes_{},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GRPC_SCENES_BATCH::GRPC_SCENES_BATCH(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct GRPC_SCENES_BATCHDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GRPC_SCENES_BATCHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GRPC_SCENES_BATCHDefaultTypeInternal() {}
+  union {
+    GRPC_SCENES_BATCH _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GRPC_SCENES_BATCHDefaultTypeInternal _GRPC_SCENES_BATCH_default_instance_;
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_PARCM_2dP4_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
@@ -226,130 +251,144 @@ const ::uint32_t
     TableStruct_PARCM_2dP4_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::Vector3, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_VECTOR3, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::Vector3, _impl_.x_),
-        PROTOBUF_FIELD_OFFSET(::Vector3, _impl_.y_),
-        PROTOBUF_FIELD_OFFSET(::Vector3, _impl_.z_),
-        PROTOBUF_FIELD_OFFSET(::Transform, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::Transform, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_VECTOR3, _impl_.x_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_VECTOR3, _impl_.y_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_VECTOR3, _impl_.z_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_TRANSFORM, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_TRANSFORM, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::Transform, _impl_.position_),
-        PROTOBUF_FIELD_OFFSET(::Transform, _impl_.rotation_),
-        PROTOBUF_FIELD_OFFSET(::Transform, _impl_.scale_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_TRANSFORM, _impl_.position_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_TRANSFORM, _impl_.rotation_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_TRANSFORM, _impl_.scale_),
         0,
         1,
         2,
-        PROTOBUF_FIELD_OFFSET(::GameObject, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::GameObject, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_GAMEOBJECT, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_GAMEOBJECT, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::GameObject, _impl_.unique_id_),
-        PROTOBUF_FIELD_OFFSET(::GameObject, _impl_.name_),
-        PROTOBUF_FIELD_OFFSET(::GameObject, _impl_.t_),
-        PROTOBUF_FIELD_OFFSET(::GameObject, _impl_.mesh_id_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_GAMEOBJECT, _impl_.unique_id_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_GAMEOBJECT, _impl_.name_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_GAMEOBJECT, _impl_.transform_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_GAMEOBJECT, _impl_.mesh_id_),
         ~0u,
         ~0u,
         0,
         ~0u,
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::WorldData, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_SCENE, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::WorldData, _impl_.game_objects_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_SCENE, _impl_.gameobjects_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::WorldRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_SCENES_BATCH, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::WorldRequest, _impl_.msg_),
+        PROTOBUF_FIELD_OFFSET(::GRPC_SCENES_BATCH, _impl_.scenes_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::MeshRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::CLIENT_JOIN_REQUEST, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::MeshRequest, _impl_.mesh_id_),
+        PROTOBUF_FIELD_OFFSET(::CLIENT_JOIN_REQUEST, _impl_.client_id_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::Mesh, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::MESH_REQUEST, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::Mesh, _impl_.mesh_data_),
+        PROTOBUF_FIELD_OFFSET(::MESH_REQUEST, _impl_.mesh_id_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::MESH, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::MESH, _impl_.mesh_data_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::Vector3)},
-        {11, 22, -1, sizeof(::Transform)},
-        {25, 37, -1, sizeof(::GameObject)},
-        {41, -1, -1, sizeof(::WorldData)},
-        {50, -1, -1, sizeof(::WorldRequest)},
-        {59, -1, -1, sizeof(::MeshRequest)},
-        {68, -1, -1, sizeof(::Mesh)},
+        {0, -1, -1, sizeof(::GRPC_VECTOR3)},
+        {11, 22, -1, sizeof(::GRPC_TRANSFORM)},
+        {25, 37, -1, sizeof(::GRPC_GAMEOBJECT)},
+        {41, -1, -1, sizeof(::GRPC_SCENE)},
+        {50, -1, -1, sizeof(::GRPC_SCENES_BATCH)},
+        {59, -1, -1, sizeof(::CLIENT_JOIN_REQUEST)},
+        {68, -1, -1, sizeof(::MESH_REQUEST)},
+        {77, -1, -1, sizeof(::MESH)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
-    &::_Vector3_default_instance_._instance,
-    &::_Transform_default_instance_._instance,
-    &::_GameObject_default_instance_._instance,
-    &::_WorldData_default_instance_._instance,
-    &::_WorldRequest_default_instance_._instance,
-    &::_MeshRequest_default_instance_._instance,
-    &::_Mesh_default_instance_._instance,
+    &::_GRPC_VECTOR3_default_instance_._instance,
+    &::_GRPC_TRANSFORM_default_instance_._instance,
+    &::_GRPC_GAMEOBJECT_default_instance_._instance,
+    &::_GRPC_SCENE_default_instance_._instance,
+    &::_GRPC_SCENES_BATCH_default_instance_._instance,
+    &::_CLIENT_JOIN_REQUEST_default_instance_._instance,
+    &::_MESH_REQUEST_default_instance_._instance,
+    &::_MESH_default_instance_._instance,
 };
 const char descriptor_table_protodef_PARCM_2dP4_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\016PARCM-P4.proto\"*\n\007Vector3\022\t\n\001x\030\001 \001(\002\022\t"
-    "\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001(\002\"\\\n\tTransform\022\032\n\010pos"
-    "ition\030\001 \001(\0132\010.Vector3\022\032\n\010rotation\030\002 \001(\0132"
-    "\010.Vector3\022\027\n\005scale\030\003 \001(\0132\010.Vector3\"U\n\nGa"
-    "meObject\022\021\n\tunique_id\030\001 \001(\t\022\014\n\004name\030\002 \001("
-    "\t\022\025\n\001t\030\003 \001(\0132\n.Transform\022\017\n\007mesh_id\030\004 \001("
-    "\t\".\n\tWorldData\022!\n\014game_objects\030\001 \003(\0132\013.G"
-    "ameObject\"\033\n\014WorldRequest\022\013\n\003msg\030\001 \001(\t\"\036"
-    "\n\013MeshRequest\022\017\n\007mesh_id\030\001 \001(\t\"\031\n\004Mesh\022\021"
-    "\n\tmesh_data\030\002 \001(\01428\n\005World\022/\n\020Initialize"
-    "Client\022\r.WorldRequest\032\n.WorldData\"\00024\n\013M"
-    "eshManager\022%\n\014DownloadMesh\022\014.MeshRequest"
-    "\032\005.Mesh\"\000b\006proto3"
+    "\n\016PARCM-P4.proto\"/\n\014GRPC_VECTOR3\022\t\n\001x\030\001 "
+    "\001(\002\022\t\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001(\002\"p\n\016GRPC_TRANSF"
+    "ORM\022\037\n\010position\030\001 \001(\0132\r.GRPC_VECTOR3\022\037\n\010"
+    "rotation\030\002 \001(\0132\r.GRPC_VECTOR3\022\034\n\005scale\030\003"
+    " \001(\0132\r.GRPC_VECTOR3\"g\n\017GRPC_GAMEOBJECT\022\021"
+    "\n\tunique_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\"\n\ttrans"
+    "form\030\003 \001(\0132\017.GRPC_TRANSFORM\022\017\n\007mesh_id\030\004"
+    " \001(\t\"3\n\nGRPC_SCENE\022%\n\013gameobjects\030\001 \003(\0132"
+    "\020.GRPC_GAMEOBJECT\"0\n\021GRPC_SCENES_BATCH\022\033"
+    "\n\006scenes\030\001 \003(\0132\013.GRPC_SCENE\"(\n\023CLIENT_JO"
+    "IN_REQUEST\022\021\n\tCLIENT_ID\030\001 \001(\t\"\037\n\014MESH_RE"
+    "QUEST\022\017\n\007mesh_id\030\001 \001(\t\"\031\n\004MESH\022\021\n\tmesh_d"
+    "ata\030\001 \001(\t2G\n\005WORLD\022>\n\020InitializeClient\022\024"
+    ".CLIENT_JOIN_REQUEST\032\022.GRPC_SCENES_BATCH"
+    "\"\0002;\n\017MESH_DISPATCHER\022(\n\014DownloadMesh\022\r."
+    "MESH_REQUEST\032\005.MESH\"\0000\001b\006proto3"
 };
 static ::absl::once_flag descriptor_table_PARCM_2dP4_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_PARCM_2dP4_2eproto = {
     false,
     false,
-    497,
+    631,
     descriptor_table_protodef_PARCM_2dP4_2eproto,
     "PARCM-P4.proto",
     &descriptor_table_PARCM_2dP4_2eproto_once,
     nullptr,
     0,
-    7,
+    8,
     schemas,
     file_default_instances,
     TableStruct_PARCM_2dP4_2eproto::offsets,
@@ -358,30 +397,30 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_PARCM_2dP4_2ep
 };
 // ===================================================================
 
-class Vector3::_Internal {
+class GRPC_VECTOR3::_Internal {
  public:
 };
 
-Vector3::Vector3(::google::protobuf::Arena* arena)
+GRPC_VECTOR3::GRPC_VECTOR3(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Vector3)
+  // @@protoc_insertion_point(arena_constructor:GRPC_VECTOR3)
 }
-Vector3::Vector3(
-    ::google::protobuf::Arena* arena, const Vector3& from)
-    : Vector3(arena) {
+GRPC_VECTOR3::GRPC_VECTOR3(
+    ::google::protobuf::Arena* arena, const GRPC_VECTOR3& from)
+    : GRPC_VECTOR3(arena) {
   MergeFrom(from);
 }
-inline PROTOBUF_NDEBUG_INLINE Vector3::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_VECTOR3::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0} {}
 
-inline void Vector3::SharedCtor(::_pb::Arena* arena) {
+inline void GRPC_VECTOR3::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, x_),
@@ -390,54 +429,54 @@ inline void Vector3::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, x_) +
                sizeof(Impl_::z_));
 }
-Vector3::~Vector3() {
-  // @@protoc_insertion_point(destructor:Vector3)
+GRPC_VECTOR3::~GRPC_VECTOR3() {
+  // @@protoc_insertion_point(destructor:GRPC_VECTOR3)
   SharedDtor(*this);
 }
-inline void Vector3::SharedDtor(MessageLite& self) {
-  Vector3& this_ = static_cast<Vector3&>(self);
+inline void GRPC_VECTOR3::SharedDtor(MessageLite& self) {
+  GRPC_VECTOR3& this_ = static_cast<GRPC_VECTOR3&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.~Impl_();
 }
 
-inline void* Vector3::PlacementNew_(const void*, void* mem,
+inline void* GRPC_VECTOR3::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Vector3(arena);
+  return ::new (mem) GRPC_VECTOR3(arena);
 }
-constexpr auto Vector3::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Vector3),
-                                            alignof(Vector3));
+constexpr auto GRPC_VECTOR3::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(GRPC_VECTOR3),
+                                            alignof(GRPC_VECTOR3));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Vector3::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull GRPC_VECTOR3::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Vector3_default_instance_._instance,
+        &_GRPC_VECTOR3_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Vector3::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Vector3>(),
+        &GRPC_VECTOR3::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<GRPC_VECTOR3>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Vector3::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Vector3>(), &Vector3::ByteSizeLong,
-            &Vector3::_InternalSerialize,
+        &GRPC_VECTOR3::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<GRPC_VECTOR3>(), &GRPC_VECTOR3::ByteSizeLong,
+            &GRPC_VECTOR3::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Vector3, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_._cached_size_),
         false,
     },
-    &Vector3::kDescriptorMethods,
+    &GRPC_VECTOR3::kDescriptorMethods,
     &descriptor_table_PARCM_2dP4_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Vector3::GetClassData() const {
+const ::google::protobuf::internal::ClassData* GRPC_VECTOR3::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Vector3::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 0, 2> GRPC_VECTOR3::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -452,30 +491,30 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Vector3::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::Vector3>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::GRPC_VECTOR3>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // float x = 1;
     {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Vector3, _impl_.x_)}},
+     {13, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.x_)}},
     // float y = 2;
     {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Vector3, _impl_.y_)}},
+     {21, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.y_)}},
     // float z = 3;
     {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(Vector3, _impl_.z_)}},
+     {29, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.z_)}},
   }}, {{
     65535, 65535
   }}, {{
     // float x = 1;
-    {PROTOBUF_FIELD_OFFSET(Vector3, _impl_.x_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.x_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float y = 2;
-    {PROTOBUF_FIELD_OFFSET(Vector3, _impl_.y_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.y_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float z = 3;
-    {PROTOBUF_FIELD_OFFSET(Vector3, _impl_.z_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.z_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }},
   // no aux_entries
@@ -483,8 +522,8 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Vector3::_table_ = {
   }},
 };
 
-PROTOBUF_NOINLINE void Vector3::Clear() {
-// @@protoc_insertion_point(message_clear_start:Vector3)
+PROTOBUF_NOINLINE void GRPC_VECTOR3::Clear() {
+// @@protoc_insertion_point(message_clear_start:GRPC_VECTOR3)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -497,17 +536,17 @@ PROTOBUF_NOINLINE void Vector3::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Vector3::_InternalSerialize(
+        ::uint8_t* GRPC_VECTOR3::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Vector3& this_ = static_cast<const Vector3&>(base);
+          const GRPC_VECTOR3& this_ = static_cast<const GRPC_VECTOR3&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Vector3::_InternalSerialize(
+        ::uint8_t* GRPC_VECTOR3::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Vector3& this_ = *this;
+          const GRPC_VECTOR3& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:Vector3)
+          // @@protoc_insertion_point(serialize_to_array_start:GRPC_VECTOR3)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -537,18 +576,18 @@ PROTOBUF_NOINLINE void Vector3::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:Vector3)
+          // @@protoc_insertion_point(serialize_to_array_end:GRPC_VECTOR3)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Vector3::ByteSizeLong(const MessageLite& base) {
-          const Vector3& this_ = static_cast<const Vector3&>(base);
+        ::size_t GRPC_VECTOR3::ByteSizeLong(const MessageLite& base) {
+          const GRPC_VECTOR3& this_ = static_cast<const GRPC_VECTOR3&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Vector3::ByteSizeLong() const {
-          const Vector3& this_ = *this;
+        ::size_t GRPC_VECTOR3::ByteSizeLong() const {
+          const GRPC_VECTOR3& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:Vector3)
+          // @@protoc_insertion_point(message_byte_size_start:GRPC_VECTOR3)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -574,10 +613,10 @@ PROTOBUF_NOINLINE void Vector3::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Vector3::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Vector3*>(&to_msg);
-  auto& from = static_cast<const Vector3&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Vector3)
+void GRPC_VECTOR3::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GRPC_VECTOR3*>(&to_msg);
+  auto& from = static_cast<const GRPC_VECTOR3&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:GRPC_VECTOR3)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -594,85 +633,85 @@ void Vector3::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google:
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Vector3::CopyFrom(const Vector3& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Vector3)
+void GRPC_VECTOR3::CopyFrom(const GRPC_VECTOR3& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:GRPC_VECTOR3)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Vector3::InternalSwap(Vector3* PROTOBUF_RESTRICT other) {
+void GRPC_VECTOR3::InternalSwap(GRPC_VECTOR3* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Vector3, _impl_.z_)
-      + sizeof(Vector3::_impl_.z_)
-      - PROTOBUF_FIELD_OFFSET(Vector3, _impl_.x_)>(
+      PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.z_)
+      + sizeof(GRPC_VECTOR3::_impl_.z_)
+      - PROTOBUF_FIELD_OFFSET(GRPC_VECTOR3, _impl_.x_)>(
           reinterpret_cast<char*>(&_impl_.x_),
           reinterpret_cast<char*>(&other->_impl_.x_));
 }
 
-::google::protobuf::Metadata Vector3::GetMetadata() const {
+::google::protobuf::Metadata GRPC_VECTOR3::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class Transform::_Internal {
+class GRPC_TRANSFORM::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<Transform>()._impl_._has_bits_);
+      decltype(std::declval<GRPC_TRANSFORM>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(Transform, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_._has_bits_);
 };
 
-Transform::Transform(::google::protobuf::Arena* arena)
+GRPC_TRANSFORM::GRPC_TRANSFORM(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Transform)
+  // @@protoc_insertion_point(arena_constructor:GRPC_TRANSFORM)
 }
-inline PROTOBUF_NDEBUG_INLINE Transform::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_TRANSFORM::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::Transform& from_msg)
+    const Impl_& from, const ::GRPC_TRANSFORM& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0} {}
 
-Transform::Transform(
+GRPC_TRANSFORM::GRPC_TRANSFORM(
     ::google::protobuf::Arena* arena,
-    const Transform& from)
+    const GRPC_TRANSFORM& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  Transform* const _this = this;
+  GRPC_TRANSFORM* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::Vector3>(
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::GRPC_VECTOR3>(
                               arena, *from._impl_.position_)
                         : nullptr;
-  _impl_.rotation_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::Vector3>(
+  _impl_.rotation_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::GRPC_VECTOR3>(
                               arena, *from._impl_.rotation_)
                         : nullptr;
-  _impl_.scale_ = (cached_has_bits & 0x00000004u) ? ::google::protobuf::Message::CopyConstruct<::Vector3>(
+  _impl_.scale_ = (cached_has_bits & 0x00000004u) ? ::google::protobuf::Message::CopyConstruct<::GRPC_VECTOR3>(
                               arena, *from._impl_.scale_)
                         : nullptr;
 
-  // @@protoc_insertion_point(copy_constructor:Transform)
+  // @@protoc_insertion_point(copy_constructor:GRPC_TRANSFORM)
 }
-inline PROTOBUF_NDEBUG_INLINE Transform::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_TRANSFORM::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0} {}
 
-inline void Transform::SharedCtor(::_pb::Arena* arena) {
+inline void GRPC_TRANSFORM::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, position_),
@@ -681,12 +720,12 @@ inline void Transform::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, position_) +
                sizeof(Impl_::scale_));
 }
-Transform::~Transform() {
-  // @@protoc_insertion_point(destructor:Transform)
+GRPC_TRANSFORM::~GRPC_TRANSFORM() {
+  // @@protoc_insertion_point(destructor:GRPC_TRANSFORM)
   SharedDtor(*this);
 }
-inline void Transform::SharedDtor(MessageLite& self) {
-  Transform& this_ = static_cast<Transform&>(self);
+inline void GRPC_TRANSFORM::SharedDtor(MessageLite& self) {
+  GRPC_TRANSFORM& this_ = static_cast<GRPC_TRANSFORM&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   delete this_._impl_.position_;
@@ -695,45 +734,45 @@ inline void Transform::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* Transform::PlacementNew_(const void*, void* mem,
+inline void* GRPC_TRANSFORM::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Transform(arena);
+  return ::new (mem) GRPC_TRANSFORM(arena);
 }
-constexpr auto Transform::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Transform),
-                                            alignof(Transform));
+constexpr auto GRPC_TRANSFORM::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(GRPC_TRANSFORM),
+                                            alignof(GRPC_TRANSFORM));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Transform::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull GRPC_TRANSFORM::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Transform_default_instance_._instance,
+        &_GRPC_TRANSFORM_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Transform::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Transform>(),
+        &GRPC_TRANSFORM::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<GRPC_TRANSFORM>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Transform::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Transform>(), &Transform::ByteSizeLong,
-            &Transform::_InternalSerialize,
+        &GRPC_TRANSFORM::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<GRPC_TRANSFORM>(), &GRPC_TRANSFORM::ByteSizeLong,
+            &GRPC_TRANSFORM::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Transform, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_._cached_size_),
         false,
     },
-    &Transform::kDescriptorMethods,
+    &GRPC_TRANSFORM::kDescriptorMethods,
     &descriptor_table_PARCM_2dP4_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Transform::GetClassData() const {
+const ::google::protobuf::internal::ClassData* GRPC_TRANSFORM::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 3, 0, 2> Transform::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 3, 0, 2> GRPC_TRANSFORM::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(Transform, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_._has_bits_),
     0, // no _extensions_
     3, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -746,41 +785,41 @@ const ::_pbi::TcParseTable<2, 3, 3, 0, 2> Transform::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::Transform>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::GRPC_TRANSFORM>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // .Vector3 position = 1;
+    // .GRPC_VECTOR3 position = 1;
     {::_pbi::TcParser::FastMtS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(Transform, _impl_.position_)}},
-    // .Vector3 rotation = 2;
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.position_)}},
+    // .GRPC_VECTOR3 rotation = 2;
     {::_pbi::TcParser::FastMtS1,
-     {18, 1, 1, PROTOBUF_FIELD_OFFSET(Transform, _impl_.rotation_)}},
-    // .Vector3 scale = 3;
+     {18, 1, 1, PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.rotation_)}},
+    // .GRPC_VECTOR3 scale = 3;
     {::_pbi::TcParser::FastMtS1,
-     {26, 2, 2, PROTOBUF_FIELD_OFFSET(Transform, _impl_.scale_)}},
+     {26, 2, 2, PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.scale_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .Vector3 position = 1;
-    {PROTOBUF_FIELD_OFFSET(Transform, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
+    // .GRPC_VECTOR3 position = 1;
+    {PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .Vector3 rotation = 2;
-    {PROTOBUF_FIELD_OFFSET(Transform, _impl_.rotation_), _Internal::kHasBitsOffset + 1, 1,
+    // .GRPC_VECTOR3 rotation = 2;
+    {PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.rotation_), _Internal::kHasBitsOffset + 1, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .Vector3 scale = 3;
-    {PROTOBUF_FIELD_OFFSET(Transform, _impl_.scale_), _Internal::kHasBitsOffset + 2, 2,
+    // .GRPC_VECTOR3 scale = 3;
+    {PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.scale_), _Internal::kHasBitsOffset + 2, 2,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::Vector3>()},
-    {::_pbi::TcParser::GetTable<::Vector3>()},
-    {::_pbi::TcParser::GetTable<::Vector3>()},
+    {::_pbi::TcParser::GetTable<::GRPC_VECTOR3>()},
+    {::_pbi::TcParser::GetTable<::GRPC_VECTOR3>()},
+    {::_pbi::TcParser::GetTable<::GRPC_VECTOR3>()},
   }}, {{
   }},
 };
 
-PROTOBUF_NOINLINE void Transform::Clear() {
-// @@protoc_insertion_point(message_clear_start:Transform)
+PROTOBUF_NOINLINE void GRPC_TRANSFORM::Clear() {
+// @@protoc_insertion_point(message_clear_start:GRPC_TRANSFORM)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -806,36 +845,36 @@ PROTOBUF_NOINLINE void Transform::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Transform::_InternalSerialize(
+        ::uint8_t* GRPC_TRANSFORM::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Transform& this_ = static_cast<const Transform&>(base);
+          const GRPC_TRANSFORM& this_ = static_cast<const GRPC_TRANSFORM&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Transform::_InternalSerialize(
+        ::uint8_t* GRPC_TRANSFORM::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Transform& this_ = *this;
+          const GRPC_TRANSFORM& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:Transform)
+          // @@protoc_insertion_point(serialize_to_array_start:GRPC_TRANSFORM)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .Vector3 position = 1;
+          // .GRPC_VECTOR3 position = 1;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 1, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
                 stream);
           }
 
-          // .Vector3 rotation = 2;
+          // .GRPC_VECTOR3 rotation = 2;
           if (cached_has_bits & 0x00000002u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 2, *this_._impl_.rotation_, this_._impl_.rotation_->GetCachedSize(), target,
                 stream);
           }
 
-          // .Vector3 scale = 3;
+          // .GRPC_VECTOR3 scale = 3;
           if (cached_has_bits & 0x00000004u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 3, *this_._impl_.scale_, this_._impl_.scale_->GetCachedSize(), target,
@@ -847,18 +886,18 @@ PROTOBUF_NOINLINE void Transform::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:Transform)
+          // @@protoc_insertion_point(serialize_to_array_end:GRPC_TRANSFORM)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Transform::ByteSizeLong(const MessageLite& base) {
-          const Transform& this_ = static_cast<const Transform&>(base);
+        ::size_t GRPC_TRANSFORM::ByteSizeLong(const MessageLite& base) {
+          const GRPC_TRANSFORM& this_ = static_cast<const GRPC_TRANSFORM&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Transform::ByteSizeLong() const {
-          const Transform& this_ = *this;
+        ::size_t GRPC_TRANSFORM::ByteSizeLong() const {
+          const GRPC_TRANSFORM& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:Transform)
+          // @@protoc_insertion_point(message_byte_size_start:GRPC_TRANSFORM)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -868,17 +907,17 @@ PROTOBUF_NOINLINE void Transform::Clear() {
           ::_pbi::Prefetch5LinesFrom7Lines(&this_);
           cached_has_bits = this_._impl_._has_bits_[0];
           if (cached_has_bits & 0x00000007u) {
-            // .Vector3 position = 1;
+            // .GRPC_VECTOR3 position = 1;
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.position_);
             }
-            // .Vector3 rotation = 2;
+            // .GRPC_VECTOR3 rotation = 2;
             if (cached_has_bits & 0x00000002u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.rotation_);
             }
-            // .Vector3 scale = 3;
+            // .GRPC_VECTOR3 scale = 3;
             if (cached_has_bits & 0x00000004u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.scale_);
@@ -888,11 +927,11 @@ PROTOBUF_NOINLINE void Transform::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Transform*>(&to_msg);
-  auto& from = static_cast<const Transform&>(from_msg);
+void GRPC_TRANSFORM::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GRPC_TRANSFORM*>(&to_msg);
+  auto& from = static_cast<const GRPC_TRANSFORM&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:Transform)
+  // @@protoc_insertion_point(class_specific_merge_from_start:GRPC_TRANSFORM)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -903,7 +942,7 @@ void Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::googl
       ABSL_DCHECK(from._impl_.position_ != nullptr);
       if (_this->_impl_.position_ == nullptr) {
         _this->_impl_.position_ =
-            ::google::protobuf::Message::CopyConstruct<::Vector3>(arena, *from._impl_.position_);
+            ::google::protobuf::Message::CopyConstruct<::GRPC_VECTOR3>(arena, *from._impl_.position_);
       } else {
         _this->_impl_.position_->MergeFrom(*from._impl_.position_);
       }
@@ -912,7 +951,7 @@ void Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::googl
       ABSL_DCHECK(from._impl_.rotation_ != nullptr);
       if (_this->_impl_.rotation_ == nullptr) {
         _this->_impl_.rotation_ =
-            ::google::protobuf::Message::CopyConstruct<::Vector3>(arena, *from._impl_.rotation_);
+            ::google::protobuf::Message::CopyConstruct<::GRPC_VECTOR3>(arena, *from._impl_.rotation_);
       } else {
         _this->_impl_.rotation_->MergeFrom(*from._impl_.rotation_);
       }
@@ -921,7 +960,7 @@ void Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::googl
       ABSL_DCHECK(from._impl_.scale_ != nullptr);
       if (_this->_impl_.scale_ == nullptr) {
         _this->_impl_.scale_ =
-            ::google::protobuf::Message::CopyConstruct<::Vector3>(arena, *from._impl_.scale_);
+            ::google::protobuf::Message::CopyConstruct<::GRPC_VECTOR3>(arena, *from._impl_.scale_);
       } else {
         _this->_impl_.scale_->MergeFrom(*from._impl_.scale_);
       }
@@ -931,78 +970,78 @@ void Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::googl
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Transform::CopyFrom(const Transform& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Transform)
+void GRPC_TRANSFORM::CopyFrom(const GRPC_TRANSFORM& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:GRPC_TRANSFORM)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Transform::InternalSwap(Transform* PROTOBUF_RESTRICT other) {
+void GRPC_TRANSFORM::InternalSwap(GRPC_TRANSFORM* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Transform, _impl_.scale_)
-      + sizeof(Transform::_impl_.scale_)
-      - PROTOBUF_FIELD_OFFSET(Transform, _impl_.position_)>(
+      PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.scale_)
+      + sizeof(GRPC_TRANSFORM::_impl_.scale_)
+      - PROTOBUF_FIELD_OFFSET(GRPC_TRANSFORM, _impl_.position_)>(
           reinterpret_cast<char*>(&_impl_.position_),
           reinterpret_cast<char*>(&other->_impl_.position_));
 }
 
-::google::protobuf::Metadata Transform::GetMetadata() const {
+::google::protobuf::Metadata GRPC_TRANSFORM::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class GameObject::_Internal {
+class GRPC_GAMEOBJECT::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<GameObject>()._impl_._has_bits_);
+      decltype(std::declval<GRPC_GAMEOBJECT>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(GameObject, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_._has_bits_);
 };
 
-GameObject::GameObject(::google::protobuf::Arena* arena)
+GRPC_GAMEOBJECT::GRPC_GAMEOBJECT(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:GameObject)
+  // @@protoc_insertion_point(arena_constructor:GRPC_GAMEOBJECT)
 }
-inline PROTOBUF_NDEBUG_INLINE GameObject::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_GAMEOBJECT::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::GameObject& from_msg)
+    const Impl_& from, const ::GRPC_GAMEOBJECT& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         unique_id_(arena, from.unique_id_),
         name_(arena, from.name_),
         mesh_id_(arena, from.mesh_id_) {}
 
-GameObject::GameObject(
+GRPC_GAMEOBJECT::GRPC_GAMEOBJECT(
     ::google::protobuf::Arena* arena,
-    const GameObject& from)
+    const GRPC_GAMEOBJECT& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  GameObject* const _this = this;
+  GRPC_GAMEOBJECT* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.t_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::Transform>(
-                              arena, *from._impl_.t_)
+  _impl_.transform_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::GRPC_TRANSFORM>(
+                              arena, *from._impl_.transform_)
                         : nullptr;
 
-  // @@protoc_insertion_point(copy_constructor:GameObject)
+  // @@protoc_insertion_point(copy_constructor:GRPC_GAMEOBJECT)
 }
-inline PROTOBUF_NDEBUG_INLINE GameObject::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_GAMEOBJECT::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0},
@@ -1010,64 +1049,64 @@ inline PROTOBUF_NDEBUG_INLINE GameObject::Impl_::Impl_(
         name_(arena),
         mesh_id_(arena) {}
 
-inline void GameObject::SharedCtor(::_pb::Arena* arena) {
+inline void GRPC_GAMEOBJECT::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.t_ = {};
+  _impl_.transform_ = {};
 }
-GameObject::~GameObject() {
-  // @@protoc_insertion_point(destructor:GameObject)
+GRPC_GAMEOBJECT::~GRPC_GAMEOBJECT() {
+  // @@protoc_insertion_point(destructor:GRPC_GAMEOBJECT)
   SharedDtor(*this);
 }
-inline void GameObject::SharedDtor(MessageLite& self) {
-  GameObject& this_ = static_cast<GameObject&>(self);
+inline void GRPC_GAMEOBJECT::SharedDtor(MessageLite& self) {
+  GRPC_GAMEOBJECT& this_ = static_cast<GRPC_GAMEOBJECT&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.unique_id_.Destroy();
   this_._impl_.name_.Destroy();
   this_._impl_.mesh_id_.Destroy();
-  delete this_._impl_.t_;
+  delete this_._impl_.transform_;
   this_._impl_.~Impl_();
 }
 
-inline void* GameObject::PlacementNew_(const void*, void* mem,
+inline void* GRPC_GAMEOBJECT::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) GameObject(arena);
+  return ::new (mem) GRPC_GAMEOBJECT(arena);
 }
-constexpr auto GameObject::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GameObject),
-                                            alignof(GameObject));
+constexpr auto GRPC_GAMEOBJECT::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GRPC_GAMEOBJECT),
+                                            alignof(GRPC_GAMEOBJECT));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull GameObject::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull GRPC_GAMEOBJECT::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_GameObject_default_instance_._instance,
+        &_GRPC_GAMEOBJECT_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &GameObject::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<GameObject>(),
+        &GRPC_GAMEOBJECT::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<GRPC_GAMEOBJECT>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &GameObject::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<GameObject>(), &GameObject::ByteSizeLong,
-            &GameObject::_InternalSerialize,
+        &GRPC_GAMEOBJECT::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<GRPC_GAMEOBJECT>(), &GRPC_GAMEOBJECT::ByteSizeLong,
+            &GRPC_GAMEOBJECT::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(GameObject, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_._cached_size_),
         false,
     },
-    &GameObject::kDescriptorMethods,
+    &GRPC_GAMEOBJECT::kDescriptorMethods,
     &descriptor_table_PARCM_2dP4_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* GameObject::GetClassData() const {
+const ::google::protobuf::internal::ClassData* GRPC_GAMEOBJECT::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 1, 39, 2> GameObject::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 1, 44, 2> GRPC_GAMEOBJECT::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(GameObject, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_._has_bits_),
     0, // no _extensions_
     4, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -1080,49 +1119,49 @@ const ::_pbi::TcParseTable<2, 4, 1, 39, 2> GameObject::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::GameObject>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::GRPC_GAMEOBJECT>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string mesh_id = 4;
     {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(GameObject, _impl_.mesh_id_)}},
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.mesh_id_)}},
     // string unique_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GameObject, _impl_.unique_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.unique_id_)}},
     // string name = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GameObject, _impl_.name_)}},
-    // .Transform t = 3;
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.name_)}},
+    // .GRPC_TRANSFORM transform = 3;
     {::_pbi::TcParser::FastMtS1,
-     {26, 0, 0, PROTOBUF_FIELD_OFFSET(GameObject, _impl_.t_)}},
+     {26, 0, 0, PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.transform_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string unique_id = 1;
-    {PROTOBUF_FIELD_OFFSET(GameObject, _impl_.unique_id_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.unique_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string name = 2;
-    {PROTOBUF_FIELD_OFFSET(GameObject, _impl_.name_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.name_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .Transform t = 3;
-    {PROTOBUF_FIELD_OFFSET(GameObject, _impl_.t_), _Internal::kHasBitsOffset + 0, 0,
+    // .GRPC_TRANSFORM transform = 3;
+    {PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.transform_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // string mesh_id = 4;
-    {PROTOBUF_FIELD_OFFSET(GameObject, _impl_.mesh_id_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(GRPC_GAMEOBJECT, _impl_.mesh_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::Transform>()},
+    {::_pbi::TcParser::GetTable<::GRPC_TRANSFORM>()},
   }}, {{
-    "\12\11\4\0\7\0\0\0"
-    "GameObject"
+    "\17\11\4\0\7\0\0\0"
+    "GRPC_GAMEOBJECT"
     "unique_id"
     "name"
     "mesh_id"
   }},
 };
 
-PROTOBUF_NOINLINE void GameObject::Clear() {
-// @@protoc_insertion_point(message_clear_start:GameObject)
+PROTOBUF_NOINLINE void GRPC_GAMEOBJECT::Clear() {
+// @@protoc_insertion_point(message_clear_start:GRPC_GAMEOBJECT)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1133,25 +1172,25 @@ PROTOBUF_NOINLINE void GameObject::Clear() {
   _impl_.mesh_id_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    ABSL_DCHECK(_impl_.t_ != nullptr);
-    _impl_.t_->Clear();
+    ABSL_DCHECK(_impl_.transform_ != nullptr);
+    _impl_.transform_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* GameObject::_InternalSerialize(
+        ::uint8_t* GRPC_GAMEOBJECT::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const GameObject& this_ = static_cast<const GameObject&>(base);
+          const GRPC_GAMEOBJECT& this_ = static_cast<const GRPC_GAMEOBJECT&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* GameObject::_InternalSerialize(
+        ::uint8_t* GRPC_GAMEOBJECT::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const GameObject& this_ = *this;
+          const GRPC_GAMEOBJECT& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:GameObject)
+          // @@protoc_insertion_point(serialize_to_array_start:GRPC_GAMEOBJECT)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -1159,7 +1198,7 @@ PROTOBUF_NOINLINE void GameObject::Clear() {
           if (!this_._internal_unique_id().empty()) {
             const std::string& _s = this_._internal_unique_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GameObject.unique_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPC_GAMEOBJECT.unique_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -1167,15 +1206,15 @@ PROTOBUF_NOINLINE void GameObject::Clear() {
           if (!this_._internal_name().empty()) {
             const std::string& _s = this_._internal_name();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GameObject.name");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPC_GAMEOBJECT.name");
             target = stream->WriteStringMaybeAliased(2, _s, target);
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .Transform t = 3;
+          // .GRPC_TRANSFORM transform = 3;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                3, *this_._impl_.t_, this_._impl_.t_->GetCachedSize(), target,
+                3, *this_._impl_.transform_, this_._impl_.transform_->GetCachedSize(), target,
                 stream);
           }
 
@@ -1183,7 +1222,7 @@ PROTOBUF_NOINLINE void GameObject::Clear() {
           if (!this_._internal_mesh_id().empty()) {
             const std::string& _s = this_._internal_mesh_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GameObject.mesh_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPC_GAMEOBJECT.mesh_id");
             target = stream->WriteStringMaybeAliased(4, _s, target);
           }
 
@@ -1192,18 +1231,18 @@ PROTOBUF_NOINLINE void GameObject::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:GameObject)
+          // @@protoc_insertion_point(serialize_to_array_end:GRPC_GAMEOBJECT)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t GameObject::ByteSizeLong(const MessageLite& base) {
-          const GameObject& this_ = static_cast<const GameObject&>(base);
+        ::size_t GRPC_GAMEOBJECT::ByteSizeLong(const MessageLite& base) {
+          const GRPC_GAMEOBJECT& this_ = static_cast<const GRPC_GAMEOBJECT&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t GameObject::ByteSizeLong() const {
-          const GameObject& this_ = *this;
+        ::size_t GRPC_GAMEOBJECT::ByteSizeLong() const {
+          const GRPC_GAMEOBJECT& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:GameObject)
+          // @@protoc_insertion_point(message_byte_size_start:GRPC_GAMEOBJECT)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1229,22 +1268,22 @@ PROTOBUF_NOINLINE void GameObject::Clear() {
             }
           }
            {
-            // .Transform t = 3;
+            // .GRPC_TRANSFORM transform = 3;
             cached_has_bits = this_._impl_._has_bits_[0];
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
-                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.t_);
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.transform_);
             }
           }
           return this_.MaybeComputeUnknownFieldsSize(total_size,
                                                      &this_._impl_._cached_size_);
         }
 
-void GameObject::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<GameObject*>(&to_msg);
-  auto& from = static_cast<const GameObject&>(from_msg);
+void GRPC_GAMEOBJECT::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GRPC_GAMEOBJECT*>(&to_msg);
+  auto& from = static_cast<const GRPC_GAMEOBJECT&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:GameObject)
+  // @@protoc_insertion_point(class_specific_merge_from_start:GRPC_GAMEOBJECT)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1260,27 +1299,27 @@ void GameObject::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
   }
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    ABSL_DCHECK(from._impl_.t_ != nullptr);
-    if (_this->_impl_.t_ == nullptr) {
-      _this->_impl_.t_ =
-          ::google::protobuf::Message::CopyConstruct<::Transform>(arena, *from._impl_.t_);
+    ABSL_DCHECK(from._impl_.transform_ != nullptr);
+    if (_this->_impl_.transform_ == nullptr) {
+      _this->_impl_.transform_ =
+          ::google::protobuf::Message::CopyConstruct<::GRPC_TRANSFORM>(arena, *from._impl_.transform_);
     } else {
-      _this->_impl_.t_->MergeFrom(*from._impl_.t_);
+      _this->_impl_.transform_->MergeFrom(*from._impl_.transform_);
     }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GameObject::CopyFrom(const GameObject& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:GameObject)
+void GRPC_GAMEOBJECT::CopyFrom(const GRPC_GAMEOBJECT& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:GRPC_GAMEOBJECT)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void GameObject::InternalSwap(GameObject* PROTOBUF_RESTRICT other) {
+void GRPC_GAMEOBJECT::InternalSwap(GRPC_GAMEOBJECT* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1289,118 +1328,118 @@ void GameObject::InternalSwap(GameObject* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.unique_id_, &other->_impl_.unique_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.mesh_id_, &other->_impl_.mesh_id_, arena);
-  swap(_impl_.t_, other->_impl_.t_);
+  swap(_impl_.transform_, other->_impl_.transform_);
 }
 
-::google::protobuf::Metadata GameObject::GetMetadata() const {
+::google::protobuf::Metadata GRPC_GAMEOBJECT::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class WorldData::_Internal {
+class GRPC_SCENE::_Internal {
  public:
 };
 
-WorldData::WorldData(::google::protobuf::Arena* arena)
+GRPC_SCENE::GRPC_SCENE(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:WorldData)
+  // @@protoc_insertion_point(arena_constructor:GRPC_SCENE)
 }
-inline PROTOBUF_NDEBUG_INLINE WorldData::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_SCENE::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::WorldData& from_msg)
-      : game_objects_{visibility, arena, from.game_objects_},
+    const Impl_& from, const ::GRPC_SCENE& from_msg)
+      : gameobjects_{visibility, arena, from.gameobjects_},
         _cached_size_{0} {}
 
-WorldData::WorldData(
+GRPC_SCENE::GRPC_SCENE(
     ::google::protobuf::Arena* arena,
-    const WorldData& from)
+    const GRPC_SCENE& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  WorldData* const _this = this;
+  GRPC_SCENE* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:WorldData)
+  // @@protoc_insertion_point(copy_constructor:GRPC_SCENE)
 }
-inline PROTOBUF_NDEBUG_INLINE WorldData::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_SCENE::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : game_objects_{visibility, arena},
+      : gameobjects_{visibility, arena},
         _cached_size_{0} {}
 
-inline void WorldData::SharedCtor(::_pb::Arena* arena) {
+inline void GRPC_SCENE::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-WorldData::~WorldData() {
-  // @@protoc_insertion_point(destructor:WorldData)
+GRPC_SCENE::~GRPC_SCENE() {
+  // @@protoc_insertion_point(destructor:GRPC_SCENE)
   SharedDtor(*this);
 }
-inline void WorldData::SharedDtor(MessageLite& self) {
-  WorldData& this_ = static_cast<WorldData&>(self);
+inline void GRPC_SCENE::SharedDtor(MessageLite& self) {
+  GRPC_SCENE& this_ = static_cast<GRPC_SCENE&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.~Impl_();
 }
 
-inline void* WorldData::PlacementNew_(const void*, void* mem,
+inline void* GRPC_SCENE::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) WorldData(arena);
+  return ::new (mem) GRPC_SCENE(arena);
 }
-constexpr auto WorldData::InternalNewImpl_() {
+constexpr auto GRPC_SCENE::InternalNewImpl_() {
   constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
-      PROTOBUF_FIELD_OFFSET(WorldData, _impl_.game_objects_) +
-          decltype(WorldData::_impl_.game_objects_)::
+      PROTOBUF_FIELD_OFFSET(GRPC_SCENE, _impl_.gameobjects_) +
+          decltype(GRPC_SCENE::_impl_.gameobjects_)::
               InternalGetArenaOffset(
                   ::google::protobuf::Message::internal_visibility()),
   });
   if (arena_bits.has_value()) {
     return ::google::protobuf::internal::MessageCreator::ZeroInit(
-        sizeof(WorldData), alignof(WorldData), *arena_bits);
+        sizeof(GRPC_SCENE), alignof(GRPC_SCENE), *arena_bits);
   } else {
-    return ::google::protobuf::internal::MessageCreator(&WorldData::PlacementNew_,
-                                 sizeof(WorldData),
-                                 alignof(WorldData));
+    return ::google::protobuf::internal::MessageCreator(&GRPC_SCENE::PlacementNew_,
+                                 sizeof(GRPC_SCENE),
+                                 alignof(GRPC_SCENE));
   }
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull WorldData::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull GRPC_SCENE::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_WorldData_default_instance_._instance,
+        &_GRPC_SCENE_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &WorldData::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<WorldData>(),
+        &GRPC_SCENE::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<GRPC_SCENE>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &WorldData::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<WorldData>(), &WorldData::ByteSizeLong,
-            &WorldData::_InternalSerialize,
+        &GRPC_SCENE::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<GRPC_SCENE>(), &GRPC_SCENE::ByteSizeLong,
+            &GRPC_SCENE::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(WorldData, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(GRPC_SCENE, _impl_._cached_size_),
         false,
     },
-    &WorldData::kDescriptorMethods,
+    &GRPC_SCENE::kDescriptorMethods,
     &descriptor_table_PARCM_2dP4_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* WorldData::GetClassData() const {
+const ::google::protobuf::internal::ClassData* GRPC_SCENE::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 1, 0, 2> WorldData::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 1, 0, 2> GRPC_SCENE::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1415,55 +1454,55 @@ const ::_pbi::TcParseTable<0, 1, 1, 0, 2> WorldData::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::WorldData>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::GRPC_SCENE>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // repeated .GameObject game_objects = 1;
+    // repeated .GRPC_GAMEOBJECT gameobjects = 1;
     {::_pbi::TcParser::FastMtR1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(WorldData, _impl_.game_objects_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_SCENE, _impl_.gameobjects_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // repeated .GameObject game_objects = 1;
-    {PROTOBUF_FIELD_OFFSET(WorldData, _impl_.game_objects_), 0, 0,
+    // repeated .GRPC_GAMEOBJECT gameobjects = 1;
+    {PROTOBUF_FIELD_OFFSET(GRPC_SCENE, _impl_.gameobjects_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::GameObject>()},
+    {::_pbi::TcParser::GetTable<::GRPC_GAMEOBJECT>()},
   }}, {{
   }},
 };
 
-PROTOBUF_NOINLINE void WorldData::Clear() {
-// @@protoc_insertion_point(message_clear_start:WorldData)
+PROTOBUF_NOINLINE void GRPC_SCENE::Clear() {
+// @@protoc_insertion_point(message_clear_start:GRPC_SCENE)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.game_objects_.Clear();
+  _impl_.gameobjects_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* WorldData::_InternalSerialize(
+        ::uint8_t* GRPC_SCENE::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const WorldData& this_ = static_cast<const WorldData&>(base);
+          const GRPC_SCENE& this_ = static_cast<const GRPC_SCENE&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* WorldData::_InternalSerialize(
+        ::uint8_t* GRPC_SCENE::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const WorldData& this_ = *this;
+          const GRPC_SCENE& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:WorldData)
+          // @@protoc_insertion_point(serialize_to_array_start:GRPC_SCENE)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
-          // repeated .GameObject game_objects = 1;
+          // repeated .GRPC_GAMEOBJECT gameobjects = 1;
           for (unsigned i = 0, n = static_cast<unsigned>(
-                                   this_._internal_game_objects_size());
+                                   this_._internal_gameobjects_size());
                i < n; i++) {
-            const auto& repfield = this_._internal_game_objects().Get(i);
+            const auto& repfield = this_._internal_gameobjects().Get(i);
             target =
                 ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                     1, repfield, repfield.GetCachedSize(),
@@ -1475,18 +1514,18 @@ PROTOBUF_NOINLINE void WorldData::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:WorldData)
+          // @@protoc_insertion_point(serialize_to_array_end:GRPC_SCENE)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t WorldData::ByteSizeLong(const MessageLite& base) {
-          const WorldData& this_ = static_cast<const WorldData&>(base);
+        ::size_t GRPC_SCENE::ByteSizeLong(const MessageLite& base) {
+          const GRPC_SCENE& this_ = static_cast<const GRPC_SCENE&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t WorldData::ByteSizeLong() const {
-          const WorldData& this_ = *this;
+        ::size_t GRPC_SCENE::ByteSizeLong() const {
+          const GRPC_SCENE& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:WorldData)
+          // @@protoc_insertion_point(message_byte_size_start:GRPC_SCENE)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1495,10 +1534,10 @@ PROTOBUF_NOINLINE void WorldData::Clear() {
 
           ::_pbi::Prefetch5LinesFrom7Lines(&this_);
            {
-            // repeated .GameObject game_objects = 1;
+            // repeated .GRPC_GAMEOBJECT gameobjects = 1;
             {
-              total_size += 1UL * this_._internal_game_objects_size();
-              for (const auto& msg : this_._internal_game_objects()) {
+              total_size += 1UL * this_._internal_gameobjects_size();
+              for (const auto& msg : this_._internal_gameobjects()) {
                 total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
               }
             }
@@ -1507,131 +1546,373 @@ PROTOBUF_NOINLINE void WorldData::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void WorldData::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<WorldData*>(&to_msg);
-  auto& from = static_cast<const WorldData&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:WorldData)
+void GRPC_SCENE::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GRPC_SCENE*>(&to_msg);
+  auto& from = static_cast<const GRPC_SCENE&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:GRPC_SCENE)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_game_objects()->MergeFrom(
-      from._internal_game_objects());
+  _this->_internal_mutable_gameobjects()->MergeFrom(
+      from._internal_gameobjects());
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WorldData::CopyFrom(const WorldData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:WorldData)
+void GRPC_SCENE::CopyFrom(const GRPC_SCENE& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:GRPC_SCENE)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void WorldData::InternalSwap(WorldData* PROTOBUF_RESTRICT other) {
+void GRPC_SCENE::InternalSwap(GRPC_SCENE* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.game_objects_.InternalSwap(&other->_impl_.game_objects_);
+  _impl_.gameobjects_.InternalSwap(&other->_impl_.gameobjects_);
 }
 
-::google::protobuf::Metadata WorldData::GetMetadata() const {
+::google::protobuf::Metadata GRPC_SCENE::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class WorldRequest::_Internal {
+class GRPC_SCENES_BATCH::_Internal {
  public:
 };
 
-WorldRequest::WorldRequest(::google::protobuf::Arena* arena)
+GRPC_SCENES_BATCH::GRPC_SCENES_BATCH(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:WorldRequest)
+  // @@protoc_insertion_point(arena_constructor:GRPC_SCENES_BATCH)
 }
-inline PROTOBUF_NDEBUG_INLINE WorldRequest::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_SCENES_BATCH::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::WorldRequest& from_msg)
-      : msg_(arena, from.msg_),
+    const Impl_& from, const ::GRPC_SCENES_BATCH& from_msg)
+      : scenes_{visibility, arena, from.scenes_},
         _cached_size_{0} {}
 
-WorldRequest::WorldRequest(
+GRPC_SCENES_BATCH::GRPC_SCENES_BATCH(
     ::google::protobuf::Arena* arena,
-    const WorldRequest& from)
+    const GRPC_SCENES_BATCH& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  WorldRequest* const _this = this;
+  GRPC_SCENES_BATCH* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:WorldRequest)
+  // @@protoc_insertion_point(copy_constructor:GRPC_SCENES_BATCH)
 }
-inline PROTOBUF_NDEBUG_INLINE WorldRequest::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GRPC_SCENES_BATCH::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : msg_(arena),
+      : scenes_{visibility, arena},
         _cached_size_{0} {}
 
-inline void WorldRequest::SharedCtor(::_pb::Arena* arena) {
+inline void GRPC_SCENES_BATCH::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-WorldRequest::~WorldRequest() {
-  // @@protoc_insertion_point(destructor:WorldRequest)
+GRPC_SCENES_BATCH::~GRPC_SCENES_BATCH() {
+  // @@protoc_insertion_point(destructor:GRPC_SCENES_BATCH)
   SharedDtor(*this);
 }
-inline void WorldRequest::SharedDtor(MessageLite& self) {
-  WorldRequest& this_ = static_cast<WorldRequest&>(self);
+inline void GRPC_SCENES_BATCH::SharedDtor(MessageLite& self) {
+  GRPC_SCENES_BATCH& this_ = static_cast<GRPC_SCENES_BATCH&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
-  this_._impl_.msg_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* WorldRequest::PlacementNew_(const void*, void* mem,
+inline void* GRPC_SCENES_BATCH::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) WorldRequest(arena);
+  return ::new (mem) GRPC_SCENES_BATCH(arena);
 }
-constexpr auto WorldRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(WorldRequest),
-                                            alignof(WorldRequest));
+constexpr auto GRPC_SCENES_BATCH::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(GRPC_SCENES_BATCH, _impl_.scenes_) +
+          decltype(GRPC_SCENES_BATCH::_impl_.scenes_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::Message::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::ZeroInit(
+        sizeof(GRPC_SCENES_BATCH), alignof(GRPC_SCENES_BATCH), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&GRPC_SCENES_BATCH::PlacementNew_,
+                                 sizeof(GRPC_SCENES_BATCH),
+                                 alignof(GRPC_SCENES_BATCH));
+  }
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull WorldRequest::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull GRPC_SCENES_BATCH::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_WorldRequest_default_instance_._instance,
+        &_GRPC_SCENES_BATCH_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &WorldRequest::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<WorldRequest>(),
+        &GRPC_SCENES_BATCH::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<GRPC_SCENES_BATCH>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &WorldRequest::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<WorldRequest>(), &WorldRequest::ByteSizeLong,
-            &WorldRequest::_InternalSerialize,
+        &GRPC_SCENES_BATCH::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<GRPC_SCENES_BATCH>(), &GRPC_SCENES_BATCH::ByteSizeLong,
+            &GRPC_SCENES_BATCH::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(WorldRequest, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(GRPC_SCENES_BATCH, _impl_._cached_size_),
         false,
     },
-    &WorldRequest::kDescriptorMethods,
+    &GRPC_SCENES_BATCH::kDescriptorMethods,
     &descriptor_table_PARCM_2dP4_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* WorldRequest::GetClassData() const {
+const ::google::protobuf::internal::ClassData* GRPC_SCENES_BATCH::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 24, 2> WorldRequest::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 1, 0, 2> GRPC_SCENES_BATCH::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::GRPC_SCENES_BATCH>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // repeated .GRPC_SCENE scenes = 1;
+    {::_pbi::TcParser::FastMtR1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GRPC_SCENES_BATCH, _impl_.scenes_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // repeated .GRPC_SCENE scenes = 1;
+    {PROTOBUF_FIELD_OFFSET(GRPC_SCENES_BATCH, _impl_.scenes_), 0, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::GRPC_SCENE>()},
+  }}, {{
+  }},
+};
+
+PROTOBUF_NOINLINE void GRPC_SCENES_BATCH::Clear() {
+// @@protoc_insertion_point(message_clear_start:GRPC_SCENES_BATCH)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.scenes_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* GRPC_SCENES_BATCH::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const GRPC_SCENES_BATCH& this_ = static_cast<const GRPC_SCENES_BATCH&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* GRPC_SCENES_BATCH::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const GRPC_SCENES_BATCH& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:GRPC_SCENES_BATCH)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // repeated .GRPC_SCENE scenes = 1;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_scenes_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_scenes().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    1, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:GRPC_SCENES_BATCH)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t GRPC_SCENES_BATCH::ByteSizeLong(const MessageLite& base) {
+          const GRPC_SCENES_BATCH& this_ = static_cast<const GRPC_SCENES_BATCH&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t GRPC_SCENES_BATCH::ByteSizeLong() const {
+          const GRPC_SCENES_BATCH& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:GRPC_SCENES_BATCH)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated .GRPC_SCENE scenes = 1;
+            {
+              total_size += 1UL * this_._internal_scenes_size();
+              for (const auto& msg : this_._internal_scenes()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void GRPC_SCENES_BATCH::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GRPC_SCENES_BATCH*>(&to_msg);
+  auto& from = static_cast<const GRPC_SCENES_BATCH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:GRPC_SCENES_BATCH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_scenes()->MergeFrom(
+      from._internal_scenes());
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GRPC_SCENES_BATCH::CopyFrom(const GRPC_SCENES_BATCH& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:GRPC_SCENES_BATCH)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void GRPC_SCENES_BATCH::InternalSwap(GRPC_SCENES_BATCH* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.scenes_.InternalSwap(&other->_impl_.scenes_);
+}
+
+::google::protobuf::Metadata GRPC_SCENES_BATCH::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class CLIENT_JOIN_REQUEST::_Internal {
+ public:
+};
+
+CLIENT_JOIN_REQUEST::CLIENT_JOIN_REQUEST(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:CLIENT_JOIN_REQUEST)
+}
+inline PROTOBUF_NDEBUG_INLINE CLIENT_JOIN_REQUEST::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::CLIENT_JOIN_REQUEST& from_msg)
+      : client_id_(arena, from.client_id_),
+        _cached_size_{0} {}
+
+CLIENT_JOIN_REQUEST::CLIENT_JOIN_REQUEST(
+    ::google::protobuf::Arena* arena,
+    const CLIENT_JOIN_REQUEST& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  CLIENT_JOIN_REQUEST* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:CLIENT_JOIN_REQUEST)
+}
+inline PROTOBUF_NDEBUG_INLINE CLIENT_JOIN_REQUEST::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : client_id_(arena),
+        _cached_size_{0} {}
+
+inline void CLIENT_JOIN_REQUEST::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+CLIENT_JOIN_REQUEST::~CLIENT_JOIN_REQUEST() {
+  // @@protoc_insertion_point(destructor:CLIENT_JOIN_REQUEST)
+  SharedDtor(*this);
+}
+inline void CLIENT_JOIN_REQUEST::SharedDtor(MessageLite& self) {
+  CLIENT_JOIN_REQUEST& this_ = static_cast<CLIENT_JOIN_REQUEST&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.client_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* CLIENT_JOIN_REQUEST::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) CLIENT_JOIN_REQUEST(arena);
+}
+constexpr auto CLIENT_JOIN_REQUEST::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(CLIENT_JOIN_REQUEST),
+                                            alignof(CLIENT_JOIN_REQUEST));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull CLIENT_JOIN_REQUEST::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_CLIENT_JOIN_REQUEST_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &CLIENT_JOIN_REQUEST::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<CLIENT_JOIN_REQUEST>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &CLIENT_JOIN_REQUEST::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<CLIENT_JOIN_REQUEST>(), &CLIENT_JOIN_REQUEST::ByteSizeLong,
+            &CLIENT_JOIN_REQUEST::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(CLIENT_JOIN_REQUEST, _impl_._cached_size_),
+        false,
+    },
+    &CLIENT_JOIN_REQUEST::kDescriptorMethods,
+    &descriptor_table_PARCM_2dP4_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* CLIENT_JOIN_REQUEST::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 37, 2> CLIENT_JOIN_REQUEST::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1646,58 +1927,58 @@ const ::_pbi::TcParseTable<0, 1, 0, 24, 2> WorldRequest::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::WorldRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::CLIENT_JOIN_REQUEST>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string msg = 1;
+    // string CLIENT_ID = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(WorldRequest, _impl_.msg_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(CLIENT_JOIN_REQUEST, _impl_.client_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string msg = 1;
-    {PROTOBUF_FIELD_OFFSET(WorldRequest, _impl_.msg_), 0, 0,
+    // string CLIENT_ID = 1;
+    {PROTOBUF_FIELD_OFFSET(CLIENT_JOIN_REQUEST, _impl_.client_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\14\3\0\0\0\0\0\0"
-    "WorldRequest"
-    "msg"
+    "\23\11\0\0\0\0\0\0"
+    "CLIENT_JOIN_REQUEST"
+    "CLIENT_ID"
   }},
 };
 
-PROTOBUF_NOINLINE void WorldRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:WorldRequest)
+PROTOBUF_NOINLINE void CLIENT_JOIN_REQUEST::Clear() {
+// @@protoc_insertion_point(message_clear_start:CLIENT_JOIN_REQUEST)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.msg_.ClearToEmpty();
+  _impl_.client_id_.ClearToEmpty();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* WorldRequest::_InternalSerialize(
+        ::uint8_t* CLIENT_JOIN_REQUEST::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const WorldRequest& this_ = static_cast<const WorldRequest&>(base);
+          const CLIENT_JOIN_REQUEST& this_ = static_cast<const CLIENT_JOIN_REQUEST&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* WorldRequest::_InternalSerialize(
+        ::uint8_t* CLIENT_JOIN_REQUEST::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const WorldRequest& this_ = *this;
+          const CLIENT_JOIN_REQUEST& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:WorldRequest)
+          // @@protoc_insertion_point(serialize_to_array_start:CLIENT_JOIN_REQUEST)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
-          // string msg = 1;
-          if (!this_._internal_msg().empty()) {
-            const std::string& _s = this_._internal_msg();
+          // string CLIENT_ID = 1;
+          if (!this_._internal_client_id().empty()) {
+            const std::string& _s = this_._internal_client_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "WorldRequest.msg");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "CLIENT_JOIN_REQUEST.CLIENT_ID");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -1706,18 +1987,18 @@ PROTOBUF_NOINLINE void WorldRequest::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:WorldRequest)
+          // @@protoc_insertion_point(serialize_to_array_end:CLIENT_JOIN_REQUEST)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t WorldRequest::ByteSizeLong(const MessageLite& base) {
-          const WorldRequest& this_ = static_cast<const WorldRequest&>(base);
+        ::size_t CLIENT_JOIN_REQUEST::ByteSizeLong(const MessageLite& base) {
+          const CLIENT_JOIN_REQUEST& this_ = static_cast<const CLIENT_JOIN_REQUEST&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t WorldRequest::ByteSizeLong() const {
-          const WorldRequest& this_ = *this;
+        ::size_t CLIENT_JOIN_REQUEST::ByteSizeLong() const {
+          const CLIENT_JOIN_REQUEST& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:WorldRequest)
+          // @@protoc_insertion_point(message_byte_size_start:CLIENT_JOIN_REQUEST)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1725,144 +2006,144 @@ PROTOBUF_NOINLINE void WorldRequest::Clear() {
           (void)cached_has_bits;
 
            {
-            // string msg = 1;
-            if (!this_._internal_msg().empty()) {
+            // string CLIENT_ID = 1;
+            if (!this_._internal_client_id().empty()) {
               total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                              this_._internal_msg());
+                                              this_._internal_client_id());
             }
           }
           return this_.MaybeComputeUnknownFieldsSize(total_size,
                                                      &this_._impl_._cached_size_);
         }
 
-void WorldRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<WorldRequest*>(&to_msg);
-  auto& from = static_cast<const WorldRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:WorldRequest)
+void CLIENT_JOIN_REQUEST::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<CLIENT_JOIN_REQUEST*>(&to_msg);
+  auto& from = static_cast<const CLIENT_JOIN_REQUEST&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:CLIENT_JOIN_REQUEST)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_msg().empty()) {
-    _this->_internal_set_msg(from._internal_msg());
+  if (!from._internal_client_id().empty()) {
+    _this->_internal_set_client_id(from._internal_client_id());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WorldRequest::CopyFrom(const WorldRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:WorldRequest)
+void CLIENT_JOIN_REQUEST::CopyFrom(const CLIENT_JOIN_REQUEST& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:CLIENT_JOIN_REQUEST)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void WorldRequest::InternalSwap(WorldRequest* PROTOBUF_RESTRICT other) {
+void CLIENT_JOIN_REQUEST::InternalSwap(CLIENT_JOIN_REQUEST* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.msg_, &other->_impl_.msg_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.client_id_, &other->_impl_.client_id_, arena);
 }
 
-::google::protobuf::Metadata WorldRequest::GetMetadata() const {
+::google::protobuf::Metadata CLIENT_JOIN_REQUEST::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class MeshRequest::_Internal {
+class MESH_REQUEST::_Internal {
  public:
 };
 
-MeshRequest::MeshRequest(::google::protobuf::Arena* arena)
+MESH_REQUEST::MESH_REQUEST(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:MeshRequest)
+  // @@protoc_insertion_point(arena_constructor:MESH_REQUEST)
 }
-inline PROTOBUF_NDEBUG_INLINE MeshRequest::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE MESH_REQUEST::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::MeshRequest& from_msg)
+    const Impl_& from, const ::MESH_REQUEST& from_msg)
       : mesh_id_(arena, from.mesh_id_),
         _cached_size_{0} {}
 
-MeshRequest::MeshRequest(
+MESH_REQUEST::MESH_REQUEST(
     ::google::protobuf::Arena* arena,
-    const MeshRequest& from)
+    const MESH_REQUEST& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  MeshRequest* const _this = this;
+  MESH_REQUEST* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:MeshRequest)
+  // @@protoc_insertion_point(copy_constructor:MESH_REQUEST)
 }
-inline PROTOBUF_NDEBUG_INLINE MeshRequest::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE MESH_REQUEST::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : mesh_id_(arena),
         _cached_size_{0} {}
 
-inline void MeshRequest::SharedCtor(::_pb::Arena* arena) {
+inline void MESH_REQUEST::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-MeshRequest::~MeshRequest() {
-  // @@protoc_insertion_point(destructor:MeshRequest)
+MESH_REQUEST::~MESH_REQUEST() {
+  // @@protoc_insertion_point(destructor:MESH_REQUEST)
   SharedDtor(*this);
 }
-inline void MeshRequest::SharedDtor(MessageLite& self) {
-  MeshRequest& this_ = static_cast<MeshRequest&>(self);
+inline void MESH_REQUEST::SharedDtor(MessageLite& self) {
+  MESH_REQUEST& this_ = static_cast<MESH_REQUEST&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.mesh_id_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* MeshRequest::PlacementNew_(const void*, void* mem,
+inline void* MESH_REQUEST::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) MeshRequest(arena);
+  return ::new (mem) MESH_REQUEST(arena);
 }
-constexpr auto MeshRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(MeshRequest),
-                                            alignof(MeshRequest));
+constexpr auto MESH_REQUEST::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(MESH_REQUEST),
+                                            alignof(MESH_REQUEST));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull MeshRequest::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull MESH_REQUEST::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_MeshRequest_default_instance_._instance,
+        &_MESH_REQUEST_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &MeshRequest::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<MeshRequest>(),
+        &MESH_REQUEST::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<MESH_REQUEST>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &MeshRequest::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<MeshRequest>(), &MeshRequest::ByteSizeLong,
-            &MeshRequest::_InternalSerialize,
+        &MESH_REQUEST::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<MESH_REQUEST>(), &MESH_REQUEST::ByteSizeLong,
+            &MESH_REQUEST::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(MeshRequest, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(MESH_REQUEST, _impl_._cached_size_),
         false,
     },
-    &MeshRequest::kDescriptorMethods,
+    &MESH_REQUEST::kDescriptorMethods,
     &descriptor_table_PARCM_2dP4_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* MeshRequest::GetClassData() const {
+const ::google::protobuf::internal::ClassData* MESH_REQUEST::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 27, 2> MeshRequest::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 28, 2> MESH_REQUEST::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1877,29 +2158,29 @@ const ::_pbi::TcParseTable<0, 1, 0, 27, 2> MeshRequest::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::MeshRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::MESH_REQUEST>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string mesh_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(MeshRequest, _impl_.mesh_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(MESH_REQUEST, _impl_.mesh_id_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string mesh_id = 1;
-    {PROTOBUF_FIELD_OFFSET(MeshRequest, _impl_.mesh_id_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(MESH_REQUEST, _impl_.mesh_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\13\7\0\0\0\0\0\0"
-    "MeshRequest"
+    "\14\7\0\0\0\0\0\0"
+    "MESH_REQUEST"
     "mesh_id"
   }},
 };
 
-PROTOBUF_NOINLINE void MeshRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:MeshRequest)
+PROTOBUF_NOINLINE void MESH_REQUEST::Clear() {
+// @@protoc_insertion_point(message_clear_start:MESH_REQUEST)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1910,17 +2191,17 @@ PROTOBUF_NOINLINE void MeshRequest::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* MeshRequest::_InternalSerialize(
+        ::uint8_t* MESH_REQUEST::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const MeshRequest& this_ = static_cast<const MeshRequest&>(base);
+          const MESH_REQUEST& this_ = static_cast<const MESH_REQUEST&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* MeshRequest::_InternalSerialize(
+        ::uint8_t* MESH_REQUEST::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const MeshRequest& this_ = *this;
+          const MESH_REQUEST& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:MeshRequest)
+          // @@protoc_insertion_point(serialize_to_array_start:MESH_REQUEST)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -1928,7 +2209,7 @@ PROTOBUF_NOINLINE void MeshRequest::Clear() {
           if (!this_._internal_mesh_id().empty()) {
             const std::string& _s = this_._internal_mesh_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "MeshRequest.mesh_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "MESH_REQUEST.mesh_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -1937,18 +2218,18 @@ PROTOBUF_NOINLINE void MeshRequest::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:MeshRequest)
+          // @@protoc_insertion_point(serialize_to_array_end:MESH_REQUEST)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t MeshRequest::ByteSizeLong(const MessageLite& base) {
-          const MeshRequest& this_ = static_cast<const MeshRequest&>(base);
+        ::size_t MESH_REQUEST::ByteSizeLong(const MessageLite& base) {
+          const MESH_REQUEST& this_ = static_cast<const MESH_REQUEST&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t MeshRequest::ByteSizeLong() const {
-          const MeshRequest& this_ = *this;
+        ::size_t MESH_REQUEST::ByteSizeLong() const {
+          const MESH_REQUEST& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:MeshRequest)
+          // @@protoc_insertion_point(message_byte_size_start:MESH_REQUEST)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1966,10 +2247,10 @@ PROTOBUF_NOINLINE void MeshRequest::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void MeshRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<MeshRequest*>(&to_msg);
-  auto& from = static_cast<const MeshRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:MeshRequest)
+void MESH_REQUEST::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<MESH_REQUEST*>(&to_msg);
+  auto& from = static_cast<const MESH_REQUEST&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:MESH_REQUEST)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1980,15 +2261,15 @@ void MeshRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goo
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void MeshRequest::CopyFrom(const MeshRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:MeshRequest)
+void MESH_REQUEST::CopyFrom(const MESH_REQUEST& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:MESH_REQUEST)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void MeshRequest::InternalSwap(MeshRequest* PROTOBUF_RESTRICT other) {
+void MESH_REQUEST::InternalSwap(MESH_REQUEST* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1996,110 +2277,110 @@ void MeshRequest::InternalSwap(MeshRequest* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.mesh_id_, &other->_impl_.mesh_id_, arena);
 }
 
-::google::protobuf::Metadata MeshRequest::GetMetadata() const {
+::google::protobuf::Metadata MESH_REQUEST::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class Mesh::_Internal {
+class MESH::_Internal {
  public:
 };
 
-Mesh::Mesh(::google::protobuf::Arena* arena)
+MESH::MESH(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Mesh)
+  // @@protoc_insertion_point(arena_constructor:MESH)
 }
-inline PROTOBUF_NDEBUG_INLINE Mesh::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE MESH::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::Mesh& from_msg)
+    const Impl_& from, const ::MESH& from_msg)
       : mesh_data_(arena, from.mesh_data_),
         _cached_size_{0} {}
 
-Mesh::Mesh(
+MESH::MESH(
     ::google::protobuf::Arena* arena,
-    const Mesh& from)
+    const MESH& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  Mesh* const _this = this;
+  MESH* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:Mesh)
+  // @@protoc_insertion_point(copy_constructor:MESH)
 }
-inline PROTOBUF_NDEBUG_INLINE Mesh::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE MESH::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : mesh_data_(arena),
         _cached_size_{0} {}
 
-inline void Mesh::SharedCtor(::_pb::Arena* arena) {
+inline void MESH::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-Mesh::~Mesh() {
-  // @@protoc_insertion_point(destructor:Mesh)
+MESH::~MESH() {
+  // @@protoc_insertion_point(destructor:MESH)
   SharedDtor(*this);
 }
-inline void Mesh::SharedDtor(MessageLite& self) {
-  Mesh& this_ = static_cast<Mesh&>(self);
+inline void MESH::SharedDtor(MessageLite& self) {
+  MESH& this_ = static_cast<MESH&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.mesh_data_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* Mesh::PlacementNew_(const void*, void* mem,
+inline void* MESH::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Mesh(arena);
+  return ::new (mem) MESH(arena);
 }
-constexpr auto Mesh::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(Mesh),
-                                            alignof(Mesh));
+constexpr auto MESH::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(MESH),
+                                            alignof(MESH));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Mesh::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull MESH::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Mesh_default_instance_._instance,
+        &_MESH_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Mesh::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Mesh>(),
+        &MESH::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<MESH>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Mesh::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Mesh>(), &Mesh::ByteSizeLong,
-            &Mesh::_InternalSerialize,
+        &MESH::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<MESH>(), &MESH::ByteSizeLong,
+            &MESH::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Mesh, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(MESH, _impl_._cached_size_),
         false,
     },
-    &Mesh::kDescriptorMethods,
+    &MESH::kDescriptorMethods,
     &descriptor_table_PARCM_2dP4_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Mesh::GetClassData() const {
+const ::google::protobuf::internal::ClassData* MESH::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> Mesh::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 22, 2> MESH::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    2, 0,  // max_field_number, fast_idx_mask
+    1, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967293,  // skipmap
+    4294967294,  // skipmap
     offsetof(decltype(_table_), field_entries),
     1,  // num_field_entries
     0,  // num_aux_entries
@@ -2108,26 +2389,29 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> Mesh::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::Mesh>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::MESH>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // bytes mesh_data = 2;
-    {::_pbi::TcParser::FastBS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Mesh, _impl_.mesh_data_)}},
+    // string mesh_data = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(MESH, _impl_.mesh_data_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // bytes mesh_data = 2;
-    {PROTOBUF_FIELD_OFFSET(Mesh, _impl_.mesh_data_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kBytes | ::_fl::kRepAString)},
+    // string mesh_data = 1;
+    {PROTOBUF_FIELD_OFFSET(MESH, _impl_.mesh_data_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
+    "\4\11\0\0\0\0\0\0"
+    "MESH"
+    "mesh_data"
   }},
 };
 
-PROTOBUF_NOINLINE void Mesh::Clear() {
-// @@protoc_insertion_point(message_clear_start:Mesh)
+PROTOBUF_NOINLINE void MESH::Clear() {
+// @@protoc_insertion_point(message_clear_start:MESH)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2138,24 +2422,26 @@ PROTOBUF_NOINLINE void Mesh::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Mesh::_InternalSerialize(
+        ::uint8_t* MESH::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Mesh& this_ = static_cast<const Mesh&>(base);
+          const MESH& this_ = static_cast<const MESH&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Mesh::_InternalSerialize(
+        ::uint8_t* MESH::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Mesh& this_ = *this;
+          const MESH& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:Mesh)
+          // @@protoc_insertion_point(serialize_to_array_start:MESH)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
-          // bytes mesh_data = 2;
+          // string mesh_data = 1;
           if (!this_._internal_mesh_data().empty()) {
             const std::string& _s = this_._internal_mesh_data();
-            target = stream->WriteBytesMaybeAliased(2, _s, target);
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "MESH.mesh_data");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -2163,18 +2449,18 @@ PROTOBUF_NOINLINE void Mesh::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:Mesh)
+          // @@protoc_insertion_point(serialize_to_array_end:MESH)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Mesh::ByteSizeLong(const MessageLite& base) {
-          const Mesh& this_ = static_cast<const Mesh&>(base);
+        ::size_t MESH::ByteSizeLong(const MessageLite& base) {
+          const MESH& this_ = static_cast<const MESH&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Mesh::ByteSizeLong() const {
-          const Mesh& this_ = *this;
+        ::size_t MESH::ByteSizeLong() const {
+          const MESH& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:Mesh)
+          // @@protoc_insertion_point(message_byte_size_start:MESH)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -2182,9 +2468,9 @@ PROTOBUF_NOINLINE void Mesh::Clear() {
           (void)cached_has_bits;
 
            {
-            // bytes mesh_data = 2;
+            // string mesh_data = 1;
             if (!this_._internal_mesh_data().empty()) {
-              total_size += 1 + ::google::protobuf::internal::WireFormatLite::BytesSize(
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                               this_._internal_mesh_data());
             }
           }
@@ -2192,10 +2478,10 @@ PROTOBUF_NOINLINE void Mesh::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Mesh::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Mesh*>(&to_msg);
-  auto& from = static_cast<const Mesh&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Mesh)
+void MESH::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<MESH*>(&to_msg);
+  auto& from = static_cast<const MESH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:MESH)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2206,15 +2492,15 @@ void Mesh::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::pr
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Mesh::CopyFrom(const Mesh& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Mesh)
+void MESH::CopyFrom(const MESH& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:MESH)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Mesh::InternalSwap(Mesh* PROTOBUF_RESTRICT other) {
+void MESH::InternalSwap(MESH* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -2222,7 +2508,7 @@ void Mesh::InternalSwap(Mesh* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.mesh_data_, &other->_impl_.mesh_data_, arena);
 }
 
-::google::protobuf::Metadata Mesh::GetMetadata() const {
+::google::protobuf::Metadata MESH::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)

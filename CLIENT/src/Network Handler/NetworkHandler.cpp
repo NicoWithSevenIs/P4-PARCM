@@ -3,13 +3,16 @@
 
 void NetworkHandler::Initialize()
 {
+	/*
 	auto channel = CreateChannel("localhost:50051", InsecureChannelCredentials());
 	get().stub = World::NewStub(channel);
+	*/
 }
 
 
 void NetworkHandler::MessageServer()
 {
+	/*
 	WorldRequest request;
 	request.set_msg("ASDADASDFASD");
 
@@ -36,4 +39,5 @@ void NetworkHandler::MessageServer()
 		auto engine_go = Engine::GameObjectData(proto_go.unique_id(), proto_go.name(), e_t, proto_go.mesh_id());
 		engine_go.Print();
 	}
+	*/
 }

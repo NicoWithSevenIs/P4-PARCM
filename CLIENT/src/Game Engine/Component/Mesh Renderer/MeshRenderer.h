@@ -25,6 +25,7 @@ class MeshRenderer final: public Component
 		std::vector<tinyobj::material_t> materials;
 
 	private:
+		Math::Vector2f color;
 		DrawArgs draw_args;
 		Constant constant;
 

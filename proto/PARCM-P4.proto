@@ -1,48 +1,54 @@
 syntax = "proto3";
 
-//Scenes
 
-message Vector3{
+
+message GRPC_VECTOR3{
 	float x = 1;
 	float y = 2;
 	float z = 3;
 }
 
-message Transform{
-	Vector3 position = 1;
-	Vector3 rotation = 2;
-	Vector3 scale = 3;
+message GRPC_TRANSFORM{
+	GRPC_VECTOR3 position = 1;
+	GRPC_VECTOR3 rotation = 2;
+	GRPC_VECTOR3 scale = 3;
 }
 
-message GameObject{
+message GRPC_GAMEOBJECT{
 	string unique_id = 1;
 	string name = 2;
-	Transform t = 3;
+	GRPC_TRANSFORM transform = 3;
 	string mesh_id = 4;
 }
 
-message WorldData{
-	repeated GameObject game_objects = 1;
+//Scenes
+
+message GRPC_SCENE{
+	repeated GRPC_GAMEOBJECT gameobjects = 1;
 }
 
-message WorldRequest{
-	string msg = 1;
+message GRPC_SCENES_BATCH{
+	repeated GRPC_SCENE scenes = 1;
 }
 
-service World{
-	rpc InitializeClient(WorldRequest) returns (WorldData){}
+message CLIENT_JOIN_REQUEST{
+	string CLIENT_ID = 1;
+}
+
+service WORLD{
+	rpc InitializeClient(CLIENT_JOIN_REQUEST) returns (GRPC_SCENES_BATCH){}
 }
 
 //Meshes
 
-message MeshRequest{
+message MESH_REQUEST{
 	string mesh_id = 1;
 }
 
-message Mesh{
-	bytes mesh_data = 2;
+message MESH{
+	string mesh_data = 1;
 }
 
-service MeshManager{
-	rpc DownloadMesh(MeshRequest) returns (Mesh){}
+service MESH_DISPATCHER{
+	rpc DownloadMesh(MESH_REQUEST) returns (stream MESH){}
 }
