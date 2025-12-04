@@ -20,7 +20,6 @@ void BaseRunner::OnCreate()
 	GameObjectManager::get().main += camera_object;
 
 	NetworkHandler::MessageServer();
-
 }
 
 

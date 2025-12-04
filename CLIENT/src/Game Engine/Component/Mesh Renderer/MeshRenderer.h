@@ -13,10 +13,16 @@
 #include "../Transform/TransformComponent.h"
 
 #include <string>
+#include <sstream>
 
 using namespace Engine;
 
-class MeshRenderer final: public Component {
+class MeshRenderer final: public Component 
+{
+	private:
+		tinyobj::attrib_t attribs;
+		std::vector<tinyobj::shape_t> shapes;
+		std::vector<tinyobj::material_t> materials;
 
 	private:
 		DrawArgs draw_args;
@@ -28,7 +34,14 @@ class MeshRenderer final: public Component {
 	public:
 		MeshRenderer();
 		
+	private:
+		void ConfigurePipeline();
+		void ConfigureVertices();
+
 	public:
-		void Initialize(std::string obj_path, std::string vs_path = "", std::string ps_path = "");
+		void InitializeFromFile(std::string obj_path);
+		void InitializeFromString(std::stringstream obj_str);
 		void Update() override;
+
+
 };	

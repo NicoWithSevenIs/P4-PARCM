@@ -2,12 +2,10 @@
 
 MeshRenderer::MeshRenderer(): Component("MESH RENDERER", ComponentType::RENDERER) {}
 
-void MeshRenderer::Initialize(std::string obj_path, std::string vs_path, std::string ps_path)
-{	
-	tinyobj::attrib_t attribs;
-	std::vector<tinyobj::shape_t> shapes;
-	std::vector<tinyobj::material_t> materials;
 
+
+void MeshRenderer::InitializeFromFile(std::string obj_path)
+{	
 	std::string warn;
 	std::string err;
 
@@ -18,6 +16,28 @@ void MeshRenderer::Initialize(std::string obj_path, std::string vs_path, std::st
 		return;
 	}
 
+	ConfigureVertices();
+	ConfigurePipeline();
+}
+
+void MeshRenderer::InitializeFromString(std::stringstream obj_stream)
+{
+	tinyobj::ObjReader reader;
+	tinyobj::ObjReaderConfig config;
+
+	bool success = reader.ParseFromString(obj_stream.str(), "", config);
+
+	if (!success) {
+		std::cout << "[ERROR] Mesh String Parsing Error." << std::endl;
+		return;
+	}
+
+	ConfigureVertices();
+	ConfigurePipeline();
+}
+
+void MeshRenderer::ConfigureVertices()
+{
 	for (int i = 0; i < shapes[0].mesh.indices.size(); i++) {
 		tinyobj::index_t vData = shapes[0].mesh.indices[i];
 
@@ -25,9 +45,10 @@ void MeshRenderer::Initialize(std::string obj_path, std::string vs_path, std::st
 		tinyobj::real_t y = attribs.vertices[vData.vertex_index * 3 + 1];
 		tinyobj::real_t z = attribs.vertices[vData.vertex_index * 3 + 2];
 
-		list_vertices.push_back(Vector3f(x,y,z));
+		list_vertices.push_back(Vector3f(x, y, z));
 	}
 
+	//center pivot
 	Vector3f min, max;
 
 	for (auto& v : list_vertices) {
@@ -39,29 +60,30 @@ void MeshRenderer::Initialize(std::string obj_path, std::string vs_path, std::st
 		if (v.y > max.y) max.y = v.y;
 		if (v.z > max.z) max.z = v.z;
 	}
-	
+
 	Vector3f center = (min + max) / 2;
 	for (auto& v : list_vertices) {
-		v = v -  center; 
+		v = v - center;
 	}
+}
 
-	draw_args.vertex_shader		= GraphicsEngine::CompileVertexShader("mesh_vertex.hlsl");
-	draw_args.pixel_shader		= GraphicsEngine::CompilePixelShader("mesh_pixel.hlsl");
-	draw_args.vertex_buffer		= GraphicsEngine::CreateVertexBuffer(
-												&this->list_vertices[0],
-												sizeof(Vector3f),
-												this->list_vertices.size(),
-												draw_args.vertex_shader->GetBlob()
-											);
-	draw_args.constant_buffer	= GraphicsEngine::CreateConstantBuffer(
-												&this->constant,
-												sizeof(Constant)
-											);
+void MeshRenderer::ConfigurePipeline()
+{
+	draw_args.vertex_shader = GraphicsEngine::CompileVertexShader("mesh_vertex.hlsl");
+	draw_args.pixel_shader = GraphicsEngine::CompilePixelShader("mesh_pixel.hlsl");
+	draw_args.vertex_buffer = GraphicsEngine::CreateVertexBuffer(
+		&this->list_vertices[0],
+		sizeof(Vector3f),
+		this->list_vertices.size(),
+		draw_args.vertex_shader->GetBlob()
+	);
+	draw_args.constant_buffer = GraphicsEngine::CreateConstantBuffer(
+		&this->constant,
+		sizeof(Constant)
+	);
 
 	initialized = true;
 }
-
-bool once = false;
 
 void MeshRenderer::Update()
 {
