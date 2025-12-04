@@ -30,6 +30,7 @@ void ImguiHandler::Initialize(HWND hwnd, ID3D11Device* d3d_device, ID3D11DeviceC
 		sceneMiniWindow->height = 150;
 		sceneMiniWindow->x = (i * 150);
 		sceneMiniWindow->y = 0;
+		sceneMiniWindow->index = i;
 		imgui_components.push_back(sceneMiniWindow);
 	}
 }

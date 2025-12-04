@@ -41,7 +41,7 @@ class MeshRenderer final: public Component
 
 	public:
 		void InitializeFromFile(std::string obj_path);
-		void InitializeFromString(std::stringstream obj_str);
+		void InitializeFromString(std::string obj_str);
 		void Update() override;
 
 

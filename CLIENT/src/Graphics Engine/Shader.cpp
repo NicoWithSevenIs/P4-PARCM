@@ -66,7 +66,6 @@ void Shader<ID3D11PixelShader>::Initialize(std::string filename, ID3D11Device* d
 
 	if (FAILED(hr))
 		std::cout << "[ERROR] Failed to Initialize Pixel Shader: " << filename << std::endl;
-	else std::cout << "[LOG] Successfully Initialized Pixel Shader: " << filename << std::endl;
 }
 
 void Shader<ID3D11VertexShader>::Initialize(std::string filename, ID3D11Device* d3d_device) 
@@ -92,5 +91,4 @@ void Shader<ID3D11VertexShader>::Initialize(std::string filename, ID3D11Device* 
 
 	if (FAILED(hr))
 		std::cout << "[ERROR] Failed to Initialize Vertex Shader: " << filename << std::endl;
-	else std::cout << "[LOG] Successfully Initialized Vertex Shader: " << filename << std::endl;
 }

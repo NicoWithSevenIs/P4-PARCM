@@ -8,19 +8,19 @@ SceneData WorldService::GenerateScene(std::string client_id, std::string scene_i
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<> dist(5, 10);
 
-	std::uniform_real_distribution<float> pos_dist(-10.0f, 10.0f);
+	std::uniform_real_distribution<float> pos_dist(-5.0f, 5.0f);
 	std::uniform_real_distribution<float> scale_dist(0.3f, 1.1f);
 
 	int count = dist(gen);
 
-	for (int i = 0; i < count; i++) {
-
+	for (int i = 0; i < count; i++) 
+	{
 		std::string model = MeshDispatcher::DrawLots();
 		std::string unique_id = client_id + "_" + scene_id + "_" + std::to_string(i);
 
-		auto random_pos = Math::Vector3f(pos_dist(gen), pos_dist(gen), pos_dist(gen));
+		auto random_pos = Math::Vector3f(pos_dist(gen), 0, pos_dist(gen));
 
-		float uniform_scale = pos_dist(gen);
+		float uniform_scale = scale_dist(gen);
 		auto random_scale = Math::Vector3f(uniform_scale, uniform_scale, uniform_scale);
 
 		Engine::GameObjectData data
@@ -52,26 +52,31 @@ Status WorldService::InitializeClient
 	for (int i = 0; i < 5; i++) {
 		GRPC_SCENE* scene = response->add_scenes();
 		SceneData scene_data = GenerateScene(id, std::to_string(i));
+		std::cout << "----------" << i << "---------" << std::endl;
 		for (auto& go_data : scene_data) {
 			GRPC_GAMEOBJECT* go = scene->add_gameobjects();
 			go->set_unique_id(go_data.GetUID());
-			go->set_unique_id(go_data.GetUID());
+			go->set_name(go_data.GetName());
 			go->set_mesh_id(go_data.GetMeshID());
 			ConfigureTransform(go, go_data);
+			go_data.Print();
+			std::cout << "--------------------" << std::endl;
 		}
 	}
-	
+	std::cout << "Initialized " << id << std::endl;
 	return Status::OK;
 }
 
 void WorldService::ConfigureTransform(GRPC_GAMEOBJECT* proto_go, Engine::GameObjectData engine_go)
 {
+
 	auto ConfigureVector = [&](GRPC_VECTOR3* proto_vec, Math::Vector3f math_vec)
-		{
-			proto_vec->set_x(math_vec.x);
-			proto_vec->set_y(math_vec.y);
-			proto_vec->set_z(math_vec.z);
-		};
+	{
+		proto_vec->set_x(math_vec.x);
+		proto_vec->set_y(math_vec.y);
+		proto_vec->set_z(math_vec.z);
+	};
+
 	GRPC_TRANSFORM* proto_t = proto_go->mutable_transform();
 
 	GRPC_VECTOR3* pos = proto_t->mutable_position();

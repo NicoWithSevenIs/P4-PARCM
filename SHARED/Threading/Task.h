@@ -4,6 +4,7 @@
 #include <chrono>
 
 class Task {
+public:
 	inline static void Spawn(std::function<void()> callable) {
 		std::thread t(callable);
 		t.detach();

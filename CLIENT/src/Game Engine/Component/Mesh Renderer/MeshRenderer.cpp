@@ -20,12 +20,16 @@ void MeshRenderer::InitializeFromFile(std::string obj_path)
 	ConfigurePipeline();
 }
 
-void MeshRenderer::InitializeFromString(std::stringstream obj_stream)
+void MeshRenderer::InitializeFromString(std::string obj_str)
 {
 	tinyobj::ObjReader reader;
 	tinyobj::ObjReaderConfig config;
 
-	bool success = reader.ParseFromString(obj_stream.str(), "", config);
+	bool success = reader.ParseFromString(obj_str, "", config);
+
+	this->attribs = reader.GetAttrib();
+	this->shapes = reader.GetShapes();
+	this->materials = reader.GetMaterials();
 
 	if (!success) {
 		std::cout << "[ERROR] Mesh String Parsing Error." << std::endl;

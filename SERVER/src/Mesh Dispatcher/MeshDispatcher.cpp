@@ -2,7 +2,7 @@
 
 std::vector<std::string> 
 MeshDispatcher::model_pool = {
-	"lucy.obj",
+	//"lucy.obj",
 	"cow.obj",
 	"homer.obj"
 };
@@ -27,7 +27,7 @@ Status MeshDispatcher::DownloadMesh
 
 	if (!obj.is_open()) {
 		std::cerr << "Failed to open OBJ file: " << filename;
-		return Status::ABORTED;
+		return Status::OK;
 	}
 
 	std::stringstream stream;
@@ -40,6 +40,7 @@ Status MeshDispatcher::DownloadMesh
 		partitioned.push_back(line);
 	}
 
+	std::string batch;
 	for (auto& line : partitioned) {
 		batch += line + "\n";              
 		MESH chunk;

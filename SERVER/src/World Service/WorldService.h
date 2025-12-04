@@ -16,7 +16,6 @@ typedef std::vector<Engine::GameObjectData> SceneData;
 
 class WorldService final : public WORLD::Service
 {
-	
 	std::vector<SceneData> scenes;
 
 	public:

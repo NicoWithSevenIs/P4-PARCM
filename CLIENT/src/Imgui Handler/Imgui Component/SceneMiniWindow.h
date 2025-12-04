@@ -2,20 +2,20 @@
 #include "ImguiComponent.h"
 #include "d3d11.h"
 
+#include "../../Network Handler/NetworkHandler.h"
+#include "../../Game Engine/GameObjectManager/GameObjectManager.h"
+
 class SceneMiniWindow final : public ImguiComponent {
 
 	public:
 		ID3D11ShaderResourceView* thumbnailTexture;
+		int index = 0;
 
 	inline void Initialize() override {
 
 	}
 
 	inline void Update(double deltaTime) override {
-		if (this->fDisplayVal < 100) {
-			this->fDisplayVal += deltaTime;
-		}
-		
 	}
 
 	inline void Render() override {
@@ -28,7 +28,8 @@ class SceneMiniWindow final : public ImguiComponent {
 		{
 			printf("You clicked the image button!\n");
 		}
-		ImGui::ProgressBar(this->fDisplayVal);
+
+		ImGui::ProgressBar(NetworkHandler::get().progress[index]);
 		ImGui::End();
 	}
 };

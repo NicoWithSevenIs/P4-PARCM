@@ -6,11 +6,15 @@ void ServerRunner::Run()
 
 
 	std::string add("0.0.0.0:50051");
+
 	WorldService world;
+	MeshDispatcher dispatcher;
+
 	grpc::ServerBuilder builder;
 
 	builder.AddListeningPort(add, grpc::InsecureServerCredentials());
 	builder.RegisterService(&world);
+	builder.RegisterService(&dispatcher);
 
 	auto server(builder.BuildAndStart());
 	std::cout << "Server listening on " << add << std::endl;
