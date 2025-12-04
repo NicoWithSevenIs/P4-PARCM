@@ -5,7 +5,10 @@
 
 #include <vector>
 #include <iostream>
+
 using namespace grpc;
+
+typedef std::vector<Engine::GameObjectData> SceneData;
 
 class WorldService final : public World::Service
 {
