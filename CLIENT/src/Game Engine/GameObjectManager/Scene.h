@@ -9,7 +9,7 @@
 typedef std::string UID;
 
 class Scene {
-	private: 
+	public: 
 		std::unordered_map<UID, Engine::GameObject*> scene_objects;
 
 	public:

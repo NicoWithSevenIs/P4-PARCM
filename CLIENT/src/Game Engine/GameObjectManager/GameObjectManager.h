@@ -15,19 +15,15 @@
 
 namespace Engine {
 	class GameObjectManager: public Singleton<GameObjectManager> {
-		private: 
-			std::unordered_map<std::string, GameObject*> object_map;
+		public: 
+			Scene main;
+			Scene* current_scene = nullptr;
 
 		public:
 			GameObjectManager();
 
 		public:
-			static GameObject* AddGameObject(GameObjectData gameobject);
-			static void AddGameObject(GameObject* gameobject);
-			inline static GameObject* GetGameObject(std::string uid){ return get().object_map[uid]; }
-
-			void AddGameObjects(std::vector<GameObjectData> gameobjects);
-
+			void UnloadCurrentScene();
 
 		public:
 			static void Update();
