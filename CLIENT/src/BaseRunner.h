@@ -16,6 +16,9 @@ class BaseRunner final: public Window
 		void OnCreate() override;
 		void OnUpdate() override;
 		void OnDestroy() override;
-		void OnFocus() override;
-		void OnUnfocus() override;
+
+	public:
+		virtual void OnKeyboardInput(char key, bool up_or_down) override;
+		virtual void OnMouseMove(Math::Vector2i point) override;
+		virtual void OnMouseInput(int button, bool up_or_down) override;
 };

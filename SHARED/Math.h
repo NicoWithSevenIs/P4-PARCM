@@ -19,6 +19,15 @@ namespace Math {
 		public:
 			Vector2() : x(0), y(0) {}
 			Vector2(N x, N y): x(x), y(y){}
+
+		public:
+			inline friend std::ostream& operator << (std::ostream& os, const Vector2<N>& vec) {
+				os << "(" << vec.x << "," << vec.y << ")";
+				return os;
+			}
+			Vector2 operator-(const Vector2& rhs) {
+				return Vector2(x - rhs.x, y - rhs.y);
+			}
 	};
 
 
@@ -44,6 +53,12 @@ namespace Math {
 
 			Vector3 operator+(const Vector3& rhs) {
 				return Vector3(x + rhs.x, y + rhs.y, z + rhs.z);
+			}
+
+			void operator+=(const Vector3& rhs) {
+				this->x += rhs.x;
+				this->y += rhs.y;
+				this->z += rhs.z;
 			}
 
 			Vector3 operator-(const Vector3& rhs) {

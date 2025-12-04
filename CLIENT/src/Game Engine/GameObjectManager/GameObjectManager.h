@@ -23,7 +23,8 @@ namespace Engine {
 			GameObjectManager();
 
 		public:
-			void UnloadCurrentScene();
+			static void LoadScene(Scene* to_load);
+			static void UnloadCurrentScene();
 
 		public:
 			static void Update();

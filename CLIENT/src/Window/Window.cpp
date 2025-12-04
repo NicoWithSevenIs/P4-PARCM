@@ -7,28 +7,33 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
 	extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 	if (ImGui_ImplWin32_WndProcHandler(hwnd, msg, wparam, lparam))
 		return true;
-	
+
+	int x = 0, y = 0;
+
 	switch (msg) {
 
-	case WM_CREATE:
-		window->SetHWND(hwnd);
-		break;
-	case WM_DESTROY:
-		window->OnDestroy();
-		::PostQuitMessage(0);
-		break;
+		case WM_CREATE:
+			window->SetHWND(hwnd);
+			break;
+		case WM_DESTROY:
+			window->OnDestroy();
+			::PostQuitMessage(0);
+			break;
 
-	case WM_SETFOCUS:
-		window->OnFocus();
-		::PostQuitMessage(0);
+		case WM_KEYDOWN: window->OnKeyboardInput(wparam, false); break;
+		case WM_KEYUP: window->OnKeyboardInput(wparam, true); break;
+		case WM_MOUSEMOVE: 
+			x = GET_X_LPARAM(lparam);
+			y = GET_Y_LPARAM(lparam);
+			window->OnMouseMove(Math::Vector2i(x,y));
 		break;
+		case WM_LBUTTONDOWN: window->OnMouseInput(0, false); break;
+		case WM_LBUTTONUP: window->OnMouseInput(0, true); 	break;
+		case WM_RBUTTONDOWN: window->OnMouseInput(1, false); break;
+		case WM_RBUTTONUP: window->OnMouseInput(1, true); 	break;
 
-	case WM_KILLFOCUS:
-		window->OnUnfocus();
-		::PostQuitMessage(0);
-		break;
-	default:
-		return ::DefWindowProc(hwnd, msg, wparam, lparam);
+		default:
+			return ::DefWindowProc(hwnd, msg, wparam, lparam);
 	}
 	return NULL;
 }
@@ -103,8 +108,10 @@ void Window::Broadcast()
 void Window::OnCreate(){}
 void Window::OnUpdate() {}
 void Window::OnDestroy(){}
-void Window::OnFocus() {}
-void Window::OnUnfocus(){}
+
+void Window::OnKeyboardInput(char key, bool up_or_down){}
+void Window::OnMouseMove(Math::Vector2i point){}
+void Window::OnMouseInput(int button, bool up_or_down){}
 
 bool Window::IsRunning() 
 {

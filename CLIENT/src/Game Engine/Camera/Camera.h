@@ -17,6 +17,13 @@ class Camera: public Engine::GameObject
 		float viewport_height;
 
 	public:
+		float forward = 0;
+		float right = 0;
+		float up = 0;
+		float x_rot = 0;
+		float y_rot = 0;
+
+	public:
 		Camera(Engine::GameObjectData data, float viewport_width, float viewport_height);
 
 	public:
@@ -24,7 +31,7 @@ class Camera: public Engine::GameObject
 		Matrix GetProjectionMatrix();
 
 	public:
-		inline virtual void Update() override {}
+		virtual void Update() override;
 };
 
 class CameraManager : public Singleton<CameraManager>

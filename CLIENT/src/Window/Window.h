@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <Windows.h>
-
+#include <windowsx.h>
 class Window {
 	protected:
 		HWND hwnd;
@@ -31,10 +31,9 @@ class Window {
 		virtual void OnCreate();
 		virtual void OnUpdate();
 		virtual void OnDestroy();
-
-	public:
-		virtual void OnFocus();
-		virtual void OnUnfocus();
+		virtual void OnKeyboardInput(char key, bool up_or_down);
+		virtual void OnMouseMove(Math::Vector2i point);
+		virtual void OnMouseInput(int button, bool up_or_down);
 
 	public:
 		bool IsRunning();

@@ -37,3 +37,8 @@ class Scene {
 			scene_objects.clear();
 		}
 };
+
+
+
+
+

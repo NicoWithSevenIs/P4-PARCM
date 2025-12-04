@@ -9,6 +9,13 @@ GameObjectManager::GameObjectManager()
 
 }
 
+
+
+void Engine::GameObjectManager::LoadScene(Scene* to_load)
+{
+	get().current_scene = to_load;
+}
+
 void Engine::GameObjectManager::UnloadCurrentScene()
 {
 	get().current_scene = nullptr;
