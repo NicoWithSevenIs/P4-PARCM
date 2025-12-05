@@ -1,6 +1,8 @@
 #include "NetworkHandler.h"
 
-const int NetworkHandler::TIMEOUT = 60;
+const int NetworkHandler::TIMEOUT = 30;
+const int NetworkHandler::MAX_RETRIES = 3;
+
 
 void NetworkHandler::Initialize()
 {
@@ -74,8 +76,18 @@ void NetworkHandler::ConfigureAllScenes()
 						
 			for (auto& [UID, GO] : scene->scene_objects) {
 				Task::Sleep(100);
-				RequestMesh(get().channel, GO->data.GetMeshID(), scene);
 
+				int tries = 0;
+				bool success ;
+
+				do 
+				{
+					success = RequestMesh(get().channel, GO->data.GetMeshID(), scene);
+					tries += 1;
+				}
+				while(!success && tries < MAX_RETRIES);
+
+		
 				{
 					std::lock_guard<std::mutex> mtx(get().download_mutex);
 
@@ -95,7 +107,7 @@ void NetworkHandler::ConfigureAllScenes()
 
 }
 
-void NetworkHandler::RequestMesh(std::shared_ptr<Channel> channel, std::string mesh_id, Scene* scene)
+bool NetworkHandler::RequestMesh(std::shared_ptr<Channel> channel, std::string mesh_id, Scene* scene)
 {
 	MESH_REQUEST request;
 	request.set_mesh_id(mesh_id);
@@ -125,6 +137,7 @@ void NetworkHandler::RequestMesh(std::shared_ptr<Channel> channel, std::string m
 	if (!status.ok())
 	{
 		std::cerr << "[ERROR] Mesh Download Failed: " << status.error_message() << "." << std::endl;
+		return false;
 	}
-
+	return true;
 }

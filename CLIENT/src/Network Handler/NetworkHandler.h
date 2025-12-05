@@ -22,6 +22,7 @@ class NetworkHandler: public Singleton<NetworkHandler>
 {
 	public:
 		static const int TIMEOUT;
+		static const int MAX_RETRIES;
 
 	private:
 		std::unique_ptr<WORLD::Stub> wrld_stub;
@@ -42,5 +43,5 @@ class NetworkHandler: public Singleton<NetworkHandler>
 		static void Initialize();
 		static void InformServer();
 		static void ConfigureAllScenes();
-		static void RequestMesh(std::shared_ptr<Channel> channel, std::string mesh_id, Scene* scene);
+		static bool RequestMesh(std::shared_ptr<Channel> channel, std::string mesh_id, Scene* scene);
 };
