@@ -1,6 +1,8 @@
 #pragma once
 #include "vector"
 #include "../../../SHARED/Singleton.h"
+#include "../../../SHARED/IMediator.h"
+
 #include <Windows.h>
 
 #include "imgui.h"
@@ -10,7 +12,8 @@
 #include "Imgui Component/FPSDisplay.h"
 #include "Imgui Component/SceneMiniWindow.h"
 
-class ImguiHandler : public Singleton<ImguiHandler> {
+class ImguiHandler : public Singleton<ImguiHandler>, IMediator<ImguiComponent> 
+{
 	public:
 		static std::vector<ImguiComponent*> imgui_components;
 
@@ -19,4 +22,7 @@ class ImguiHandler : public Singleton<ImguiHandler> {
 		static void Release();
 		static void Update();
 		static void Render();
+
+		virtual void Notify(ImguiComponent* notifier, std::string notification) override;
+		virtual ImguiComponent* Get(std::string name) override;
 };

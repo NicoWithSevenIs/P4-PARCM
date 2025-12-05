@@ -9,6 +9,7 @@ struct Constant
 		Math::Matrix transform_matrix;
 		Math::Matrix view_matrix;
 		Math::Matrix projection_matrix;
+		Math::Vector3f color;
 		float deltaTime;
 };
 

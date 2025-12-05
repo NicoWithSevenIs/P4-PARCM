@@ -53,3 +53,18 @@ void GameObjectManager::Release() {
 	}
 	get().main.scene_objects.clear();
 }
+
+void GameObjectManager::ConsolidateScenes(std::vector<Scene*> scenes)
+{
+	Scene* c_s = new Scene();
+
+	for (auto& scene : scenes) 
+	{
+		for (auto& [uid, gameobject] : scene->scene_objects) 
+		{
+			*c_s += gameobject;
+		}
+	}
+
+	GameObjectManager::LoadScene(c_s);
+}

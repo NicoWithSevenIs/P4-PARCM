@@ -13,6 +13,7 @@ cbuffer CONSTANT : register(b0)
     row_major float4x4 transform;
     row_major float4x4 view;
     row_major float4x4 projection;
+    float3 color;
     float delta_time;
 }
 

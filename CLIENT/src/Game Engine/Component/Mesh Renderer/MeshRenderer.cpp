@@ -1,6 +1,14 @@
 #include "MeshRenderer.h"
 
-MeshRenderer::MeshRenderer(): Component("MESH RENDERER", ComponentType::RENDERER) {}
+MeshRenderer::MeshRenderer(): Component("MESH RENDERER", ComponentType::RENDERER) 
+{
+
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_real_distribution<> col(0.4f, 0.7f);
+
+	this->color = Math::Vector3f(col(gen), col(gen), col(gen));
+}
 
 
 
@@ -100,6 +108,7 @@ void MeshRenderer::Update()
 	constant.deltaTime = Time::deltaTime();
 	constant.projection_matrix = CameraManager::GetCurrentCamera()->GetProjectionMatrix();
 	constant.view_matrix = CameraManager::GetCurrentCamera()->GetViewMatrix();
+	constant.color = this->color;
 
 	draw_args.constant_buffer->Update(GraphicsEngine::GetDeviceContext(), &constant);
 	GraphicsEngine::Draw(draw_args);

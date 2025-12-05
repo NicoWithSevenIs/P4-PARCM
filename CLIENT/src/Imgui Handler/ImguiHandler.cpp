@@ -1,5 +1,6 @@
 #include "ImguiHandler.h"
 #include "../SHARED/Time/Time.h"
+#include "Imgui Component/SceneLoadProgress.h"
 
 std::vector<ImguiComponent*> ImguiHandler::imgui_components;
 
@@ -20,6 +21,7 @@ void ImguiHandler::Initialize(HWND hwnd, ID3D11Device* d3d_device, ID3D11DeviceC
 	UI_FPSDisplay* fpsDisplay = new UI_FPSDisplay();
 	fpsDisplay->width = 150.0f; 
 	fpsDisplay->height = 50.0f;
+	fpsDisplay->owner = &get();
 	imgui_components.push_back(fpsDisplay);
 
 	for (int i = 0; i < 5; i++) {
@@ -31,8 +33,17 @@ void ImguiHandler::Initialize(HWND hwnd, ID3D11Device* d3d_device, ID3D11DeviceC
 		sceneMiniWindow->x = (i * 150);
 		sceneMiniWindow->y = 0;
 		sceneMiniWindow->index = i;
+		sceneMiniWindow->owner = &get();
 		imgui_components.push_back(sceneMiniWindow);
 	}
+
+	SceneLoadProgress* loading_screen = new SceneLoadProgress();
+	loading_screen->name = "SCENE LOADER SCREEN";
+	loading_screen->height = 300.0f;
+	loading_screen->width = 500.0f;
+	loading_screen->owner = &get();
+	imgui_components.push_back(loading_screen);
+	
 }
 
 void ImguiHandler::Update()
@@ -55,6 +66,20 @@ void ImguiHandler::Render()
 
 	ImGui::Render();
 	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+}
+
+void ImguiHandler::Notify(ImguiComponent* notifier, std::string notification)
+{
+}
+
+ImguiComponent* ImguiHandler::Get(std::string name)
+{
+	for (auto& imgui_comp : this->imgui_components) 
+	{
+		if(imgui_comp->name == name)
+			return imgui_comp;
+	}
+	return nullptr;
 }
 
 void ImguiHandler::Release()

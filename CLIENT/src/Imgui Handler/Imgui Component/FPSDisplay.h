@@ -1,5 +1,8 @@
 #pragma once
 #include "ImguiComponent.h"
+#include "../../Game Engine/GameObjectManager/GameObjectManager.h"
+#include "../../Network Handler/NetworkHandler.h"
+
 
 class UI_FPSDisplay final : public ImguiComponent {
 	inline void Initialize() override {
@@ -18,6 +21,13 @@ class UI_FPSDisplay final : public ImguiComponent {
 		ImGui::Begin("FPS");
 		ImGui::Text("FPS: %.2f", this->fDisplayVal);
 		if (ImGui::Button("View All")) {
+
+			int ave = 0;
+			for (auto& i : NetworkHandler::get().progress) 
+				ave+=i;
+			
+			if (ave / 5 == 1) 
+				GameObjectManager::ConsolidateScenes(NetworkHandler::get().scene_cache);
 			
 		}
 		ImGui::End();

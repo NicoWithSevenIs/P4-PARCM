@@ -30,5 +30,6 @@ namespace Engine {
 			static void Update();
 			static void Draw();
 			static void Release();
+			static void ConsolidateScenes(std::vector<Scene*> scenes);
 	};
 }

@@ -1,6 +1,10 @@
 #pragma once
 #include "string"
+#include "../../../SHARED/IMediator.h"
 class ImguiComponent {
+	public:
+		IMediator<ImguiComponent>* owner;
+
 	public:
 		std::string name = "name";
 		bool isOpen = true;
